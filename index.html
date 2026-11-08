@@ -1,0 +1,698 @@
+<title>Fraclab Jubin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Makmal pecahan interaktif: bina, tukar dan banding pecahan dengan jubin berwarna.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: one working bench. Sticky top bar → mode tabs → a two-column bench (controls | model), stacking on phones.
+   Tiles follow the classroom convention: every denominator has its own colour. */
+:root{
+  --bg:#eef2f7; --grid:#dfe6ef; --panel:#ffffff; --panel-2:#f5f8fb; --line:#cfd8e3;
+  --fg:#16202e; --muted:#5b6878; --accent:#2f5bd3; --accent-fg:#ffffff;
+  --good:#1d8a52; --good-bg:#e3f5ea; --bad:#c2402f; --bad-bg:#fbe8e4;
+  --empty:#e6ebf2; --empty-edge:#c9d2de;
+  --tile-s:72%; --tile-l:56%; --tile-ink:#ffffff;
+  --shadow:0 1px 0 rgba(22,32,46,.06),0 8px 24px -12px rgba(22,32,46,.18);
+  --f-display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1622; --grid:#172131; --panel:#151f2e; --panel-2:#1a2638; --line:#2a3a52;
+  --fg:#e8eef7; --muted:#93a3b8; --accent:#7ea2ff; --accent-fg:#0b1220;
+  --good:#5fd394; --good-bg:#12301f; --bad:#ff8a78; --bad-bg:#3a1a16;
+  --empty:#1e2a3c; --empty-edge:#2c3c55;
+  --tile-s:62%; --tile-l:52%; --tile-ink:#ffffff;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1622; --grid:#172131; --panel:#151f2e; --panel-2:#1a2638; --line:#2a3a52;
+  --fg:#e8eef7; --muted:#93a3b8; --accent:#7ea2ff; --accent-fg:#0b1220;
+  --good:#5fd394; --good-bg:#12301f; --bad:#ff8a78; --bad-bg:#3a1a16;
+  --empty:#1e2a3c; --empty-edge:#2c3c55;
+  --tile-s:62%; --tile-l:52%; --tile-ink:#ffffff;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--panel);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
+.logo{display:grid;grid-template-columns:repeat(3,10px);gap:2px}
+.logo i{height:18px;border-radius:3px;display:block}
+.brand b{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand small{display:block;color:var(--muted);font-size:12px;line-height:1.2}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--panel-2)}
+.seg button{border:0;background:transparent;border-radius:999px;padding:5px 12px;font-weight:700;font-size:14px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.chip{border:1px solid var(--line);background:var(--panel-2);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
+
+/* intro + tabs */
+.intro{padding-block:28px 8px;display:flex;gap:24px;align-items:end;justify-content:space-between;flex-wrap:wrap}
+.intro h1{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4.4vw,46px);line-height:1.02;letter-spacing:-.03em;margin:0;text-wrap:balance;max-width:16ch}
+.intro p{margin:8px 0 0;color:var(--muted);max-width:52ch}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-block:16px 4px;scrollbar-width:none}
+.tabs a{flex:none;text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:9px 14px;font-weight:700;font-size:15px;display:flex;gap:8px;align-items:center}
+.tabs a .k{font-family:var(--f-display);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px}
+.tabs a[aria-current="page"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.tabs a[aria-current="page"] .k{color:var(--bg);border-color:color-mix(in srgb,var(--bg) 40%,transparent)}
+
+/* bench */
+main{padding-block:12px 40px}
+.bench{display:grid;grid-template-columns:300px minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:860px){.bench{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;min-width:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.panel h2{font-family:var(--f-display);font-size:22px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+.panel p.lead{margin:0 0 16px;color:var(--muted);font-size:15px}
+.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fields.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--muted)}
+.num,select.num{width:100%;border:1px solid var(--line);background:var(--panel-2);border-radius:10px;padding:10px 12px;font-family:var(--f-display);font-weight:700;font-size:20px;font-variant-numeric:tabular-nums}
+.stack{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.btn{border:1px solid var(--line);background:var(--panel-2);border-radius:999px;padding:10px 18px;font-weight:700}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:6px 12px;font-size:13px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.spacer{flex:1}
+.hint{border-radius:12px;padding:12px 14px;background:var(--panel-2);border:1px solid var(--line);font-size:15px}
+.hint b{font-family:var(--f-display)}
+.steps{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:14px;color:var(--muted)}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line);font-weight:700;color:var(--fg);font-size:13px}
+.steps li.on{color:var(--fg)}
+.steps li.on::before{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.steps li.ok::before{content:"✓";background:var(--good);border-color:var(--good);color:#fff}
+
+/* fraction typesetting */
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1;font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular-nums}
+.fr>span:first-child{border-bottom:.08em solid currentColor;padding:0 .12em .06em}
+.fr>span:last-child{padding-top:.06em}
+.mixed{display:inline-flex;align-items:center;gap:.12em;font-family:var(--f-display);font-weight:800}
+.big{font-size:48px}
+.equation{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.equation .arrow{font-size:30px;color:var(--accent);font-weight:800}
+.q{font-family:var(--f-display);font-weight:800;color:var(--muted)}
+
+/* strips */
+.strips{display:grid;gap:12px;margin-top:16px;touch-action:none;user-select:none;-webkit-user-select:none}
+.strip{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;align-items:center}
+.strip .meta{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.strip .meta .w{font-family:var(--f-display);font-weight:800;font-size:18px;line-height:1}
+.strip .meta small{font-size:11px;color:var(--muted);line-height:1.1}
+.track{display:flex;height:58px;border-radius:10px;overflow:hidden;border:2px solid var(--empty-edge);background:var(--empty)}
+.tile{flex:1 1 0;min-width:0;border:0;border-right:2px solid var(--empty-edge);background:transparent;display:grid;place-items:center;padding:0;position:relative;transition:background-color .12s,transform .12s}
+.tile:last-child{border-right:0}
+.tile .fr{font-size:14px;color:var(--muted);opacity:.85}
+.tile.on{background:hsl(var(--h) var(--tile-s) var(--tile-l));border-right-color:hsl(var(--h) var(--tile-s) calc(var(--tile-l) - 14%))}
+.tile.on .fr{color:var(--tile-ink);opacity:1}
+.tile.pop{animation:pop .22s ease-out}
+@keyframes pop{0%{transform:scale(.86)}100%{transform:scale(1)}}
+.strip.full .track{border-color:hsl(var(--h) var(--tile-s) calc(var(--tile-l) - 14%))}
+.strip.full .meta .w{color:hsl(var(--h) var(--tile-s) calc(var(--tile-l) - 8%))}
+.tiny .track{height:40px}
+.tiny .tile .fr{font-size:11px}
+@media (max-width:520px){
+  .strip{grid-template-columns:minmax(0,1fr)}
+  .strip .meta{flex-direction:row;justify-content:space-between}
+  .tile .fr{font-size:11px}
+}
+.counter{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;margin-top:14px}
+.counter b{font-family:var(--f-display);font-size:28px;font-variant-numeric:tabular-nums;color:var(--accent)}
+
+/* readout cards */
+.readout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+@media (max-width:640px){.readout{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ro{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-height:96px}
+.ro small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ro .v{font-family:var(--f-display);font-weight:800;font-size:28px;font-variant-numeric:tabular-nums;display:flex;align-items:center;flex:1}
+.ro .v .fr{font-size:22px}
+
+/* number line */
+.nl{margin-top:16px;overflow-x:auto}
+.nl svg{display:block;width:100%;height:auto;min-width:420px}
+.nl text{font-family:var(--f-display);font-weight:700;fill:var(--muted);font-size:13px}
+.nl .maj{stroke:var(--fg);stroke-width:2}
+.nl .min{stroke:var(--muted);stroke-width:1}
+.nl .base{stroke:var(--fg);stroke-width:2}
+
+/* answer area */
+.answer{margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.answer h3{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.answer .ask{margin:0 0 12px;font-weight:700}
+.ain{width:72px;text-align:center;border:2px solid var(--line);background:var(--panel-2);border-radius:10px;padding:6px;font-family:var(--f-display);font-weight:800;font-size:26px;font-variant-numeric:tabular-nums}
+.ain.whole{width:80px;font-size:34px}
+.afr{display:inline-flex;flex-direction:column;align-items:center;gap:4px}
+.afr .bar{width:100%;height:3px;background:var(--fg);border-radius:2px}
+.afr .den{font-family:var(--f-display);font-weight:800;font-size:26px}
+.fb{margin-top:12px;border-radius:12px;padding:12px 14px;font-weight:700;display:flex;gap:10px;align-items:flex-start}
+.fb.good{background:var(--good-bg);color:var(--good)}
+.fb.bad{background:var(--bad-bg);color:var(--bad)}
+.relation{margin-top:14px;background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+.relation small{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.relation div{font-family:var(--f-display);font-weight:800;font-size:24px;font-variant-numeric:tabular-nums}
+
+/* compare */
+.cmp{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:6px}
+.sym{font-family:var(--f-display);font-weight:800;font-size:56px;width:72px;height:72px;display:grid;place-items:center;border-radius:50%;background:var(--panel-2);border:2px solid var(--line)}
+.sym.eq{background:var(--good-bg);color:var(--good);border-color:var(--good)}
+.pick{display:flex;gap:8px;justify-content:center}
+.pick .btn{font-family:var(--f-display);font-size:24px;width:64px;padding:8px 0}
+
+/* quiz */
+.qhead{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:5px;flex-wrap:wrap}
+.dots i{width:22px;height:8px;border-radius:4px;background:var(--empty);display:block}
+.dots i.ok{background:var(--good)}
+.dots i.no{background:var(--bad)}
+.dots i.cur{background:var(--accent)}
+.stat{font-size:13px;color:var(--muted);font-weight:700}
+.stat b{font-family:var(--f-display);font-size:18px;color:var(--fg)}
+.qtext{font-family:var(--f-display);font-size:24px;font-weight:700;margin:18px 0 6px;text-wrap:balance}
+.stars{font-size:44px;letter-spacing:6px;color:#f2b632}
+.stars .off{color:var(--empty-edge)}
+
+footer{color:var(--muted);font-size:13px;padding-block:20px 32px;text-align:center}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:20;width:100%;height:100%}
+@media (prefers-reduced-motion:reduce){.tile,.tile.pop{animation:none;transition:none}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"><i style="background:hsl(352 72% 56%)"></i><i style="background:hsl(212 72% 56%)"></i><i style="background:hsl(146 60% 44%)"></i></div>
+      <div><b>FRACLAB</b><small data-i="tag"></small></div>
+    </div>
+    <div class="seg" role="group" aria-label="Bahasa / Language">
+      <button id="lang-bm" type="button" aria-pressed="true">BM</button>
+      <button id="lang-en" type="button" aria-pressed="false">EN</button>
+    </div>
+    <button id="sound" class="chip" type="button" aria-pressed="true"></button>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="intro">
+    <div>
+      <h1 data-i="h1"></h1>
+      <p data-i="sub"></p>
+    </div>
+  </section>
+  <nav class="tabs" aria-label="Mod">
+    <a href="#teroka" data-r="teroka"><span class="k">1</span><span data-i="t_explore"></span></a>
+    <a href="#bercampur" data-r="bercampur"><span class="k">2</span><span data-i="t_m2i"></span></a>
+    <a href="#tidak-wajar" data-r="tidak-wajar"><span class="k">3</span><span data-i="t_i2m"></span></a>
+    <a href="#banding" data-r="banding"><span class="k">4</span><span data-i="t_cmp"></span></a>
+    <a href="#kuiz" data-r="kuiz"><span class="k">5</span><span data-i="t_quiz"></span></a>
+  </nav>
+  <main id="view"></main>
+  <footer data-i="foot"></footer>
+</div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script>
+(()=>{
+'use strict';
+/* ---------- i18n ---------- */
+const T={
+ bm:{
+  tag:"Makmal Pecahan Interaktif",
+  h1:"Pecahan yang boleh disentuh.",
+  sub:"Seret jari atau tetikus untuk mengisi jubin. Setiap penyebut ada warnanya sendiri, jadi 1/3 dan 1/4 tidak pernah tertukar.",
+  t_explore:"Teroka",t_m2i:"Bercampur → Tidak wajar",t_i2m:"Tidak wajar → Bercampur",t_cmp:"Banding",t_quiz:"Kuiz",
+  foot:"FRACLAB · makmal pecahan untuk murid sekolah rendah",
+  sound_on:"Bunyi: ON",sound_off:"Bunyi: OFF",
+  whole:"keseluruhan",fillAll:"Isi penuh",clear:"Kosongkan",clearAll:"Kosongkan semua",
+  tilesFilled:"Jubin diisi",eachTile:"Setiap jubin",
+  ex_eyebrow:"Mod teroka",ex_title:"Bina sebarang pecahan",ex_lead:"Pilih saiz jubin dan bilangan jalur. Isi jubin dan lihat nilai yang sama ditulis dalam empat cara.",
+  den:"Penyebut",strips:"Jalur",whole_n:"Nombor bulat",num:"Pengangka",
+  ro_frac:"Pecahan",ro_mixed:"Bercampur",ro_dec:"Perpuluhan",ro_pct:"Peratus",
+  simplest:"Bentuk termudah",
+  m2i_eyebrow:"Tetapkan soalan",m2i_title:"Bina nombor bercampur",m2i_lead:"Pilih nilai, kemudian bina model dengan jubin pecahan.",
+  build:"Bina jalur",random:"Soalan rawak",
+  m2i_hint:(w,n,d)=>`Isi <b>${w} jalur penuh</b>, kemudian isi <b>${n} bahagian</b> pada jalur seterusnya.`,
+  m2i_hint0:(w)=>`Isi <b>${w} jalur penuh</b>.`,
+  m2i_s1:"Isi jalur penuh untuk nombor bulat.",m2i_s2:"Isi baki jubin untuk pengangka.",m2i_s3:"Kira semua jubin dan tulis jawapan.",
+  writeAns:"Tulis jawapan",askTiles:"Berapa jumlah jubin yang telah diisi?",check:"Semak",
+  relation:"Hubungan nombor",
+  ok_m2i:(w,n,d,t)=>`Betul! ${w} jalur × ${d} jubin + ${n} jubin = ${t} jubin.`,
+  modelShort:(have,need)=>`Model belum padan: ada ${have} jubin, soalan perlukan ${need}. Semak jalur dahulu.`,
+  wrong:"Belum tepat. Kira semula jubin berwarna, atau guna hubungan nombor di bawah.",
+  empty:"Isi kotak jawapan dahulu.",
+  i2m_eyebrow:"Tetapkan soalan",i2m_title:"Pecahkan pecahan tidak wajar",i2m_lead:"Isi jubin satu demi satu. Setiap kali jalur penuh, itu satu nombor bulat.",
+  i2m_hint:(n,d)=>`Isi <b>${n} jubin</b> bersaiz 1/${d}. Jubin akan menyusun dirinya ke dalam jalur.`,
+  i2m_s1:"Isi semua jubin pengangka.",i2m_s2:"Kira jalur yang penuh: itu nombor bulat.",i2m_s3:"Jubin yang tinggal ialah pengangka baru.",
+  askMixed:"Berapa jalur penuh, dan berapa jubin yang tinggal?",
+  addTile:"+1 jubin",removeTile:"−1 jubin",autoFill:"Isi semua",
+  ok_i2m:(n,d,w,r)=>`Betul! ${n} ÷ ${d} = ${w} baki ${r}.`,
+  divRel:(n,d)=>`${n} ÷ ${d} = ? baki ?`,
+  cmp_eyebrow:"Mod banding",cmp_title:"Mana lebih besar?",cmp_lead:"Letak dua pecahan bersebelahan. Jalur yang sama panjang menjadikan perbandingan adil.",
+  first:"Pecahan A",second:"Pecahan B",
+  cmp_guess:"Teka dahulu: pilih simbol yang betul.",
+  cmp_ok:"Tepat!",cmp_no:"Cuba lihat jalur sekali lagi.",
+  cmp_eq:(a,b,c,d)=>`${a}/${b} dan ${c}/${d} ialah pecahan setara.`,
+  cross:"Darab silang",
+  swap:"Tukar",
+  quiz_eyebrow:"Kuiz 10 soalan",quiz_title:"Uji kefahaman",quiz_lead:"Empat jenis soalan bercampur. Jawapan betul berturut-turut menaikkan rentetan.",
+  start:"Mula kuiz",next:"Soalan seterusnya",again:"Main semula",
+  score:"Markah",streak:"Rentetan",best:"Terbaik",
+  q_m2i:"Tukar kepada pecahan tidak wajar.",q_i2m:"Tukar kepada nombor bercampur.",q_read:"Pecahan tidak wajar apakah yang ditunjukkan oleh model?",q_cmp:"Pilih simbol yang betul.",
+  q_ok:"Betul!",q_no:(a)=>`Jawapan: ${a}`,
+  done:(s)=>`Anda dapat ${s} daripada 10.`,
+  done_msg:[ "Teruskan berlatih. Mulakan dengan mod Teroka.","Bagus! Ulang kuiz untuk rentetan lebih panjang.","Hebat! Anda sudah menguasai pecahan."],
+  newBest:"Rekod baharu!",
+ },
+ en:{
+  tag:"Interactive Fraction Lab",
+  h1:"Fractions you can touch.",
+  sub:"Drag a finger or mouse to fill tiles. Every denominator has its own colour, so 1/3 and 1/4 never get mixed up.",
+  t_explore:"Explore",t_m2i:"Mixed → Improper",t_i2m:"Improper → Mixed",t_cmp:"Compare",t_quiz:"Quiz",
+  foot:"FRACLAB · a fraction lab for primary school pupils",
+  sound_on:"Sound: ON",sound_off:"Sound: OFF",
+  whole:"whole",fillAll:"Fill whole",clear:"Clear",clearAll:"Clear all",
+  tilesFilled:"Tiles filled",eachTile:"Each tile",
+  ex_eyebrow:"Explore mode",ex_title:"Build any fraction",ex_lead:"Choose a tile size and how many strips. Fill tiles and see the same value written four ways.",
+  den:"Denominator",strips:"Strips",whole_n:"Whole number",num:"Numerator",
+  ro_frac:"Fraction",ro_mixed:"Mixed",ro_dec:"Decimal",ro_pct:"Percent",
+  simplest:"Simplest form",
+  m2i_eyebrow:"Set the question",m2i_title:"Build a mixed number",m2i_lead:"Pick the values, then build the model with fraction tiles.",
+  build:"Build strips",random:"Random question",
+  m2i_hint:(w,n,d)=>`Fill <b>${w} whole strip${w>1?'s':''}</b>, then fill <b>${n} part${n>1?'s':''}</b> of the next strip.`,
+  m2i_hint0:(w)=>`Fill <b>${w} whole strip${w>1?'s':''}</b>.`,
+  m2i_s1:"Fill whole strips for the whole number.",m2i_s2:"Fill the remaining tiles for the numerator.",m2i_s3:"Count every tile and write the answer.",
+  writeAns:"Write the answer",askTiles:"How many tiles are filled in total?",check:"Check",
+  relation:"Number relation",
+  ok_m2i:(w,n,d,t)=>`Correct! ${w} strip${w>1?'s':''} × ${d} tiles + ${n} tiles = ${t} tiles.`,
+  modelShort:(have,need)=>`The model doesn't match yet: it has ${have} tiles, the question needs ${need}. Check the strips first.`,
+  wrong:"Not quite. Count the coloured tiles again, or use the number relation below.",
+  empty:"Fill in the answer box first.",
+  i2m_eyebrow:"Set the question",i2m_title:"Break up an improper fraction",i2m_lead:"Fill tiles one by one. Every full strip is one whole.",
+  i2m_hint:(n,d)=>`Fill <b>${n} tiles</b> of size 1/${d}. The tiles pack themselves into strips.`,
+  i2m_s1:"Fill all the numerator tiles.",i2m_s2:"Count the full strips: that's the whole number.",i2m_s3:"The leftover tiles are the new numerator.",
+  askMixed:"How many full strips, and how many tiles are left over?",
+  addTile:"+1 tile",removeTile:"−1 tile",autoFill:"Fill all",
+  ok_i2m:(n,d,w,r)=>`Correct! ${n} ÷ ${d} = ${w} remainder ${r}.`,
+  divRel:(n,d)=>`${n} ÷ ${d} = ? remainder ?`,
+  cmp_eyebrow:"Compare mode",cmp_title:"Which is bigger?",cmp_lead:"Put two fractions side by side. Strips of the same length make the comparison fair.",
+  first:"Fraction A",second:"Fraction B",
+  cmp_guess:"Guess first: pick the right symbol.",
+  cmp_ok:"Spot on!",cmp_no:"Look at the strips once more.",
+  cmp_eq:(a,b,c,d)=>`${a}/${b} and ${c}/${d} are equivalent fractions.`,
+  cross:"Cross-multiply",
+  swap:"Swap",
+  quiz_eyebrow:"10-question quiz",quiz_title:"Test yourself",quiz_lead:"Four kinds of question, mixed up. Correct answers in a row build your streak.",
+  start:"Start quiz",next:"Next question",again:"Play again",
+  score:"Score",streak:"Streak",best:"Best",
+  q_m2i:"Convert to an improper fraction.",q_i2m:"Convert to a mixed number.",q_read:"Which improper fraction does the model show?",q_cmp:"Pick the right symbol.",
+  q_ok:"Correct!",q_no:(a)=>`Answer: ${a}`,
+  done:(s)=>`You scored ${s} out of 10.`,
+  done_msg:["Keep practising. Start with Explore mode.","Nice! Replay for a longer streak.","Brilliant! You've mastered fractions."],
+  newBest:"New record!",
+ }
+};
+const store={get(k,d){try{const v=localStorage.getItem('fraclab.'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('fraclab.'+k,JSON.stringify(v))}catch(e){}}};
+let lang=store.get('lang','bm'); let soundOn=store.get('sound',true);
+const t=(k,...a)=>{const v=T[lang][k];return typeof v==='function'?v(...a):v};
+
+/* ---------- helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const h=(html)=>{const d=document.createElement('div');d.innerHTML=html.trim();return d.firstElementChild};
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const HUE={1:352,2:20,3:42,4:146,5:186,6:212,7:262,8:300,9:330,10:96,11:170,12:236};
+const fr=(n,d)=>`<span class="fr"><span>${n}</span><span>${d}</span></span>`;
+const mixed=(w,n,d)=>!n?`<span class="mixed">${w}</span>`:(w?`<span class="mixed">${w}${fr(n,d)}</span>`:fr(n,d));
+const reduced=v=>v.toFixed(3).replace(/\.?0+$/,'');
+const prefersReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- sound ---------- */
+let ac=null;
+function tone(freq,dur=.08,type='sine',vol=.08,when=0){
+  if(!soundOn)return;
+  try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+  const o=ac.createOscillator(),g=ac.createGain(),s=ac.currentTime+when;
+  o.type=type;o.frequency.setValueAtTime(freq,s);g.gain.setValueAtTime(vol,s);g.gain.exponentialRampToValueAtTime(.0001,s+dur);
+  o.connect(g).connect(ac.destination);o.start(s);o.stop(s+dur+.02);}catch(e){}
+}
+const sfx={
+  tile:(i,d)=>tone(330*Math.pow(2,(i%(d||8))/(d||8)),.07,'triangle',.06),
+  whole:()=>{tone(523,.1,'triangle');tone(784,.14,'triangle',.07,.08)},
+  good:()=>{[523,659,784,1047].forEach((f,i)=>tone(f,.16,'triangle',.08,i*.08))},
+  bad:()=>{tone(196,.18,'sawtooth',.04);tone(165,.22,'sawtooth',.04,.1)},
+};
+
+/* ---------- confetti ---------- */
+const cv=$('#confetti'),cx=cv.getContext('2d');let parts=[],raf=0;
+function confetti(){
+  if(prefersReduced)return;
+  cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio;
+  const hues=Object.values(HUE);
+  for(let i=0;i<120;i++)parts.push({x:innerWidth/2,y:innerHeight*.35,vx:(Math.random()-.5)*14,vy:-Math.random()*12-4,w:6+Math.random()*8,h:4+Math.random()*6,r:Math.random()*6,vr:(Math.random()-.5)*.4,c:`hsl(${hues[i%hues.length]} 75% 58%)`,life:0});
+  if(!raf)raf=requestAnimationFrame(step);
+}
+function step(){
+  cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);cx.clearRect(0,0,innerWidth,innerHeight);
+  parts.forEach(p=>{p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life++;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
+  parts=parts.filter(p=>p.y<innerHeight+40&&p.life<240);
+  raf=parts.length?requestAnimationFrame(step):(cx.clearRect(0,0,innerWidth,innerHeight),0);
+}
+
+/* ---------- strip component ----------
+   model: array of arrays of booleans (one array per strip). */
+function strips(model,d,{onChange,readonly=false,tiny=false,fillBtns=true}={}){
+  const root=h(`<div class="strips${tiny?' tiny':''}"></div>`);
+  root.style.setProperty('--h',HUE[d]||212);
+  model.forEach((row,si)=>{
+    const full=row.every(Boolean);
+    const s=h(`<div class="strip${full?' full':''}">
+      <div class="meta"><span class="w">1</span><small>${t('whole')}</small>${(!readonly&&fillBtns)?`<button type="button" class="btn sm" data-fill="${si}">${full?t('clear'):t('fillAll')}</button>`:''}</div>
+      <div class="track" role="group" aria-label="${t('whole')} ${si+1}"></div></div>`);
+    const tr=$('.track',s);
+    row.forEach((on,ti)=>{
+      const b=h(`<button type="button" class="tile${on?' on':''}" data-s="${si}" data-t="${ti}" aria-pressed="${on}" ${readonly?'tabindex="-1" disabled':''}>${d<=12?fr(1,d):''}</button>`);
+      tr.appendChild(b);
+    });
+    root.appendChild(s);
+  });
+  if(readonly)return root;
+  let paint=null;
+  const apply=(el)=>{
+    if(!el||!el.classList.contains('tile'))return;
+    const si=+el.dataset.s,ti=+el.dataset.t;
+    if(model[si][ti]===paint)return;
+    model[si][ti]=paint;el.classList.toggle('on',paint);el.setAttribute('aria-pressed',paint);
+    if(paint){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}
+    sfx.tile(ti,d);
+    refreshFull(si);onChange&&onChange();
+  };
+  const refreshFull=(si)=>{
+    const s=root.children[si];const full=model[si].every(Boolean);
+    if(full&&!s.classList.contains('full'))sfx.whole();
+    s.classList.toggle('full',full);const b=$('[data-fill]',s);if(b)b.textContent=full?t('clear'):t('fillAll');
+  };
+  root.addEventListener('pointerdown',e=>{
+    const el=e.target.closest('.tile');if(!el)return;
+    e.preventDefault();paint=!model[+el.dataset.s][+el.dataset.t];apply(el);
+  });
+  root.addEventListener('pointermove',e=>{if(paint===null)return;apply(document.elementFromPoint(e.clientX,e.clientY)?.closest('.tile'))});
+  const end=()=>paint=null;addEventListener('pointerup',end);addEventListener('pointercancel',end);
+  root.addEventListener('keydown',e=>{const el=e.target.closest('.tile');if(el&&(e.key===' '||e.key==='Enter')){e.preventDefault();paint=!model[+el.dataset.s][+el.dataset.t];apply(el);paint=null}});
+  root.addEventListener('click',e=>{
+    const b=e.target.closest('[data-fill]');if(!b)return;
+    const si=+b.dataset.fill;const full=model[si].every(Boolean);
+    model[si]=model[si].map(()=>!full);
+    [...root.children[si].querySelectorAll('.tile')].forEach((el,i)=>{el.classList.toggle('on',!full);el.setAttribute('aria-pressed',!full);if(!full){el.style.animationDelay=(i*25)+'ms';el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop')}});
+    refreshFull(si);onChange&&onChange();
+  });
+  return root;
+}
+const count=m=>m.flat().filter(Boolean).length;
+const blank=(n,d)=>Array.from({length:n},()=>Array(d).fill(false));
+const packed=(k,d,n)=>Array.from({length:n},(_,i)=>Array.from({length:d},(_,j)=>i*d+j<k));
+
+/* ---------- number line ---------- */
+function numberLine(values,d,max){
+  const W=720,H=86,pad=28,span=W-pad*2,x=v=>pad+span*v/max;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="number line"><line class="base" x1="${pad}" y1="50" x2="${W-pad}" y2="50"/>`;
+  const step=max*d>60?d:1;
+  for(let i=0;i<=max*d;i+=step){const maj=i%d===0;s+=`<line class="${maj?'maj':'min'}" x1="${x(i/d)}" x2="${x(i/d)}" y1="${maj?40:45}" y2="${maj?60:55}"/>`;if(maj)s+=`<text x="${x(i/d)}" y="78" text-anchor="middle">${i/d}</text>`}
+  values.forEach(({v,hue,label},k)=>{const X=x(Math.min(v,max));s+=`<g style="transition:transform .3s"><circle cx="${X}" cy="50" r="9" fill="hsl(${hue} 72% 52%)" stroke="var(--panel)" stroke-width="3"/>${label?`<text x="${X}" y="${k?28:22}" text-anchor="middle" style="fill:hsl(${hue} 60% 45%)">${label}</text>`:''}</g>`});
+  return `<div class="nl">${s}</svg></div>`;
+}
+
+/* ---------- views ---------- */
+const S={
+  ex:{d:4,n:2,model:packed(5,4,2)},
+  m2i:{w:2,n:3,d:7,model:blank(3,7),solved:false},
+  i2m:{n:17,d:5,k:0,solved:false},
+  cmp:{a:2,b:3,c:3,d:4,guess:null},
+  quiz:null,
+};
+const view=$('#view');
+const opts=(from,to,sel)=>{let o='';for(let i=from;i<=to;i++)o+=`<option ${i===sel?'selected':''}>${i}</option>`;return o};
+
+function viewExplore(){
+  const st=S.ex;
+  const el=h(`<div class="bench">
+    <aside class="panel"><p class="eyebrow">${t('ex_eyebrow')}</p><h2>${t('ex_title')}</h2><p class="lead">${t('ex_lead')}</p>
+      <div class="fields two"><label class="f">${t('den')}<select id="ex-d" class="num">${opts(1,12,st.d)}</select></label>
+      <label class="f">${t('strips')}<select id="ex-n" class="num">${opts(1,4,st.n)}</select></label></div>
+      <div class="stack"><button id="ex-clear" class="btn ghost" type="button">${t('clearAll')}</button></div>
+    </aside>
+    <section class="panel"><div class="row"><span class="hint">${t('eachTile')} = <b>1/${st.d}</b></span><span class="spacer"></span><span class="stat">${t('tilesFilled')}: <b id="ex-k">0</b></span></div>
+      <div id="ex-strips"></div><div id="ex-out"></div></section></div>`);
+  const out=()=>{
+    const k=count(st.model),d=st.d,g=gcd(k,d)||1,w=Math.floor(k/d),r=k%d;
+    $('#ex-k',el).textContent=k;
+    $('#ex-out',el).innerHTML=`<div class="readout">
+      <div class="ro"><small>${t('ro_frac')}</small><span class="v">${fr(k,d)}</span></div>
+      <div class="ro"><small>${t('ro_mixed')}</small><span class="v">${mixed(w,r,d)}</span></div>
+      <div class="ro"><small>${t('ro_dec')}</small><span class="v">${reduced(k/d)}</span></div>
+      <div class="ro"><small>${t('ro_pct')}</small><span class="v">${reduced(k/d*100)}%</span></div></div>
+      ${g>1&&k?`<p class="stat" style="margin:10px 0 0">${t('simplest')}: <b>${k/g}/${d/g}</b></p>`:''}
+      ${numberLine([{v:k/d,hue:HUE[d],label:`${k}/${d}`}],d,st.n)}`;
+  };
+  const draw=()=>{$('#ex-strips',el).replaceChildren(strips(st.model,st.d,{onChange:out}));out()};
+  $('#ex-d',el).onchange=e=>{const k=count(st.model);st.d=+e.target.value;st.model=packed(Math.min(k,st.d*st.n),st.d,st.n);el.replaceWith(viewExplore())};
+  $('#ex-n',el).onchange=e=>{const k=count(st.model);st.n=+e.target.value;st.model=packed(Math.min(k,st.d*st.n),st.d,st.n);el.replaceWith(viewExplore())};
+  $('#ex-clear',el).onclick=()=>{st.model=blank(st.n,st.d);draw()};
+  draw();return el;
+}
+
+function viewM2I(){
+  const st=S.m2i,{w,n,d}=st,total=w*d+n;
+  const el=h(`<div class="bench">
+    <aside class="panel"><p class="eyebrow">${t('m2i_eyebrow')}</p><h2>${t('m2i_title')}</h2><p class="lead">${t('m2i_lead')}</p>
+      <div class="fields"><label class="f">${t('whole_n')}<select id="m-w" class="num">${opts(1,3,w)}</select></label>
+      <label class="f">${t('num')}<select id="m-n" class="num">${opts(0,d-1,n)}</select></label>
+      <label class="f">${t('den')}<select id="m-d" class="num">${opts(2,12,d)}</select></label></div>
+      <div class="stack"><button id="m-rand" class="btn ghost" type="button">${t('random')}</button></div>
+      <ol class="steps" id="m-steps"><li>${t('m2i_s1')}</li><li>${t('m2i_s2')}</li><li>${t('m2i_s3')}</li></ol>
+    </aside>
+    <section class="panel">
+      <div class="row"><div class="equation"><span class="big">${mixed(w,n,d)}</span><span class="arrow">→</span><span class="big q">?</span></div><span class="spacer"></span><span class="hint">${t('eachTile')} = <b>1/${d}</b></span></div>
+      <p class="hint" style="margin:14px 0 0">${n?t('m2i_hint',w,n,d):t('m2i_hint0',w)}</p>
+      <div class="counter"><span class="stat">${t('tilesFilled')}: <b id="m-k">0</b></span></div>
+      <div id="m-strips"></div>
+      <div class="answer"><h3>${t('writeAns')}</h3><p class="ask">${t('askTiles')}</p>
+        <div class="row"><span class="big" style="font-size:36px">${mixed(w,n,d)}</span><span style="font-size:30px;font-weight:800">=</span>
+          <span class="afr"><input id="m-ans" class="ain" inputmode="numeric" autocomplete="off" aria-label="${t('num')}"><span class="bar"></span><span class="den">${d}</span></span>
+          <button id="m-check" class="btn primary" type="button">${t('check')}</button></div>
+        <div id="m-fb"></div>
+        <div class="relation"><small>${t('relation')}</small><div id="m-rel">${w} × ${d} + ${n} = ?</div></div>
+      </div></section></div>`);
+  const steps=()=>{
+    const m=st.model,fullW=m.slice(0,w).every(r=>r.every(Boolean)),k=count(m);
+    $('#m-k',el).textContent=k;
+    const li=[...el.querySelectorAll('#m-steps li')];
+    li[0].className=fullW?'ok':'on';
+    li[1].className=fullW&&k===total?'ok':(fullW?'on':'');
+    li[2].className=st.solved?'ok':(k===total?'on':'');
+  };
+  $('#m-strips',el).append(strips(st.model,d,{onChange:steps}));
+  const reset=(nw,nn,nd)=>{nn=Math.min(nn,nd-1);Object.assign(st,{w:nw,n:nn,d:nd,model:blank(nw+(nn?1:0),nd),solved:false});el.replaceWith(viewM2I())};
+  $('#m-w',el).onchange=e=>reset(+e.target.value,n,d);
+  $('#m-n',el).onchange=e=>reset(w,+e.target.value,d);
+  $('#m-d',el).onchange=e=>reset(w,n,+e.target.value);
+  $('#m-rand',el).onclick=()=>{const dd=rnd(2,10);reset(rnd(1,3),rnd(1,dd-1),dd)};
+  const check=()=>{
+    const v=$('#m-ans',el).value.trim(),fb=$('#m-fb',el),k=count(st.model);
+    if(!v){fb.innerHTML=`<div class="fb bad">${t('empty')}</div>`;return}
+    if(+v===total){
+      st.solved=true;fb.innerHTML=`<div class="fb good">${t('ok_m2i',w,n,d,total)}</div>`;$('#m-rel',el).textContent=`${w} × ${d} + ${n} = ${total}`;
+      $('.q',el).outerHTML=`<span class="big">${fr(total,d)}</span>`;
+      if(k!==total){st.model=packed(total,d,st.model.length);$('#m-strips',el).replaceChildren(strips(st.model,d,{onChange:steps}))}
+      sfx.good();confetti();
+    }else{fb.innerHTML=`<div class="fb bad">${k!==total?t('modelShort',k,total):t('wrong')}</div>`;sfx.bad()}
+    steps();
+  };
+  $('#m-check',el).onclick=check;$('#m-ans',el).onkeydown=e=>{if(e.key==='Enter')check()};
+  steps();return el;
+}
+
+function viewI2M(){
+  const st=S.i2m,{n,d}=st,W=Math.floor(n/d),R=n%d,rows=Math.ceil(n/d);
+  const el=h(`<div class="bench">
+    <aside class="panel"><p class="eyebrow">${t('i2m_eyebrow')}</p><h2>${t('i2m_title')}</h2><p class="lead">${t('i2m_lead')}</p>
+      <div class="fields two"><label class="f">${t('num')}<select id="i-n" class="num">${opts(d+1,d*3+d-1,n)}</select></label>
+      <label class="f">${t('den')}<select id="i-d" class="num">${opts(2,10,d)}</select></label></div>
+      <div class="stack"><button id="i-rand" class="btn ghost" type="button">${t('random')}</button></div>
+      <ol class="steps" id="i-steps"><li>${t('i2m_s1')}</li><li>${t('i2m_s2')}</li><li>${t('i2m_s3')}</li></ol>
+    </aside>
+    <section class="panel">
+      <div class="row"><div class="equation"><span class="big">${fr(n,d)}</span><span class="arrow">→</span><span class="big q">?</span></div><span class="spacer"></span><span class="hint">${t('eachTile')} = <b>1/${d}</b></span></div>
+      <p class="hint" style="margin:14px 0 0">${t('i2m_hint',n,d)}</p>
+      <div class="counter"><span class="stat">${t('tilesFilled')}: <b id="i-k">0</b> / ${n}</span><span class="spacer"></span>
+        <div class="row"><button id="i-minus" class="btn sm" type="button">${t('removeTile')}</button><button id="i-plus" class="btn sm primary" type="button">${t('addTile')}</button><button id="i-all" class="btn sm ghost" type="button">${t('autoFill')}</button></div></div>
+      <div id="i-strips"></div>
+      <div class="answer"><h3>${t('writeAns')}</h3><p class="ask">${t('askMixed')}</p>
+        <div class="row"><span class="big" style="font-size:36px">${fr(n,d)}</span><span style="font-size:30px;font-weight:800">=</span>
+          <input id="i-w" class="ain whole" inputmode="numeric" autocomplete="off" aria-label="${t('whole_n')}">
+          <span class="afr"><input id="i-r" class="ain" inputmode="numeric" autocomplete="off" aria-label="${t('num')}"><span class="bar"></span><span class="den">${d}</span></span>
+          <button id="i-check" class="btn primary" type="button">${t('check')}</button></div>
+        <div id="i-fb"></div>
+        <div class="relation"><small>${t('relation')}</small><div id="i-rel">${t('divRel',n,d)}</div></div>
+      </div></section></div>`);
+  const draw=(animate)=>{
+    const m=packed(st.k,d,rows);
+    $('#i-strips',el).replaceChildren(strips(m,d,{readonly:true}));
+    $('#i-k',el).textContent=st.k;
+    if(animate&&st.k){const tl=el.querySelectorAll('.tile.on');const last=tl[tl.length-1];last&&last.classList.add('pop')}
+    const li=[...el.querySelectorAll('#i-steps li')];
+    li[0].className=st.k>=n?'ok':'on';li[1].className=st.k>=n?(st.solved?'ok':'on'):'';li[2].className=st.solved?'ok':(st.k>=n?'on':'');
+    $('#i-plus',el).disabled=st.k>=n;$('#i-minus',el).disabled=st.k<=0;
+  };
+  const add=()=>{if(st.k>=n)return;st.k++;sfx.tile((st.k-1)%d,d);if(st.k%d===0)sfx.whole();draw(true)};
+  $('#i-plus',el).onclick=add;
+  $('#i-minus',el).onclick=()=>{if(st.k>0){st.k--;draw()}};
+  $('#i-all',el).onclick=()=>{const go=()=>{if(st.k<n){add();setTimeout(go,prefersReduced?0:70)}};go()};
+  const reset=(nn,nd)=>{Object.assign(st,{n:nn,d:nd,k:0,solved:false});el.replaceWith(viewI2M())};
+  $('#i-n',el).onchange=e=>reset(+e.target.value,d);
+  $('#i-d',el).onchange=e=>{const nd=+e.target.value;reset(Math.min(Math.max(n,nd+1),nd*4-1),nd)};
+  $('#i-rand',el).onclick=()=>{const dd=rnd(2,9);let nn=rnd(dd+1,dd*4-1);reset(nn,dd)};
+  const check=()=>{
+    const a=$('#i-w',el).value.trim(),b=$('#i-r',el).value.trim(),fb=$('#i-fb',el);
+    if(a===''||(R&&b==='')){fb.innerHTML=`<div class="fb bad">${t('empty')}</div>`;return}
+    if(+a===W&&(+b||0)===R){
+      st.solved=true;fb.innerHTML=`<div class="fb good">${t('ok_i2m',n,d,W,R)}</div>`;$('#i-rel',el).textContent=lang==='bm'?`${n} ÷ ${d} = ${W} baki ${R}`:`${n} ÷ ${d} = ${W} remainder ${R}`;
+      $('.q',el).outerHTML=`<span class="big">${mixed(W,R,d)}</span>`;
+      if(st.k<n){st.k=n}draw();sfx.good();confetti();
+    }else{fb.innerHTML=`<div class="fb bad">${st.k<n?t('modelShort',st.k,n):t('wrong')}</div>`;sfx.bad()}
+  };
+  $('#i-check',el).onclick=check;el.querySelectorAll('.ain').forEach(i=>i.onkeydown=e=>{if(e.key==='Enter')check()});
+  draw();return el;
+}
+
+function viewCompare(){
+  const st=S.cmp,{a,b,c,d}=st,L=a*d,R=c*b,real=L>R?'>':L<R?'<':'=';
+  const g=st.guess;
+  const fsel=(id,v,lo,hi)=>`<select id="${id}" class="num">${opts(lo,hi,v)}</select>`;
+  const el=h(`<div class="bench">
+    <aside class="panel"><p class="eyebrow">${t('cmp_eyebrow')}</p><h2>${t('cmp_title')}</h2><p class="lead">${t('cmp_lead')}</p>
+      <div class="fields two"><label class="f">${t('first')} · ${t('num')}${fsel('c-a',a,0,b)}</label><label class="f">${t('den')}${fsel('c-b',b,1,12)}</label>
+      <label class="f">${t('second')} · ${t('num')}${fsel('c-c',c,0,d)}</label><label class="f">${t('den')}${fsel('c-d',d,1,12)}</label></div>
+      <div class="stack"><button id="c-rand" class="btn ghost" type="button">${t('random')}</button><button id="c-swap" class="btn ghost" type="button">${t('swap')}</button></div>
+    </aside>
+    <section class="panel">
+      <div class="cmp"><span class="big">${fr(a,b)}</span><span class="sym${g&&real==='='?' eq':''}">${g?real:'?'}</span><span class="big">${fr(c,d)}</span></div>
+      <p style="text-align:center;margin:10px 0" class="stat">${g?(g===real?t('cmp_ok'):t('cmp_no')):t('cmp_guess')}</p>
+      <div class="pick">${['<','=','>'].map(s=>`<button type="button" class="btn${g===s?(s===real?' primary':''):''}" data-g="${s}" aria-pressed="${g===s}">${s}</button>`).join('')}</div>
+      <div id="c-a-s"></div><div id="c-c-s"></div>
+      ${numberLine([{v:a/b,hue:HUE[b],label:`${a}/${b}`},{v:c/d,hue:HUE[d],label:`${c}/${d}`}],Math.max(b,d),1)}
+      ${g?`<div class="relation"><small>${t('cross')}</small><div>${a} × ${d} = ${L} &nbsp; ${real} &nbsp; ${c} × ${b} = ${R}</div>${real==='='?`<p class="stat" style="margin:6px 0 0">${t('cmp_eq',a,b,c,d)}</p>`:''}</div>`:''}
+    </section></div>`);
+  $('#c-a-s',el).append(strips([Array.from({length:b},(_,i)=>i<a)],b,{readonly:true}));
+  $('#c-c-s',el).append(strips([Array.from({length:d},(_,i)=>i<c)],d,{readonly:true}));
+  const upd=(o)=>{Object.assign(st,o,{guess:null});st.a=Math.min(st.a,st.b);st.c=Math.min(st.c,st.d);el.replaceWith(viewCompare())};
+  $('#c-a',el).onchange=e=>upd({a:+e.target.value});$('#c-b',el).onchange=e=>upd({b:+e.target.value});
+  $('#c-c',el).onchange=e=>upd({c:+e.target.value});$('#c-d',el).onchange=e=>upd({d:+e.target.value});
+  $('#c-swap',el).onclick=()=>upd({a:c,b:d,c:a,d:b});
+  $('#c-rand',el).onclick=()=>{let B=rnd(2,12),D=rnd(2,12);if(Math.random()<.3){const k=rnd(2,3);const base=rnd(2,4);B=base;D=base*k;const A=rnd(1,B-1);return upd({a:A,b:B,c:A*k,d:D})}upd({a:rnd(1,B-1),b:B,c:rnd(1,D-1),d:D})};
+  el.querySelectorAll('[data-g]').forEach(btn=>btn.onclick=()=>{st.guess=btn.dataset.g;if(st.guess===real){sfx.good();confetti()}else sfx.bad();el.replaceWith(viewCompare())});
+  return el;
+}
+
+/* quiz */
+function makeQ(){
+  const type=['m2i','i2m','read','cmp'][rnd(0,3)];
+  if(type==='cmp'){let B=rnd(2,10),D=rnd(2,10);let A=rnd(1,B-1),C=rnd(1,D-1);if(Math.random()<.25){const k=rnd(2,3);D=B*k<=12?B*k:B;C=D===B?A:A*k}const L=A*D,R=C*B;return{type,A,B,C,D,ans:L>R?'>':L<R?'<':'='}}
+  const d=rnd(2,9),w=rnd(1,3),n=rnd(1,d-1),total=w*d+n;
+  return {type,d,w,n,total};
+}
+function viewQuiz(){
+  const st=S.quiz;const best=store.get('best',0);
+  if(!st||st.i>=10){
+    const finished=st&&st.i>=10;const sc=finished?st.score:0;
+    const stars=finished?(sc>=9?3:sc>=6?2:sc>=3?1:0):0;
+    const el=h(`<div class="bench">
+      <aside class="panel"><p class="eyebrow">${t('quiz_eyebrow')}</p><h2>${t('quiz_title')}</h2><p class="lead">${t('quiz_lead')}</p>
+        <p class="stat">${t('best')}: <b>${best}/10</b></p></aside>
+      <section class="panel" style="text-align:center">
+        ${finished?`<div class="stars" aria-label="${stars}/3">${[0,1,2].map(i=>`<span class="${i<stars?'':'off'}">★</span>`).join('')}</div>
+          <p class="qtext">${t('done',sc)}</p><p class="stat">${t('done_msg')[Math.min(2,Math.max(0,stars-1))]}${st.newBest?` · <b>${t('newBest')}</b>`:''}</p>
+          <div class="dots" style="justify-content:center;margin:14px 0">${st.res.map(r=>`<i class="${r?'ok':'no'}"></i>`).join('')}</div>`
+        :`<div class="readout" style="text-align:left;margin-top:0">
+            <div class="ro"><small>${t('t_m2i')}</small><span class="v">${mixed(2,1,4)}</span></div>
+            <div class="ro"><small>${t('t_i2m')}</small><span class="v">${fr(11,3)}</span></div>
+            <div class="ro"><small>Model</small><span class="v">${fr(7,5)}</span></div>
+            <div class="ro"><small>${t('t_cmp')}</small><span class="v" style="gap:6px">${fr(2,3)}<span>?</span>${fr(3,4)}</span></div></div>`}
+        <div class="row" style="justify-content:center;margin-top:18px"><button id="q-start" class="btn primary" type="button">${finished?t('again'):t('start')}</button></div>
+      </section></div>`);
+    $('#q-start',el).onclick=()=>{S.quiz={i:0,score:0,streak:0,res:[],q:makeQ(),answered:null};el.replaceWith(viewQuiz());$('#view input, #view [data-g]')?.focus()};
+    return el;
+  }
+  const q=st.q,ans=st.answered;
+  let body='',prompt='';
+  if(q.type==='m2i'){prompt=t('q_m2i');body=`<div class="row" style="justify-content:center"><span class="big">${mixed(q.w,q.n,q.d)}</span><span style="font-size:30px;font-weight:800">=</span><span class="afr"><input id="q-a" class="ain" inputmode="numeric" autocomplete="off" aria-label="${t('num')}"><span class="bar"></span><span class="den">${q.d}</span></span></div>`}
+  if(q.type==='i2m'){prompt=t('q_i2m');body=`<div class="row" style="justify-content:center"><span class="big">${fr(q.total,q.d)}</span><span style="font-size:30px;font-weight:800">=</span><input id="q-w" class="ain whole" inputmode="numeric" autocomplete="off" aria-label="${t('whole_n')}"><span class="afr"><input id="q-a" class="ain" inputmode="numeric" autocomplete="off" aria-label="${t('num')}"><span class="bar"></span><span class="den">${q.d}</span></span></div>`}
+  if(q.type==='read'){prompt=t('q_read');body=`<div id="q-model"></div><div class="row" style="justify-content:center;margin-top:14px"><span class="afr"><input id="q-a" class="ain" inputmode="numeric" autocomplete="off" aria-label="${t('num')}"><span class="bar"></span><span class="den">${q.d}</span></span></div>`}
+  if(q.type==='cmp'){prompt=t('q_cmp');body=`<div class="cmp"><span class="big">${fr(q.A,q.B)}</span><span class="sym">${ans?q.ans:'?'}</span><span class="big">${fr(q.C,q.D)}</span></div><div class="pick" style="margin-top:12px">${['<','=','>'].map(s=>`<button type="button" class="btn" data-g="${s}" ${ans?'disabled':''}>${s}</button>`).join('')}</div>`}
+  const answerText=q.type==='m2i'||q.type==='read'?`${q.total}/${q.d}`:q.type==='i2m'?`${q.w} ${q.n}/${q.d}`:q.ans;
+  const el=h(`<div class="bench">
+    <aside class="panel"><p class="eyebrow">${t('quiz_eyebrow')}</p><h2>${st.i+1} / 10</h2>
+      <div class="dots" style="margin:10px 0 16px">${Array.from({length:10},(_,i)=>`<i class="${i<st.res.length?(st.res[i]?'ok':'no'):i===st.i?'cur':''}"></i>`).join('')}</div>
+      <div class="row"><span class="stat">${t('score')}: <b>${st.score}</b></span><span class="stat">${t('streak')}: <b>${st.streak}</b></span><span class="stat">${t('best')}: <b>${best}</b></span></div>
+    </aside>
+    <section class="panel"><p class="qtext">${prompt}</p>${body}
+      <div id="q-fb">${ans?`<div class="fb ${ans==='ok'?'good':'bad'}">${ans==='ok'?t('q_ok'):t('q_no',answerText)}</div>`:''}</div>
+      <div class="row" style="justify-content:center;margin-top:16px">${ans?`<button id="q-next" class="btn primary" type="button">${t('next')}</button>`:(q.type!=='cmp'?`<button id="q-check" class="btn primary" type="button">${t('check')}</button>`:'')}</div>
+    </section></div>`);
+  if(q.type==='read')$('#q-model',el).append(strips(packed(q.total,q.d,q.w+1),q.d,{readonly:true,tiny:true}));
+  const finish=(ok)=>{
+    st.answered=ok?'ok':'no';st.res.push(ok);
+    if(ok){st.score++;st.streak++;sfx.good();if(st.streak>=3)confetti()}else{st.streak=0;sfx.bad()}
+    el.replaceWith(viewQuiz());setTimeout(()=>$('#q-next')?.focus(),0);
+  };
+  const check=()=>{
+    const a=$('#q-a',el)?.value.trim(),w=$('#q-w',el)?.value.trim();
+    if(a===''||(q.type==='i2m'&&w==='')){$('#q-fb',el).innerHTML=`<div class="fb bad">${t('empty')}</div>`;return}
+    finish(q.type==='i2m'?(+w===q.w&&+a===q.n):+a===q.total);
+  };
+  if(ans){
+    if(ans&&q.type!=='cmp'){el.querySelectorAll('.ain').forEach(i=>i.disabled=true)}
+    $('#q-next',el).onclick=()=>{st.i++;st.answered=null;st.q=makeQ();if(st.i>=10){if(st.score>best){store.set('best',st.score);st.newBest=true}}el.replaceWith(viewQuiz());$('#view input, #view [data-g], #q-start')?.focus()};
+  }else{
+    $('#q-check',el)&&($('#q-check',el).onclick=check);
+    el.querySelectorAll('.ain').forEach(i=>i.onkeydown=e=>{if(e.key==='Enter')check()});
+    el.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>finish(b.dataset.g===q.ans));
+  }
+  return el;
+}
+
+/* ---------- router & chrome ---------- */
+const ROUTES={'teroka':viewExplore,'bercampur':viewM2I,'tidak-wajar':viewI2M,'banding':viewCompare,'kuiz':viewQuiz};
+function route(){
+  const r=ROUTES[location.hash.slice(1)]?location.hash.slice(1):'teroka';
+  document.querySelectorAll('.tabs a').forEach(a=>{if(a.dataset.r===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  view.replaceChildren(ROUTES[r]());
+}
+function chrome(){
+  document.documentElement.lang=lang==='bm'?'ms':'en';
+  document.querySelectorAll('[data-i]').forEach(el=>el.textContent=t(el.dataset.i));
+  $('#lang-bm').setAttribute('aria-pressed',lang==='bm');$('#lang-en').setAttribute('aria-pressed',lang==='en');
+  $('#sound').textContent=soundOn?t('sound_on'):t('sound_off');$('#sound').setAttribute('aria-pressed',soundOn);
+}
+$('#lang-bm').onclick=()=>{lang='bm';store.set('lang',lang);chrome();route()};
+$('#lang-en').onclick=()=>{lang='en';store.set('lang',lang);chrome();route()};
+$('#sound').onclick=()=>{soundOn=!soundOn;store.set('sound',soundOn);chrome();if(soundOn)sfx.whole()};
+addEventListener('keydown',e=>{if(e.target.matches('input,select')||e.ctrlKey||e.metaKey||e.altKey)return;const i=+e.key;if(i>=1&&i<=5){location.hash=Object.keys(ROUTES)[i-1]}});
+addEventListener('hashchange',route);
+chrome();route();
+})();
+</script>
