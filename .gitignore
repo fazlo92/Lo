@@ -1,3 +1,4 @@
 node_modules/
 out/
 topics/*/audio.wav
+topics/*/sfx.wav

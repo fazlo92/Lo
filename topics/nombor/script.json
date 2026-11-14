@@ -1,84 +1,270 @@
 {
   "title": "Apa Jadi Kalau Nombor Tidak Wujud?",
-  "duration": 60,
+  "duration": 74,
   "fps": 30,
   "width": 1080,
   "height": 1920,
   "timer": {
     "startValue": 10.0,
-    "countStart": 9.0,
-    "countEnd": 38.0,
-    "glitchFrom": 9.6,
-    "restoreAt": 38.0,
-    "hideAt": 48.0
+    "countStart": 10.8,
+    "countEnd": 50.0,
+    "glitchFrom": 11.1,
+    "restoreAt": 50.0,
+    "hideAt": 65.9
   },
   "scenes": [
     {
-      "id": "hook", "start": 0, "end": 9,
-      "headline": { "text": "Apa jadi kalau nombor tidak wujud selama 10 saat?", "highlight": ["nombor"] },
-      "hud": { "label": "NOMBOR LENYAP SELAMA", "stat": "BIL: RM 7.50" },
+      "id": "hook",
+      "start": 0,
+      "end": 10.6,
+      "headline": {
+        "text": "Apa jadi kalau nombor tidak wujud selama 10 saat?",
+        "highlight": [
+          "nombor"
+        ]
+      },
+      "hud": {
+        "label": "NOMBOR LENYAP SELAMA",
+        "stat": "BIL: RM 7.50"
+      },
       "captions": [
-        { "t": 0.4, "text": "Bayangkan anda di kedai mamak" },
-        { "t": 2.3, "text": "di Kuala Lumpur, nak bayar teh tarik." },
-        { "t": 4.6, "text": "Tiba-tiba, semua nombor di dunia lenyap." },
-        { "t": 7.2, "text": "Hanya sepuluh saat." }
+        {
+          "t": 0.2,
+          "text": "Bayangkan anda di kedai mamak di Kuala Lumpur,"
+        },
+        {
+          "t": 3.27,
+          "text": "nak bayar teh tarik."
+        },
+        {
+          "t": 4.99,
+          "text": "Tiba-tiba…"
+        },
+        {
+          "t": 6.02,
+          "text": "semua nombor di dunia lenyap."
+        },
+        {
+          "t": 9.02,
+          "text": "Hanya sepuluh saat."
+        }
       ]
     },
     {
-      "id": "harga", "start": 9, "end": 18,
-      "headline": { "text": "Harga jadi kosong.", "highlight": ["Harga"] },
-      "hud": { "label": "NOMBOR KEMBALI DALAM", "stat": "BIL: RM ???" },
+      "id": "harga",
+      "start": 10.6,
+      "end": 20.5,
+      "headline": {
+        "text": "Harga jadi kosong.",
+        "highlight": [
+          "Harga"
+        ]
+      },
+      "hud": {
+        "label": "NOMBOR KEMBALI DALAM",
+        "stat": "BIL: RM ???"
+      },
       "captions": [
-        { "t": 9.3, "text": "Harga di menu jadi kosong." },
-        { "t": 11.3, "text": "Duit di tangan cuma kertas berwarna." },
-        { "t": 13.7, "text": "Tiada siapa tahu berapa perlu dibayar —" },
-        { "t": 15.9, "text": "atau berapa yang ada dalam bank." }
+        {
+          "t": 10.9,
+          "text": "Harga di menu jadi kosong."
+        },
+        {
+          "t": 12.77,
+          "text": "Duit di tangan cuma kertas berwarna."
+        },
+        {
+          "t": 15.36,
+          "text": "Tiada siapa tahu berapa perlu dibayar —"
+        },
+        {
+          "t": 18.1,
+          "text": "atau berapa yang ada dalam bank."
+        }
       ]
     },
     {
-      "id": "komputer", "start": 18, "end": 28,
-      "headline": { "text": "Setiap komputer lumpuh.", "highlight": ["komputer"] },
-      "hud": { "label": "NOMBOR KEMBALI DALAM", "stat": "RANGKAIAN: TERPUTUS" },
+      "id": "komputer",
+      "start": 20.5,
+      "end": 34.6,
+      "headline": {
+        "text": "Setiap komputer lumpuh.",
+        "highlight": [
+          "komputer"
+        ]
+      },
+      "hud": {
+        "label": "NOMBOR KEMBALI DALAM",
+        "stat": "RANGKAIAN: TERPUTUS"
+      },
       "captions": [
-        { "t": 18.3, "text": "Lebih teruk — komputer berfikir dalam nombor." },
-        { "t": 20.8, "text": "Kosong dan satu." },
-        { "t": 22.2, "text": "Tanpa nombor, setiap cip berhenti serentak." },
-        { "t": 24.9, "text": "Telefon gelap. Internet mati." },
-        { "t": 26.5, "text": "Lampu isyarat beku." }
+        {
+          "t": 20.73,
+          "text": "Lebih teruk —"
+        },
+        {
+          "t": 22.1,
+          "text": "komputer berfikir dalam nombor."
+        },
+        {
+          "t": 24.13,
+          "text": "Kosong… dan satu."
+        },
+        {
+          "t": 26.24,
+          "text": "Tanpa nombor,"
+        },
+        {
+          "t": 27.48,
+          "text": "setiap cip berhenti serentak."
+        },
+        {
+          "t": 29.77,
+          "text": "Telefon gelap."
+        },
+        {
+          "t": 31.07,
+          "text": "Internet mati."
+        },
+        {
+          "t": 32.54,
+          "text": "Lampu isyarat beku."
+        }
       ]
     },
     {
-      "id": "gelap", "start": 28, "end": 38,
-      "headline": { "text": "Kuala Lumpur gelap gelita.", "highlight": ["Kuala", "Lumpur"] },
-      "hud": { "label": "NOMBOR KEMBALI DALAM", "stat": "GRID ELEKTRIK: GAGAL" },
+      "id": "gelap",
+      "start": 34.6,
+      "end": 50.0,
+      "headline": {
+        "text": "Kuala Lumpur gelap gelita.",
+        "highlight": [
+          "Kuala",
+          "Lumpur"
+        ]
+      },
+      "hud": {
+        "label": "NOMBOR KEMBALI DALAM",
+        "stat": "GRID ELEKTRIK: GAGAL"
+      },
       "captions": [
-        { "t": 28.3, "text": "Grid elektrik dikawal pada frekuensi tepat —" },
-        { "t": 30.6, "text": "lima puluh hertz." },
-        { "t": 32.0, "text": "Tanpa kawalan, janakuasa tersadung satu demi satu." },
-        { "t": 34.9, "text": "Seluruh bandar gelap." },
-        { "t": 36.4, "text": "LRT terhenti di landasan." }
+        {
+          "t": 34.93,
+          "text": "Grid elektrik dikawal pada frekuensi tepat —"
+        },
+        {
+          "t": 37.86,
+          "text": "lima puluh hertz."
+        },
+        {
+          "t": 39.5,
+          "text": "Tanpa kawalan,"
+        },
+        {
+          "t": 40.53,
+          "text": "janakuasa tersadung satu demi satu."
+        },
+        {
+          "t": 43.42,
+          "text": "Seluruh bandar gelap."
+        },
+        {
+          "t": 45.25,
+          "text": "LRT terhenti di landasan."
+        },
+        {
+          "t": 47.75,
+          "text": "Kemudian,"
+        },
+        {
+          "t": 48.67,
+          "text": "sepuluh saat berakhir."
+        }
       ]
     },
     {
-      "id": "kembali", "start": 38, "end": 48,
-      "headline": { "text": "Nombor kembali. Dunia tidak.", "highlight": ["Dunia"] },
-      "hud": { "label": "NOMBOR DIPULIHKAN", "stat": "SISTEM: MULA SEMULA…" },
+      "id": "kembali",
+      "start": 50.0,
+      "end": 65.9,
+      "headline": {
+        "text": "Nombor kembali. Dunia tidak.",
+        "highlight": [
+          "Dunia"
+        ]
+      },
+      "hud": {
+        "label": "NOMBOR DIPULIHKAN",
+        "stat": "SISTEM: MULA SEMULA…"
+      },
       "captions": [
-        { "t": 38.6, "text": "Kemudian, sepuluh saat berakhir. Nombor kembali." },
-        { "t": 41.0, "text": "Tapi berbilion mesin perlu dihidupkan semula," },
-        { "t": 43.1, "text": "data hilang, dan bank tak tahu siapa milik apa." },
-        { "t": 45.3, "text": "Bumi terus berputar — alam tak perlukan nombor." },
-        { "t": 47.0, "text": "Kita yang perlukan." }
+        {
+          "t": 50.89,
+          "text": "Nombor kembali."
+        },
+        {
+          "t": 52.63,
+          "text": "Tapi berbilion mesin perlu dihidupkan semula,"
+        },
+        {
+          "t": 55.86,
+          "text": "data hilang,"
+        },
+        {
+          "t": 57.21,
+          "text": "dan bank tak tahu siapa milik apa."
+        },
+        {
+          "t": 60.66,
+          "text": "Bumi terus berputar —"
+        },
+        {
+          "t": 62.7,
+          "text": "alam tak perlukan nombor."
+        },
+        {
+          "t": 64.64,
+          "text": "Kita yang perlukan."
+        }
       ]
     },
     {
-      "id": "cta", "start": 48, "end": 60,
-      "headline": { "text": "Idea WTF mana seterusnya?", "highlight": ["WTF"], "emoji": "👇" },
+      "id": "cta",
+      "start": 65.9,
+      "end": 74,
+      "headline": {
+        "text": "Idea WTF mana seterusnya?",
+        "highlight": [
+          "WTF"
+        ],
+        "emoji": "👇"
+      },
       "hud": null,
       "captions": [
-        { "t": 48.8, "text": "Senario mustahil apa patut kita simulasi seterusnya?" },
-        { "t": 53.5, "text": "Tulis di ruang komen." }
+        {
+          "t": 66.31,
+          "text": "Senario mustahil apa patut kita simulasi seterusnya?"
+        },
+        {
+          "t": 69.56,
+          "text": "Tulis di ruang komen."
+        }
       ]
     }
-  ]
+  ],
+  "voiceover": "vo.wav",
+  "events": {
+    "vanishStart": 10.8,
+    "vanishSpread": 1.3,
+    "binaryStart": 22.1,
+    "chipsDie": 27.5,
+    "carsStop": 27.9,
+    "phoneDark": 29.8,
+    "gridStart": 40.5,
+    "gridEnd": 43.4,
+    "shopDark": 43.45,
+    "trainStop": 45.9,
+    "restore": 50.0,
+    "phoneBoot": 52.7,
+    "ctaStart": 65.9
+  }
 }

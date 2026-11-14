@@ -1,23 +1,11 @@
 // "Apa jadi kalau nombor tidak wujud?" — POV at a mamak table in Kuala Lumpur.
 // Everything in update(t) is a pure function of t so frames can render in parallel.
 
-// ---------------------------------------------------------------- timeline
-const TL = {
-  vanishStart: 9.3,   // digits begin to disappear
-  vanishSpread: 1.3,
-  chipsDie: 22.2,     // every chip stops
-  carsStop: 22.6,
-  phoneDark: 24.9,
-  signalFreeze: 26.5,
-  gridStart: 32.0,    // power stations trip one by one
-  gridEnd: 35.4,
-  shopDark: 34.9,
-  trainStop: 36.4,
-  restore: 38.0,      // numbers return (white flash)
-  phoneBoot: 41.0,
-};
+// Timeline lives in script.json ("events") so visuals, sound and captions share it.
+let TL;
 
 export async function create({ THREE, renderer, script, U }) {
+  TL = script.events;
   const { clamp, lerp, smooth, easeOut, hash, mulberry32, frameIndex } = U;
   const rand = mulberry32(1337);
   const scene = new THREE.Scene();
@@ -209,7 +197,7 @@ export async function create({ THREE, renderer, script, U }) {
   }
   const trainLamp = glow(0xffffff, 3, 0.05, guideY + 1.6, guideZ + 1.0, train);
   const trainPos = t => {
-    const v = 0.9, a0 = 33.6, a1 = TL.trainStop, base = -8;
+    const v = 0.9, a0 = TL.trainStop - 2.8, a1 = TL.trainStop, base = -8 - (a0 - 33.6) * v;
     if (t < a0) return base + v * t;
     const u = Math.min(t, a1) - a0, D = a1 - a0;
     return base + v * a0 + v * (u - u * u / (2 * D));
@@ -617,7 +605,7 @@ export async function create({ THREE, renderer, script, U }) {
     // --- icon cubes: spin; break apart when numbers vanish; reassemble on restore
     const ex = smooth(TL.vanishStart + 0.1, TL.vanishStart + 1.6, t) * (1 - smooth(TL.restore, TL.restore + 0.9, t));
     const iconVis = t < TL.vanishStart + 1.6 || t > TL.restore ? 1 : 0;
-    const iconFadeOut = 1 - smooth(46.5, 47.8, t);
+    const iconFadeOut = 1 - smooth(TL.ctaStart - 1.2, TL.ctaStart, t);
     iconGroup.visible = iconVis > 0 && iconFadeOut > 0.01;
     iconGroup.rotation.y = Math.sin(t * 0.8) * 0.35;
     cubes.forEach((c, k) => {
@@ -647,7 +635,7 @@ export async function create({ THREE, renderer, script, U }) {
       }
     }
     // binary rain: "kosong dan satu" then it shatters when the chips die
-    const b0 = 20.6, b1 = TL.chipsDie, b2 = TL.chipsDie + 1.6;
+    const b0 = TL.binaryStart, b1 = TL.chipsDie, b2 = TL.chipsDie + 1.6;
     if (t > b0 && t < b2) {
       g.font = '600 34px HudSans'; g.textAlign = 'center';
       const cols = 22;
@@ -678,7 +666,7 @@ export async function create({ THREE, renderer, script, U }) {
   }
 
   function grade(t) {
-    const sat = kf([[0, 1.05], [TL.vanishStart, 1.05], [12, 0.85], [TL.chipsDie, 0.8], [25, 0.55], [TL.restore, 0.6], [42, 0.75]], t);
+    const sat = kf([[0, 1.05], [TL.vanishStart, 1.05], [TL.vanishStart + 2.7, 0.85], [TL.chipsDie, 0.8], [TL.phoneDark, 0.55], [TL.restore, 0.6], [TL.restore + 4, 0.75]], t);
     const bri = kf([[0, 1], [TL.gridStart, 1], [TL.gridEnd + 1, 0.9], [TL.restore, 0.9], [TL.restore + 2, 1]], t);
     const con = kf([[0, 1.05], [TL.chipsDie, 1.1], [TL.gridEnd, 1.15], [TL.restore + 2, 1.05]], t);
     return `saturate(${sat.toFixed(3)}) brightness(${bri.toFixed(3)}) contrast(${con.toFixed(3)})`;
