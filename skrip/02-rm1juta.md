@@ -23,7 +23,7 @@
 | 1 | 0:00–0:10 | Tebingan Kuching (pagi) | Apa jadi kalau semua orang di Malaysia dapat **RM 1 juta** esok? | RM 5.00 | HARI KE-0 · TEBINGAN |
 | 2 | 0:10–0:21 | India Street → Vivacity | Semua orang jadi **jutawan**. | RM 5.00 | HARI KE-1 |
 | 3 | 0:21–0:29 | Lapangan terbang Kuching | Semua nak **lari**. | RM 6.00 | HARI KE-2 · LAPANGAN TERBANG |
-| 4 | 0:29–0:39 | Gerai mee kolok (tutup) | Siapa nak **kerja** lagi? | RM 12.00 | HARI KE-3 · KOPITIAM |
+| 4 | 0:29–0:39 | Gerai mee kolok (tutup) | Siapa nak **kerja** lagi? | RM 12.00 | HARI KE-3 · MEDAN SELERA |
 | 5 | 0:39–0:48 | Barisan ATM keliling tugu kucing | **Tunai** habis. | RM 30.00 | HARI KE-5 · ATM |
 | 6 | 0:48–1:02 | Pasar + jeti penambang | Harga **meletup**. | RM 120 | HARI KE-7 · PASAR |
 | 7 | 1:02–1:15 | Pelabuhan (senja) — KEMUNCAK | **Ringgit** hilang nilai. | RM 5,000 | HARI KE-30 · PELABUHAN |
