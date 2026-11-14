@@ -1,0 +1,14 @@
+{
+  "name": "lo-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node tools/render.mjs",
+    "preview": "node tools/serve.mjs"
+  },
+  "dependencies": {
+    "@fontsource/eb-garamond": "5.2.5",
+    "@fontsource/inter": "5.2.5",
+    "three": "0.170.0"
+  }
+}
