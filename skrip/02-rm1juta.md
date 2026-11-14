@@ -74,7 +74,7 @@
 **Bunyi:** suara berita samar, "whoosh" setiap sifar hilang.
 
 ## Babak 9 — TWIST · Tebingan malam
-**VO:** "Semua orang pernah jadi jutawan. Tapi tiada siapa jadi kaya. Sebab bila duit bertambah, tapi barang tak bertambah… yang naik cuma harga."
+**VO:** "Semua orang pernah jadi jutawan. Tapi tiada siapa jadi kaya. Sebab bila semua orang ada duit… duit dah tak ada nilai."
 **Visual:** Tebingan yang sama dengan babak 1, malam, sunyi dan malap. Semangkuk mee kolok di atas meja. Tangan capai mangkuk.
 **Bunyi:** sunyi, piano rendah.
 
@@ -102,6 +102,6 @@ Hari ketiga puluh. Negara lain tak mahu ringgit lagi. Gandum, ubat, minyak — s
 
 Hari kesembilan puluh. Kerajaan terpaksa buang tiga sifar daripada ringgit — Venezuela pernah buat begini. Harga mee kolok kembali lima ringgit. Tapi sejuta anda… kini cuma seribu.
 
-Semua orang pernah jadi jutawan. Tapi tiada siapa jadi kaya. Sebab bila duit bertambah, tapi barang tak bertambah… yang naik cuma harga.
+Semua orang pernah jadi jutawan. Tapi tiada siapa jadi kaya. Sebab bila semua orang ada duit… duit dah tak ada nilai.
 
 Apa jadi kalau… apa pula? Tulis di ruang komen.
