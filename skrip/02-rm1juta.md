@@ -23,8 +23,8 @@
 | 1 | 0:00–0:10 | Tebingan Kuching (pagi) | Apa jadi kalau semua orang di Malaysia dapat **RM 1 juta** esok? | RM 5.00 | HARI KE-0 · TEBINGAN |
 | 2 | 0:10–0:21 | India Street → Vivacity | Semua orang jadi **jutawan**. | RM 5.00 | HARI KE-1 |
 | 3 | 0:21–0:29 | Lapangan terbang Kuching | Semua nak **lari**. | RM 6.00 | HARI KE-2 · LAPANGAN TERBANG |
-| 4 | 0:29–0:39 | Kopitiam (tutup) | Siapa nak **kerja** lagi? | RM 12.00 | HARI KE-3 · KOPITIAM |
-| 5 | 0:39–0:48 | Barisan ATM | **Tunai** habis. | RM 30.00 | HARI KE-5 · ATM |
+| 4 | 0:29–0:39 | Gerai mee kolok (tutup) | Siapa nak **kerja** lagi? | RM 12.00 | HARI KE-3 · KOPITIAM |
+| 5 | 0:39–0:48 | Barisan ATM keliling tugu kucing | **Tunai** habis. | RM 30.00 | HARI KE-5 · ATM |
 | 6 | 0:48–1:02 | Pasar + jeti penambang | Harga **meletup**. | RM 120 | HARI KE-7 · PASAR |
 | 7 | 1:02–1:15 | Pelabuhan (senja) — KEMUNCAK | **Ringgit** hilang nilai. | RM 5,000 | HARI KE-30 · PELABUHAN |
 | 8 | 1:15–1:28 | Rumah (berita TV) | Buang **tiga sifar**. | RM 5,000 → RM 5.00 | HARI KE-90 · RUMAH |
@@ -35,7 +35,7 @@
 
 ## Babak 1 — HOOK · Tebingan Kuching
 **VO:** "Esok pagi di Kuching, anda bangun, buka telefon… dan nampak satu juta ringgit dalam akaun. Bukan anda seorang. Setiap rakyat Malaysia."
-**Visual:** Pagi di tebingan Sungai Sarawak. Telefon: notifikasi bank **+RM 1,000,000.00**. Seberang sungai: bangunan berbumbung emas, sampan penambang, bukit. Patung kucing di tepi.
+**Visual:** Pagi di tebingan Sungai Sarawak. Telefon: notifikasi bank **+RM 1,000,000.00**. Seberang sungai: bangunan DUN berbumbung emas, sampan biru penambang. Tanglung merah dan tiang lampu di tebingan.
 **Bunyi:** burung, air sungai, enjin sampan, "ting".
 
 ## Babak 2 — India Street → Vivacity
@@ -48,14 +48,14 @@
 **Visual:** Dewan berlepas penuh beg. Papan penerbangan: semua baris bertukar **"PENUH"**. Kapal terbang berlepas di luar tingkap.
 **Bunyi:** pengumuman lapangan terbang, roda bagasi, enjin jet.
 
-## Babak 4 — Kopitiam
+## Babak 4 — Gerai mee kolok
 **VO:** "Hari ketiga. Kalau dah ada sejuta, siapa nak kerja? Tukang masak mee kolok berhenti. Lori tak bergerak. Barang tak sampai."
-**Visual:** Kerusi terbalik atas meja, dapur kosong, papan "TUTUP". Di luar, lori diparkir.
+**Visual:** Gerai mee kolok keluli di medan selera — lampu padam, papan "TUTUP" di kaca, kerusi plastik terbalik. Di luar, lori diparkir.
 **Bunyi:** kipas siling, sunyi, anjing menyalak jauh.
 
-## Babak 5 — Barisan ATM
+## Babak 5 — Barisan ATM keliling tugu kucing
 **VO:** "Hari kelima. Semua nak tunai. Barisan ATM keliling blok — tapi bank tak pernah simpan wang kertas sebanyak itu."
-**Visual:** Barisan panjang berpusing keliling bangunan. Skrin ATM: **"TIADA WANG TUNAI"**. Orang ketuk mesin.
+**Visual:** Barisan panjang berpusing keliling bulatan tugu kucing. Skrin ATM: **"TIADA WANG TUNAI"**. Orang ketuk mesin.
 **Bunyi:** bip ATM ditolak, rungutan orang ramai.
 
 ## Babak 6 — Pasar + jeti penambang
