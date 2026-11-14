@@ -1,7 +1,7 @@
 // Usage:
 //   node tools/render.mjs --topic nombor                 full MP4 -> out/<topic>.mp4
 //   node tools/render.mjs --topic nombor --stills 3,12.5  PNG stills -> out/stills/
-//   options: --workers 3 --from 0 --to 60 --crf 18
+//   options: --workers 3 --from 0 --to 60 --crf 18 --out file.mp4
 import { createRequire } from 'node:module';
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -65,7 +65,7 @@ if (args.stills) {
     }
   }));
   console.log('\nencoding…');
-  const outFile = path.join(outDir, `${topic}.mp4`);
+  const outFile = args.out ? path.resolve(args.out) : path.join(outDir, `${topic}.mp4`);
   const audio = ['wav', 'mp3', 'm4a'].map(e => path.join(ROOT, 'topics', topic, `audio.${e}`)).find(fs.existsSync);
   const ff = ['-y', '-framerate', String(fps), '-i', path.join(frameDir, 'f%05d.jpg'),
     ...(audio ? ['-ss', String(from), '-i', audio, '-c:a', 'aac', '-b:a', '192k', '-shortest'] : []),

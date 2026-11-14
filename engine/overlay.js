@@ -5,6 +5,7 @@ const GLYPHS = ['?', '?', '?', '?', '_', '·', '?', '/'];
 function headlineHTML(h) {
   const words = h.text.split(' ').map(w => {
     const bare = w.replace(/[.,?!—…]/g, '');
+    if (/^_+$/.test(bare)) return w.replace(bare, '<span class="blank"></span>');   // fill-in-the-blank line
     return h.highlight?.includes(bare) ? w.replace(bare, `<span class="hl">${bare}</span>`) : w;
   });
   return words.join(' ') + (h.emoji ? `<span class="emoji">${h.emoji}</span>` : '');

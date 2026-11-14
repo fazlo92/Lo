@@ -23,6 +23,8 @@ html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
   color: var(--text); letter-spacing: -0.005em;
   text-shadow: 0 3px 18px rgba(0,0,0,.55), 0 1px 3px rgba(0,0,0,.6); }
 #headline .hl { color: var(--hl); }
+#headline .blank { display: inline-block; width: 2.4em; height: .78em; margin: 0 .08em;
+  border-bottom: .065em solid var(--hl); }
 #headline .emoji { display: block; font-size: 84px; margin-top: 30px;
   font-family: "Noto Color Emoji", sans-serif; }
 

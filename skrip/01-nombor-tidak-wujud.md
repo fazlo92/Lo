@@ -44,7 +44,7 @@
 **Bunyi:** "whoosh" layar putih, kemudian ambien sunyi + nada piano rendah.
 
 ## Babak 6 — CTA (0:48–1:00)
-**Tajuk:** Idea **WTF** mana seterusnya? 👇
+**Tajuk:** Apa jadi kalau **_____**? 👇
 **Sari kata:** "Senario mustahil apa patut kita simulasi seterusnya?" → "Tulis di ruang komen."
 **VO:** (sama seperti sari kata, atau senyap seperti video asal)
 **Visual:** Adegan babak 5 kekal, kamera bernafas perlahan. HUD hilang.

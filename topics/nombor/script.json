@@ -232,9 +232,9 @@
       "start": 65.9,
       "end": 74,
       "headline": {
-        "text": "Idea WTF mana seterusnya?",
+        "text": "Apa jadi kalau _____?",
         "highlight": [
-          "WTF"
+          "_____"
         ],
         "emoji": "👇"
       },
