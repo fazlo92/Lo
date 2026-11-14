@@ -1,0 +1,412 @@
+{
+  "title": "Apa Jadi Kalau Semua Orang di Malaysia Dapat RM 1 Juta Esok?",
+  "duration": 94,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voiceover": "vo.wav",
+  "events": {
+    "notif": 1.9,
+    "goldGone": 13.4,
+    "vivacity": 16.3,
+    "boardFull": 24.2,
+    "stallOff": 29.5,
+    "atmEmpty": 38.5,
+    "priceUp1": 48.8,
+    "priceUp2": 50.3,
+    "fare": 53.44,
+    "bigJump": 56.4,
+    "zeroCut": 68.54,
+    "priceBack": 73.41,
+    "balanceCut": 77.85,
+    "cta": 86.6
+  },
+  "scenes": [
+    {
+      "id": "tebingan",
+      "start": 0,
+      "end": 10.4,
+      "headline": {
+        "text": "Apa jadi kalau semua orang di Malaysia dapat RM 1 juta esok?",
+        "highlight": [
+          "RM",
+          "1",
+          "juta"
+        ]
+      },
+      "captions": [
+        {
+          "t": 0,
+          "text": "Esok pagi di Kuching,"
+        },
+        {
+          "t": 1.85,
+          "text": "anda bangun,"
+        },
+        {
+          "t": 2.72,
+          "text": "buka telefon…"
+        },
+        {
+          "t": 3.73,
+          "text": "dan nampak satu juta ringgit dalam akaun."
+        },
+        {
+          "t": 6.95,
+          "text": "Bukan anda seorang."
+        },
+        {
+          "t": 8.21,
+          "text": "Setiap rakyat Malaysia."
+        }
+      ]
+    },
+    {
+      "id": "india",
+      "start": 10.4,
+      "end": 16.3,
+      "headline": {
+        "text": "Semua orang jadi jutawan.",
+        "highlight": [
+          "jutawan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 10.55,
+          "text": "Hari pertama,"
+        },
+        {
+          "t": 11.56,
+          "text": "semua orang jadi jutawan."
+        },
+        {
+          "t": 13.39,
+          "text": "Kedai emas di India Street habis dalam beberapa jam."
+        }
+      ]
+    },
+    {
+      "id": "vivacity",
+      "start": 16.3,
+      "end": 19.7,
+      "headline": {
+        "text": "Semua orang jadi jutawan.",
+        "highlight": [
+          "jutawan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 16.42,
+          "text": "Barang jualan di Vivacity —"
+        },
+        {
+          "t": 18.06,
+          "text": "semua habis dibeli."
+        }
+      ],
+      "continues": true
+    },
+    {
+      "id": "airport",
+      "start": 19.7,
+      "end": 25.9,
+      "headline": {
+        "text": "Semua nak lari.",
+        "highlight": [
+          "lari"
+        ]
+      },
+      "captions": [
+        {
+          "t": 19.8,
+          "text": "Hari kedua."
+        },
+        {
+          "t": 20.69,
+          "text": "Semua nak bercuti."
+        },
+        {
+          "t": 22.17,
+          "text": "Lapangan terbang Kuching sesak."
+        },
+        {
+          "t": 24.16,
+          "text": "Tiket ke luar negara —"
+        },
+        {
+          "t": 25.45,
+          "text": "habis."
+        }
+      ]
+    },
+    {
+      "id": "gerai",
+      "start": 25.9,
+      "end": 33.9,
+      "headline": {
+        "text": "Siapa nak kerja lagi?",
+        "highlight": [
+          "kerja"
+        ]
+      },
+      "captions": [
+        {
+          "t": 26.02,
+          "text": "Hari ketiga."
+        },
+        {
+          "t": 27.03,
+          "text": "Kalau dah ada sejuta,"
+        },
+        {
+          "t": 28.4,
+          "text": "siapa nak kerja?"
+        },
+        {
+          "t": 29.45,
+          "text": "Tukang masak mee kolok berhenti."
+        },
+        {
+          "t": 31.27,
+          "text": "Lori tak bergerak."
+        },
+        {
+          "t": 32.55,
+          "text": "Barang tak sampai."
+        }
+      ]
+    },
+    {
+      "id": "atm",
+      "start": 33.9,
+      "end": 42.0,
+      "headline": {
+        "text": "Tunai habis.",
+        "highlight": [
+          "Tunai"
+        ]
+      },
+      "captions": [
+        {
+          "t": 34.06,
+          "text": "Hari kelima."
+        },
+        {
+          "t": 35.37,
+          "text": "Semua nak tunai."
+        },
+        {
+          "t": 36.6,
+          "text": "Barisan ATM keliling blok —"
+        },
+        {
+          "t": 38.52,
+          "text": "tapi bank tak pernah simpan wang kertas sebanyak itu."
+        }
+      ]
+    },
+    {
+      "id": "pasar",
+      "start": 42.0,
+      "end": 51.2,
+      "headline": {
+        "text": "Harga meletup.",
+        "highlight": [
+          "meletup"
+        ]
+      },
+      "captions": [
+        {
+          "t": 42.14,
+          "text": "Hari ketujuh."
+        },
+        {
+          "t": 43.39,
+          "text": "Tiga puluh empat trilion ringgit baru —"
+        },
+        {
+          "t": 45.66,
+          "text": "tujuh belas kali ganda ekonomi Malaysia setahun."
+        },
+        {
+          "t": 48.77,
+          "text": "Tapi barang tetap sama."
+        },
+        {
+          "t": 50.26,
+          "text": "Jadi harga naik."
+        }
+      ]
+    },
+    {
+      "id": "jeti",
+      "start": 51.2,
+      "end": 54.6,
+      "headline": {
+        "text": "Harga meletup.",
+        "highlight": [
+          "meletup"
+        ]
+      },
+      "captions": [
+        {
+          "t": 51.33,
+          "text": "Tambang penambang —"
+        },
+        {
+          "t": 52.57,
+          "text": "dari seringgit,"
+        },
+        {
+          "t": 53.41,
+          "text": "jadi seratus."
+        }
+      ],
+      "continues": true
+    },
+    {
+      "id": "pelabuhan",
+      "start": 54.6,
+      "end": 66.6,
+      "headline": {
+        "text": "Ringgit hilang nilai.",
+        "highlight": [
+          "Ringgit"
+        ]
+      },
+      "captions": [
+        {
+          "t": 54.71,
+          "text": "Hari ketiga puluh."
+        },
+        {
+          "t": 56.38,
+          "text": "Negara lain tak mahu ringgit lagi."
+        },
+        {
+          "t": 58.32,
+          "text": "Gandum,"
+        },
+        {
+          "t": 58.64,
+          "text": "ubat,"
+        },
+        {
+          "t": 59.26,
+          "text": "minyak —"
+        },
+        {
+          "t": 59.94,
+          "text": "semua import,"
+        },
+        {
+          "t": 61.38,
+          "text": "semua tak mampu dibeli."
+        },
+        {
+          "t": 63.31,
+          "text": "Di Zimbabwe,"
+        },
+        {
+          "t": 64.28,
+          "text": "harga pernah berganda setiap hari."
+        }
+      ]
+    },
+    {
+      "id": "rumah",
+      "start": 66.6,
+      "end": 79.0,
+      "headline": {
+        "text": "Buang tiga sifar.",
+        "highlight": [
+          "tiga",
+          "sifar"
+        ]
+      },
+      "captions": [
+        {
+          "t": 66.76,
+          "text": "Hari kesembilan puluh."
+        },
+        {
+          "t": 68.51,
+          "text": "Kerajaan terpaksa buang tiga sifar daripada ringgit —"
+        },
+        {
+          "t": 71.97,
+          "text": "Venezuela pernah buat begini."
+        },
+        {
+          "t": 73.38,
+          "text": "Harga mee kolok kembali lima ringgit."
+        },
+        {
+          "t": 76.09,
+          "text": "Tapi sejuta anda…"
+        },
+        {
+          "t": 77.82,
+          "text": "kini cuma seribu."
+        }
+      ]
+    },
+    {
+      "id": "malam",
+      "start": 79.0,
+      "end": 86.6,
+      "headline": {
+        "text": "Semua jutawan. Tiada siapa kaya.",
+        "highlight": [
+          "jutawan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 79.13,
+          "text": "Semua orang pernah jadi jutawan."
+        },
+        {
+          "t": 81.54,
+          "text": "Tapi tiada siapa jadi kaya."
+        },
+        {
+          "t": 83.03,
+          "text": "Sebab bila semua orang ada duit…"
+        },
+        {
+          "t": 85.23,
+          "text": "duit dah tak ada nilai."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 86.6,
+      "end": 94.0,
+      "headline": {
+        "text": "Apa jadi kalau _____?",
+        "highlight": [
+          "_____"
+        ],
+        "emoji": "👇"
+      },
+      "captions": [
+        {
+          "t": 86.75,
+          "text": "Apa jadi kalau…"
+        },
+        {
+          "t": 88.23,
+          "text": "apa pula?"
+        },
+        {
+          "t": 89.67,
+          "text": "Tulis di ruang komen."
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ export function createOverlay(script) {
     caption: document.getElementById('caption'),
     flash: document.getElementById('flash'),
   };
-  const T = script.timer;
+  const T = script.timer || {};
   let lastHeadline = null, lastCaption = null;
 
   // amount of "numbers missing" in [0,1]
@@ -50,17 +50,22 @@ export function createOverlay(script) {
 
   return {
     sceneAt(t) { return script.scenes.find(s => t >= s.start && t < s.end) || script.scenes.at(-1); },
-    update(t) {
+    update(t, world) {
       const sc = this.sceneAt(t);
       const local = t - sc.start;
 
       // Headline: fade/slide in at scene start, fade out in last 0.25s.
-      if (lastHeadline !== sc.id) { el.headline.innerHTML = headlineHTML(sc.headline); lastHeadline = sc.id; }
-      const hin = easeOut(local / 0.45), hout = 1 - smooth(sc.end - 0.25, sc.end, t);
+      if (lastHeadline !== sc.headline.text) { el.headline.innerHTML = headlineHTML(sc.headline); lastHeadline = sc.headline.text; }
+      // consecutive scenes sharing a headline keep it on screen without re-animating
+      const idx = script.scenes.indexOf(sc);
+      let h0 = idx; while (h0 > 0 && script.scenes[h0 - 1].headline.text === sc.headline.text) h0--;
+      const nxt = script.scenes[idx + 1];
+      const hin = easeOut((t - script.scenes[h0].start) / 0.45);
+      const hout = nxt && nxt.headline.text === sc.headline.text ? 1 : 1 - smooth(sc.end - 0.25, sc.end, t);
       el.headline.style.opacity = Math.min(hin, sc === script.scenes.at(-1) ? 1 : hout);
       el.headline.style.transform = `translateY(${(1 - hin) * 24}px)`;
       el.headline.style.filter = `blur(${(1 - hin) * 6}px)`;
-      el.headline.style.top = sc.id === 'cta' ? '400px' : '440px';
+      el.headline.style.top = sc.id === 'cta' ? '400px' : (sc.headlineTop || '440px');
       el.headline.style.fontSize = sc.id === 'cta' ? '100px' : '86px';
 
       // Caption chunks
@@ -72,8 +77,20 @@ export function createOverlay(script) {
       el.caption.style.opacity = cap ? Math.min(easeOut((t - cap.t) / 0.18), 1 - smooth(sc.end - 0.15, sc.end, t)) : 0;
       el.caption.style.top = sc.id === 'cta' ? '940px' : '1300px';
 
-      // HUD
-      if (!sc.hud || t >= T.hideAt) { el.hud.style.opacity = 0; }
+      // HUD — a topic can drive it entirely (world.hud(t) -> {label, value, stat, pop, opacity} | null)
+      if (world && world.hud) {
+        const h = world.hud(t);
+        if (!h) { el.hud.style.opacity = 0; }
+        else {
+          el.hud.style.opacity = h.opacity ?? 1;
+          el.label.textContent = h.label;
+          if (el.timer.textContent !== h.value) el.timer.textContent = h.value;
+          el.timer.style.transform = `translateX(${h.jitter || 0}px) scale(${h.pop || 1})`;
+          el.timer.style.opacity = 1;
+          el.timer.style.color = h.color || '';
+          el.stat.textContent = h.stat;
+        }
+      } else if (!sc.hud || t >= T.hideAt) { el.hud.style.opacity = 0; }
       else {
         el.hud.style.opacity = 1;
         const m = missing(t);

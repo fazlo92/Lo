@@ -32,7 +32,7 @@ function renderFrame(t) {
   canvas.style.filter = world.grade ? world.grade(t) : 'none';
   fx.clearRect(0, 0, script.width, script.height);
   if (world.drawFx) world.drawFx(fx, t, script.width, script.height);
-  overlay.update(t);
+  overlay.update(t, world);
   overlay.setFlash(world.flash ? world.flash(t) : 0);
 }
 window.renderFrame = t => { renderFrame(t); return true; };
