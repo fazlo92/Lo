@@ -63,7 +63,7 @@ Anggaran masa daripada bilangan perkataan × rentak suara video lepas (selepas j
 - **VO:** "Pukul sebelas. Had laju tak bermakna apa-apa. Pam minyak tak tahu bila nak berhenti. Jalan raya lumpuh."
 - **Paparan:**
   - Papan had laju `60` — digit bertukar `6`, `600`, `0.6`; kereta meluncur laju / ada yang merangkak
-  - Stesen minyak (tiada jenama): skrin pam berpusing tanpa henti, minyak melimpah ke lantai
+  - Stesen minyak *(rujukan: stesen-minyak-siang.jpg)*: kanopi merah bucu bulat, tiang pam gerbang merah bernombor, satu gerbang biru — tanpa logo. Skrin pam berpusing tanpa henti, minyak melimpah ke lantai
   - Lampu isyarat dengan kiraan detik bercelaru → semua kereta tersekat, hon
 - **Bunyi:** hon bertalu, enjin, deruan.
 

@@ -66,3 +66,9 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**. Logo syarikat pe
 
 ## Guna semula dari video RM 1 juta
 Tebingan + DUN (babak 1, 10–12), tugu kucing + ATM (babak 4), jalan raya (babak 5), troli gerai (babak 2)
+
+## Babak 5 — Stesen minyak · `stesen-minyak-siang.jpg`, `stesen-minyak-senja.jpg`
+- Kanopi besar **merah** dengan bucu bulat melengkung, bahagian bawah putih/kelabu bergaris, jalur hitam di belakang, lampu LED garisan panjang di siling
+- **Tiang pam bentuk gerbang (arch)** merah tebal dengan nombor putih besar (3, 5, 9…), satu gerbang **biru**, satu kelabu
+- Pam minyak putih-merah di bawah gerbang, lantai konkrit cerah, kereta beratur
+- **Logo/nama jenama tidak dimodelkan** — papan kanopi dibiarkan kosong (warna rata) supaya tiada jenama sebenar dikaitkan dengan pam yang "rosak"
