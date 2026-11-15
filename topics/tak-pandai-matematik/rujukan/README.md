@@ -1,39 +1,55 @@
 # Rujukan Visual — Tiba-tiba Tak Pandai Matematik (Kuching)
 
-Gambar sebenar tidak dapat dimuat turun dalam sesi ini (rangkaian menyekat laman web/imej), jadi rujukan di bawah ialah **penerangan teks** daripada carian web + pengetahuan umum. Perkara bertanda ⚠️ perlu disahkan dengan gambar sebenar.
-Semua bangunan dibina dalam gaya low-poly, tanpa logo/papan tanda rasmi.
+Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**. Logo syarikat penerbangan, pengendali lapangan terbang, iklan dan nombor plat kereta **tidak** dimodelkan. Orang dalam gambar tidak dirujuk.
 
-## 1. Laksa Sarawak (babak 2)
-- Mangkuk putih, kuah oren-coklat berlemak santan
-- Bihun halus, udang dengan kulit, jalur telur dadar nipis, ayam carik, taugeh, daun ketumbar
-- Hirisan limau kasturi + sambal belacan dalam piring kecil di tepi
-- Gerai: guna semula troli keluli dari video RM 1 juta, papan ditukar "LAKSA SARAWAK", pelekat harga **RM 8**
-- Sumber: [Sarawak Tourism](https://sarawaktourism.com/blog/how-to-make-borneo-breakfast-of-the-gods), [SBS Food](https://www.sbs.com.au/food/recipes/sarawak-laksa)
+## Babak 2 — Laksa Sarawak · `laksa-sarawak.jpg`
+- Mangkuk/pinggan lebar putih krim dengan bibir emas
+- Kuah oren-coklat, bihun halus di bawah
+- Atas: jalur telur dadar kuning (kiri), ayam carik putih (atas), 3 ekor udang oren-merah jambu (bawah), taugeh putih (kanan), 2 limau kasturi dibelah (hijau), sambal merah gelap di tengah, sedikit daun ketumbar
+- Gerai: guna semula troli keluli, papan "LAKSA SARAWAK", pelekat harga **RM 8**
 
-## 2. Kubah Ria / Pasar Satok (babak 3)
-- Kompleks Kubah Ria dibina SEDC; pasar basah di sebelah (Medan Niaga Satok) — pasar basah terbesar di Kuching
-- Sekurang-kurangnya 6 gerai ikan terubok masin; ikan dibungkus dalam kotak untuk kargo udara
-- Visual: deretan gerai di bawah bumbung besar, ikan terubok masin (pipih, perak keemasan) disusun bertingkat, penimbang digital di kaunter, kotak bungkusan
-- ⚠️ Bentuk bumbung/kubah kompleks — perlu gambar
-- Sumber: [The Star](https://www.thestar.com.my/news/community/2012/11/17/new-kubah-ria-shows-sedcs-commitment-to-expand-trading-areas), [Sarawak Tribune](https://www.sarawaktribune.com/?p=450358)
+## Babak 3 — Kubah Ria · `kubah-ria.jpg` ⚠️ (sahkan ini Kubah Ria)
+- Bangunan panjang dua tingkat, dinding krim/salmon, bumbung hijau muda melengkung panjang
+- Bahagian tengah lebih tinggi: dinding kaca biru dengan rangka putih, bumbung pelana putih dengan kaca segi tiga besar
+- Kaki lima bertiang segi empat krim + tupang besi putih menyerong, lampu bulat di siling
+- Meja dan kerusi gerai makan di bawah kaki lima, dataran bata merah di hadapan
+- Waktu: senja biru
+- Gerai ikan terubok masin (rekaan): ikan pipih perak keemasan disusun bertingkat, penimbang digital, kotak bungkusan
 
-## 3. Lapangan Terbang Antarabangsa Kuching (babak 6)
-- Terminal diubah suai dan dibuka semula pada 2006; banyak ciri reka bentuk dipinjam dari KLIA
-- Visual: dewan berlepas luas, bumbung modul berbentuk kanopi, papan penerbangan — semua baris bertukar **"BATAL"**
-- ⚠️ Bentuk bumbung sebenar — perlu gambar
-- Sumber: [Wikiwand](https://wikiwand.com/en/articles/Kuching_International_Airport), [CAPA](https://centreforaviation.com/analysis/reports/new-terminal-at-kuching-international-airport-launched-966)
+## Babak 6 — Lapangan Terbang Antarabangsa Kuching
+**Luar** · `lapangan-terbang-luar.jpg`
+- Deretan tiang bulat kelabu dengan **kanopi berbentuk mangkuk/payung melengkung** (bahagian bawah kayu coklat) — ciri paling ikonik
+- Bumbung utama tajam menyerong ke atas di hujung kanan, dinding kaca
+- Jejantas/ramp berlepas bertingkat dengan pagar besi, tiang konkrit bulat besar di bawah
+- Rumput dan pokok renek di hadapan, langit biru cerah
 
-## 4. Hospital Umum Sarawak (babak 7)
-- Hospital am terbesar di Sarawak, ~1,005 katil, jabatan kecemasan, ada helipad; di Jalan Tun Abang Haji Openg
-- Visual: blok bangunan tinggi putih/krim, pintu kecemasan, ambulans, kaunter farmasi dengan botol ubat dan label dos "2 biji sehari"
-- ⚠️ Rupa fasad sebenar — perlu gambar
-- Sumber: [Wikipedia](https://en.wikipedia.org/wiki/Sarawak_General_Hospital)
+**Dalam** · `lapangan-terbang-dalam.jpg`, `-pintu.jpg`, `-papan-tanda.jpg`
+- Lantai jubin berkilat krim dengan jalur coklat/merah bata
+- Tiang bulat bersalut keluli, siling coklat dengan lampu bulat kuning keemasan (suasana hangat)
+- Papan tanda coklat dengan huruf putih: "Balai Berlepas **A** ←", "B", "Perlepasan Domestik"
+- Pintu berlepas: papan oren "**3**", kerusi menunggu merah jambu berderet, tali penghadang merah, tingkap tinggi
+- Skrin penerbangan kecil di tiang → semua baris bertukar **"BATAL"** merah
 
-## 5. Jambatan baru di Waterfront (babak 8)
-- Jambatan sedia ada di Waterfront: **Jambatan Darul Hana** — jambatan pejalan kaki berbentuk **"S"**, ~336 m panjang, ~3.25 m lebar, ~12 m di atas air, merentasi Sungai Sarawak antara Waterfront dan kawasan DUN
-- Cadangan visual: "jambatan baru" bergaya lengkung S dibina dari dua tebing — dua separuh lengkung **terlepas** antara satu sama lain di tengah sungai (satu terlalu tinggi, satu tersasar ke tepi)
-- ⚠️ Tiang/menara dan kabel jambatan — perlu gambar
-- Sumber: [Wikipedia](https://en.wikipedia.org/wiki/Darul_Hana_Bridge), [Borneo Post](https://www.theborneopost.com/2017/11/12/abang-johari-hopeful-iconic-darul-hana-bridge-will-draw-more-tourists-to-the-state/)
+## Babak 7 — Hospital Umum Sarawak
+**Blok utama** · `hospital-blok-utama.jpg`
+- Bangunan panjang 5–6 tingkat, dinding krim-merah jambu, **bumbung limas merah bata**, menara tengah dengan papan nama, dua pavilion bumbung merah di hujung
+- Blok sebelah kanan: biru muda, 4 tingkat, tingkap jalur panjang
+- Pintu pagar: tiang krim-merah jambu, pagar putih "MASUK"/"KELUAR", pondok pengawal bumbung merah di tengah jalan, bebendul hitam-putih
+
+**Kecemasan** · `hospital-kecemasan.jpg`, `hospital-papan-nama.jpg`
+- Bangunan baru putih + panel ungu dan hijau tua, kanopi kaca besar di laluan masuk kecemasan
+- Papan tanda biru tinggi dengan jalur merah "KECEMASAN / EMERGENCY", jalan berlorong merah
+- Dinding papan nama krim "HOSPITAL UMUM SARAWAK" huruf hitam
+- Dalam (rekaan): kaunter farmasi, botol ubat, label "2 biji sehari" → "20?"
+
+## Babak 8 — Jambatan di Waterfront
+`jambatan-darul-hana-udara.jpg`, `waterfront-udara.jpg`, `jambatan-dun-senja.jpg`
+- Jambatan Darul Hana: dek melengkung bentuk **"S"** putih, nipis, dengan pagar
+- **Dua tiang (pylon) putih tinggi berbentuk A/Y terbalik** menyerong, dengan kabel ke dek
+- **Pelantar tinjau bulat** di kaki setiap tiang, berbumbung kuning
+- Tebing: Waterfront (dataran, bangunan putih kecil) di satu sisi; DUN, taman dengan pavilion bumbung kuning, tangga ke sungai di sisi lain
+- Sungai coklat-hijau (siang) / biru (senja), latar bandar: menara tinggi, deretan rumah kedai bumbung berwarna
+- **Cadangan babak:** "jambatan baru" gaya ini dibina dari dua tebing — dua separuh lengkung S tak bertemu di tengah (satu terlalu tinggi, satu tersasar ke tepi), kren pembinaan di hujung masing-masing
 
 ## Guna semula dari video RM 1 juta
 Tebingan + DUN (babak 1, 10–12), tugu kucing + ATM (babak 4), jalan raya (babak 5), troli gerai (babak 2)
