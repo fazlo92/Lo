@@ -16,7 +16,7 @@
 |---|---|---|---|---|---|---|
 | 1 Hook | 7:00 pagi | Rumah | Apa jadi kalau semua orang di Kuching tiba-tiba tak pandai **matematik**? | 0 | 😄 | Jam loceng berbunyi — tiada siapa tahu pukul berapa. |
 | 2 | 7:30 pagi | Gerai laksa Sarawak | Baki **salah**. | 12 | 😄 | Laksa Sarawak RM 8. Bayar RM 10 — peniaga pulangkan RM 80. |
-| 3 | 9:00 pagi | Pasar Kubah Ria | Timbang **ikan**. | 480 | 😄 | Beli ikan terubok masin: 2 kg dibaca 20 kg. "Diskaun 50%" jadi lebih mahal. |
+| 3 | 9:00 pagi | Pasar Kubah Ria | Timbang **ikan**. | 480 | 😄 | Beli ikan terubuk masin: 2 kg dibaca 20 kg. "Diskaun 50%" jadi lebih mahal. |
 | 4 | 10:00 pagi | Bank / ATM (tugu kucing) | **Gaji** hilang. | 3,600 | 😬 | Tiada siapa boleh kira baki. Bank tutup kaunter. |
 | 5 | 11:00 pagi | Jalan raya | Jalan **lumpuh**. | 9,300 | 😬 | Had laju tak bermakna, pam minyak tak berhenti, lampu isyarat kiraan detik kacau. |
 | 6 | 12:00 tengah hari | Lapangan Terbang Antarabangsa Kuching | Semua **penerbangan** dibatalkan. | 21,000 | 😨 | Juruterbang tak boleh kira bahan api dan ketinggian. Papan: "BATAL". |
@@ -31,7 +31,7 @@
 
 1. Esok pagi, semua orang di Kuching bangun… dan tiba-tiba tak pandai matematik. Jam loceng berbunyi — tapi tiada siapa tahu pukul berapa.
 2. Pukul tujuh setengah, gerai laksa. Semangkuk laksa Sarawak lapan ringgit. Anda bayar sepuluh — peniaga pulangkan lapan puluh.
-3. Pukul sembilan, di Kubah Ria. Nak beli ikan terubok masin. Penimbang tunjuk dua kilo — peniaga baca dua puluh. "Diskaun lima puluh peratus" — harga jadi lebih mahal.
+3. Pukul sembilan, di Kubah Ria. Nak beli ikan terubuk masin. Penimbang tunjuk dua kilo — peniaga baca dua puluh. "Diskaun lima puluh peratus" — harga jadi lebih mahal.
 4. Pukul sepuluh. Hari gaji. Tapi tiada siapa boleh kira baki akaun. Bank tutup kaunter.
 5. Pukul sebelas. Had laju tak bermakna apa-apa. Pam minyak tak tahu bila nak berhenti. Jalan raya lumpuh.
 6. Tengah hari, Lapangan Terbang Antarabangsa Kuching. Juruterbang tak boleh kira bahan api atau ketinggian. Semua penerbangan — dibatalkan.

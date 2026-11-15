@@ -8,15 +8,22 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**. Logo syarikat pe
 - Atas: jalur telur dadar kuning (kiri), ayam carik putih (atas), 3 ekor udang oren-merah jambu (bawah), taugeh putih (kanan), 2 limau kasturi dibelah (hijau), sambal merah gelap di tengah, sedikit daun ketumbar
 - Gerai: guna semula troli keluli, papan "LAKSA SARAWAK", pelekat harga **RM 8**
 
-## Babak 3 — Kubah Ria · `kubah-ria.jpg` ⚠️ (sahkan ini Kubah Ria)
-- Bangunan panjang dua tingkat, dinding krim/salmon, bumbung hijau muda melengkung panjang
-- Bahagian tengah lebih tinggi: dinding kaca biru dengan rangka putih, bumbung pelana putih dengan kaca segi tiga besar
-- Kaki lima bertiang segi empat krim + tupang besi putih menyerong, lampu bulat di siling
-- Meja dan kerusi gerai makan di bawah kaki lima, dataran bata merah di hadapan
-- Waktu: senja biru
-- Gerai ikan terubok masin (rekaan): ikan pipih perak keemasan disusun bertingkat, penimbang digital, kotak bungkusan
+## Babak 3 — Gerai ikan terubuk masin, Kubah Ria / Satok · `gerai-ikan-terubuk.jpg`
+- Meja gerai panjang menurun ke arah kamera, **dulang plastik merah** penuh ikan terubuk masin
+- Ikan disusun rapat menyerong dalam barisan, badan **perak-kelabu kebiruan** berkilat, ekor bercabang ke atas
+- Lampu mentol besar tergantung dari atas (bulat putih), kipas dinding, payung/khemah di atas
+- Papan harga **hijau terang bercorak** dengan tulisan merah/putih, contoh "3 EKOR RM ..." — ini papan yang akan "dibaca salah"
+- Lantai basah berkilat, peniaga berkasut but getah kuning, penimbang digital di hujung meja
+- Latar: deretan kedai dinding salmon/oren dengan pintu gulung, kereta diparkir
+- Kubah Ria sendiri: tiada gambar — dibina sebagai bumbung pasar bertiang ringkas
 
 ## Babak 6 — Lapangan Terbang Antarabangsa Kuching
+**Hadapan (senja)** · `lapangan-terbang-hadapan.jpg`
+- Bangunan panjang dua tingkat, dinding krim/salmon, bumbung hijau muda melengkung panjang
+- Bahagian tengah lebih tinggi: dinding kaca biru dengan rangka putih, bumbung pelana putih dengan kaca segi tiga besar
+- Kaki lima bertiang segi empat krim + tupang besi putih menyerong, lampu bulat di siling, meja makan di bawah kaki lima
+- Dataran bata merah di hadapan, langit senja biru
+
 **Luar** · `lapangan-terbang-luar.jpg`
 - Deretan tiang bulat kelabu dengan **kanopi berbentuk mangkuk/payung melengkung** (bahagian bawah kayu coklat) — ciri paling ikonik
 - Bumbung utama tajam menyerong ke atas di hujung kanan, dinding kaca
