@@ -8,14 +8,20 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**. Logo syarikat pe
 - Atas: jalur telur dadar kuning (kiri), ayam carik putih (atas), 3 ekor udang oren-merah jambu (bawah), taugeh putih (kanan), 2 limau kasturi dibelah (hijau), sambal merah gelap di tengah, sedikit daun ketumbar
 - Gerai: guna semula troli keluli, papan "LAKSA SARAWAK", pelekat harga **RM 8**
 
-## Babak 3 — Gerai ikan terubuk masin, Kubah Ria / Satok · `gerai-ikan-terubuk.jpg`
+## Babak 3 — Medan Niaga Satok
+**Luar** · `medan-niaga-satok-pintu.jpg`, `medan-niaga-satok-panorama.jpg`
+- Pintu masuk: **bumbung besar melengkung seperti cengkerang**, rusuk logam kelabu di bawah, kanopi kaca kecil menyerong di atas pintu
+- Tiang oren, jalur papan tanda merah "MEDAN NIAGA SATOK" huruf putih
+- Kompleks: deretan bumbung **merah-oren berlapis bersudut** (macam kipas), dinding krim dengan tingkap kaca biru-hijau
+- Bangunan bulat Kubah Ria di sebelah dengan sepanduk merah, tiang lampu hijau, tempat letak kereta dengan bebendul hitam-putih, kon oren
+
+**Gerai ikan terubuk** · `gerai-ikan-terubuk.jpg`
 - Meja gerai panjang menurun ke arah kamera, **dulang plastik merah** penuh ikan terubuk masin
 - Ikan disusun rapat menyerong dalam barisan, badan **perak-kelabu kebiruan** berkilat, ekor bercabang ke atas
 - Lampu mentol besar tergantung dari atas (bulat putih), kipas dinding, payung/khemah di atas
 - Papan harga **hijau terang bercorak** dengan tulisan merah/putih, contoh "3 EKOR RM ..." — ini papan yang akan "dibaca salah"
 - Lantai basah berkilat, peniaga berkasut but getah kuning, penimbang digital di hujung meja
 - Latar: deretan kedai dinding salmon/oren dengan pintu gulung, kereta diparkir
-- Kubah Ria sendiri: tiada gambar — dibina sebagai bumbung pasar bertiang ringkas
 
 ## Babak 6 — Lapangan Terbang Antarabangsa Kuching
 **Hadapan (senja)** · `lapangan-terbang-hadapan.jpg`
