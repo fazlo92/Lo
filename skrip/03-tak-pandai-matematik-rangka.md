@@ -1,4 +1,4 @@
-# Apa Jadi Kalau Semua Orang di Kuching Tiba-tiba Lupa Matematik? — Rangka v3
+# Apa Jadi Kalau Semua Orang di Kuching Tiba-tiba Tak Pandai Matematik? — Rangka v3
 
 (Tajuk asal pengguna: "Apa jadi kalau orang Kuching semua langsung tak pandai Matematik?" — dicadang versi "tiba-tiba lupa" supaya jadi kejadian mustahil satu hari, bukan sindiran.)
 
@@ -14,7 +14,7 @@
 
 | # | Jam | Lokasi | Tajuk (kata biru) | Kaunter | Tahap | Apa berlaku |
 |---|---|---|---|---|---|---|
-| 1 Hook | 7:00 pagi | Rumah | Apa jadi kalau semua orang di Kuching tiba-tiba lupa **matematik**? | 0 | 😄 | Jam loceng berbunyi — tiada siapa tahu pukul berapa. |
+| 1 Hook | 7:00 pagi | Rumah | Apa jadi kalau semua orang di Kuching tiba-tiba tak pandai **matematik**? | 0 | 😄 | Jam loceng berbunyi — tiada siapa tahu pukul berapa. |
 | 2 | 7:30 pagi | Gerai laksa Sarawak | Baki **salah**. | 12 | 😄 | Laksa Sarawak RM 8. Bayar RM 10 — peniaga pulangkan RM 80. |
 | 3 | 9:00 pagi | Pasar Kubah Ria | Timbang **ikan**. | 480 | 😄 | Beli ikan terubok masin: 2 kg dibaca 20 kg. "Diskaun 50%" jadi lebih mahal. |
 | 4 | 10:00 pagi | Bank / ATM (tugu kucing) | **Gaji** hilang. | 3,600 | 😬 | Tiada siapa boleh kira baki. Bank tutup kaunter. |
@@ -29,7 +29,7 @@
 
 ## Draf suara latar
 
-1. Esok pagi, semua orang di Kuching bangun… dan lupa cara mengira. Jam loceng berbunyi — tapi tiada siapa tahu pukul berapa.
+1. Esok pagi, semua orang di Kuching bangun… dan tiba-tiba tak pandai matematik. Jam loceng berbunyi — tapi tiada siapa tahu pukul berapa.
 2. Pukul tujuh setengah, gerai laksa. Semangkuk laksa Sarawak lapan ringgit. Anda bayar sepuluh — peniaga pulangkan lapan puluh.
 3. Pukul sembilan, di Kubah Ria. Nak beli ikan terubok masin. Penimbang tunjuk dua kilo — peniaga baca dua puluh. "Diskaun lima puluh peratus" — harga jadi lebih mahal.
 4. Pukul sepuluh. Hari gaji. Tapi tiada siapa boleh kira baki akaun. Bank tutup kaunter.
@@ -43,4 +43,3 @@
 12. Apa jadi kalau… apa pula? Tulis di ruang komen.
 
 ## Soalan untuk disahkan
-- Guna tajuk "tiba-tiba lupa matematik" atau kekal tajuk asal?
