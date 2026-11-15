@@ -1,6 +1,6 @@
 # Apa Jadi Kalau Semua Orang di Kuching Tiba-tiba Tak Pandai Matematik? — Rangka v3
 
-(Tajuk asal pengguna: "Apa jadi kalau orang Kuching semua langsung tak pandai Matematik?" — dicadang versi "tiba-tiba lupa" supaya jadi kejadian mustahil satu hari, bukan sindiran.)
+(Tajuk dipilih pengguna: "Tiba-tiba Tak Pandai Matematik" — kejadian mustahil satu hari.)
 
 - **Format:** 9:16, ~1:50 (bawah 2 minit), POV low-poly, siri "Apa Jadi?"
 - **Tempoh cerita:** satu hari — 7 pagi hingga 9 malam. Langit makin gelap = keadaan makin teruk.
@@ -41,5 +41,3 @@
 10. Pukul sembilan malam. Kuching gelap gelita. Bantuan tak tahu berapa ramai perlu ditolong… atau berapa jauh perlu pergi.
 11. Baru kita sedar. Matematik bukan cuma dalam kelas. Ia ada dalam laksa pagi kita, jambatan yang kita lalu, air yang kita minum — dan setiap nyawa yang diselamatkan.
 12. Apa jadi kalau… apa pula? Tulis di ruang komen.
-
-## Soalan untuk disahkan
