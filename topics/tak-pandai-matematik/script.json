@@ -1,45 +1,45 @@
 {
   "title": "Apa Jadi Kalau Semua Orang di Kuching Tiba-tiba Tak Pandai Matematik?",
-  "duration": 92,
+  "duration": 101,
   "fps": 30,
   "width": 1080,
   "height": 1920,
   "voiceover": "vo.wav",
   "events": {
-    "alarm": 5.16,
-    "bayar": 13.69,
-    "pulang": 15.01,
-    "timbang": 21.03,
-    "baca20": 22.7,
-    "diskaun": 24.26,
-    "mahal": 25.82,
-    "gaji": 28.56,
-    "baki": 29.38,
-    "tutup": 31.96,
-    "hadLaju": 34.47,
-    "pam": 36.46,
-    "lumpuh": 38.58,
-    "batal": 45.43,
-    "duaBiji": 49.94,
-    "duaPuluh": 51.44,
-    "bina": 55.97,
-    "takJumpa": 59.01,
-    "klorin": 61.87,
-    "voltan": 63.76,
-    "airHenti": 65.85,
-    "padam": 67.02,
-    "bantuan": 70.43,
-    "laksaIcon": 78.15,
-    "jambatanIcon": 80.42,
-    "airIcon": 81.75,
-    "nyawaIcon": 82.96,
-    "cta": 84.9
+    "alarm": 5.27,
+    "bayar": 13.49,
+    "pulang": 15.16,
+    "timbang": 22.27,
+    "baca20": 23.8,
+    "diskaun": 25.49,
+    "mahal": 26.61,
+    "gaji": 29.03,
+    "baki": 30.13,
+    "tutup": 32.5,
+    "hadLaju": 34.64,
+    "pam": 37.29,
+    "lumpuh": 39.22,
+    "batal": 48.02,
+    "duaBiji": 53.86,
+    "duaPuluh": 55.18,
+    "bina": 59.53,
+    "takJumpa": 63.43,
+    "klorin": 66.33,
+    "voltan": 67.97,
+    "airHenti": 70.29,
+    "padam": 71.48,
+    "bantuan": 75.18,
+    "laksaIcon": 85.71,
+    "jambatanIcon": 88.57,
+    "airIcon": 91.0,
+    "nyawaIcon": 91.96,
+    "cta": 93.92
   },
   "scenes": [
     {
       "id": "rumah",
       "start": 0,
-      "end": 8.8,
+      "end": 8.96,
       "headline": {
         "text": "Apa jadi kalau semua orang di Kuching tiba-tiba tak pandai matematik?",
         "highlight": [
@@ -48,31 +48,31 @@
       },
       "captions": [
         {
-          "t": 0.02,
+          "t": 0.01,
           "text": "Esok pagi,"
         },
         {
-          "t": 1.12,
+          "t": 0.7,
           "text": "semua orang di Kuching bangun…"
         },
         {
-          "t": 2.96,
+          "t": 3.06,
           "text": "dan tiba-tiba tak pandai matematik."
         },
         {
-          "t": 5.13,
+          "t": 5.24,
           "text": "Jam loceng berbunyi —"
         },
         {
-          "t": 6.53,
+          "t": 6.12,
           "text": "tapi tiada siapa tahu pukul berapa."
         }
       ]
     },
     {
       "id": "laksa",
-      "start": 8.8,
-      "end": 16.6,
+      "start": 8.96,
+      "end": 18.44,
       "headline": {
         "text": "Baki salah.",
         "highlight": [
@@ -81,31 +81,31 @@
       },
       "captions": [
         {
-          "t": 9.07,
+          "t": 9.23,
           "text": "Pukul tujuh setengah,"
         },
         {
-          "t": 10.28,
+          "t": 10.44,
           "text": "gerai laksa."
         },
         {
-          "t": 11.32,
+          "t": 11.52,
           "text": "Semangkuk laksa Sarawak lapan ringgit."
         },
         {
-          "t": 13.66,
+          "t": 13.46,
           "text": "Anda bayar sepuluh —"
         },
         {
-          "t": 14.98,
+          "t": 15.13,
           "text": "peniaga pulangkan lapan puluh."
         }
       ]
     },
     {
       "id": "satok",
-      "start": 16.6,
-      "end": 19.6,
+      "start": 18.44,
+      "end": 21.97,
       "headline": {
         "text": "Timbang ikan.",
         "highlight": [
@@ -114,23 +114,23 @@
       },
       "captions": [
         {
-          "t": 16.81,
+          "t": 18.71,
           "text": "Pukul sembilan,"
         },
         {
-          "t": 17.72,
+          "t": 19.52,
           "text": "di Medan Niaga Satok."
         },
         {
-          "t": 19.01,
+          "t": 20.75,
           "text": "Nak beli ikan terubuk masin."
         }
       ]
     },
     {
       "id": "terubuk",
-      "start": 19.6,
-      "end": 27.4,
+      "start": 21.97,
+      "end": 27.91,
       "headline": {
         "text": "Timbang ikan.",
         "highlight": [
@@ -139,27 +139,27 @@
       },
       "captions": [
         {
-          "t": 21.0,
+          "t": 22.24,
           "text": "Penimbang tunjuk dua kilo —"
         },
         {
-          "t": 22.67,
+          "t": 23.77,
           "text": "peniaga baca dua puluh."
         },
         {
-          "t": 24.23,
+          "t": 25.46,
           "text": "Diskaun lima puluh peratus —"
         },
         {
-          "t": 25.79,
+          "t": 26.58,
           "text": "harga jadi lebih mahal."
         }
       ]
     },
     {
       "id": "atm",
-      "start": 27.4,
-      "end": 33.1,
+      "start": 27.91,
+      "end": 33.2,
       "headline": {
         "text": "Gaji hilang.",
         "highlight": [
@@ -168,27 +168,27 @@
       },
       "captions": [
         {
-          "t": 27.62,
+          "t": 28.18,
           "text": "Pukul sepuluh."
         },
         {
-          "t": 28.53,
+          "t": 29.0,
           "text": "Hari gaji."
         },
         {
-          "t": 29.35,
+          "t": 30.1,
           "text": "Tapi tiada siapa boleh kira baki akaun."
         },
         {
-          "t": 31.93,
+          "t": 32.47,
           "text": "Bank tutup kaunter."
         }
       ]
     },
     {
       "id": "jalan",
-      "start": 33.1,
-      "end": 39.8,
+      "start": 33.2,
+      "end": 40.42,
       "headline": {
         "text": "Jalan lumpuh.",
         "highlight": [
@@ -197,27 +197,27 @@
       },
       "captions": [
         {
-          "t": 33.32,
+          "t": 33.47,
           "text": "Pukul sebelas."
         },
         {
-          "t": 34.44,
+          "t": 34.61,
           "text": "Had laju tak bermakna apa-apa."
         },
         {
-          "t": 36.43,
+          "t": 37.26,
           "text": "Pam minyak tak tahu bila nak berhenti."
         },
         {
-          "t": 38.55,
+          "t": 39.19,
           "text": "Jalan raya lumpuh."
         }
       ]
     },
     {
       "id": "airportLuar",
-      "start": 39.8,
-      "end": 42.6,
+      "start": 40.42,
+      "end": 44.57,
       "headline": {
         "text": "Semua penerbangan dibatalkan.",
         "highlight": [
@@ -226,23 +226,23 @@
       },
       "captions": [
         {
-          "t": 40.04,
+          "t": 40.69,
           "text": "Tengah hari,"
         },
         {
-          "t": 40.79,
+          "t": 41.7,
           "text": "Lapangan Terbang Antarabangsa Kuching."
         },
         {
-          "t": 42.58,
+          "t": 43.64,
           "text": "Juruterbang tak boleh kira bahan api atau ketinggian."
         }
       ]
     },
     {
       "id": "airportDalam",
-      "start": 42.6,
-      "end": 47.5,
+      "start": 44.57,
+      "end": 50.58,
       "headline": {
         "text": "Semua penerbangan dibatalkan.",
         "highlight": [
@@ -251,19 +251,19 @@
       },
       "captions": [
         {
-          "t": 45.4,
+          "t": 47.99,
           "text": "Semua penerbangan —"
         },
         {
-          "t": 46.68,
+          "t": 49.98,
           "text": "dibatalkan."
         }
       ]
     },
     {
       "id": "hospitalLuar",
-      "start": 47.5,
-      "end": 49.8,
+      "start": 50.58,
+      "end": 53.56,
       "headline": {
         "text": "Ubat jadi bahaya.",
         "highlight": [
@@ -272,19 +272,19 @@
       },
       "captions": [
         {
-          "t": 47.78,
+          "t": 50.85,
           "text": "Pukul dua petang,"
         },
         {
-          "t": 48.69,
+          "t": 52.55,
           "text": "Hospital Umum Sarawak."
         }
       ]
     },
     {
       "id": "farmasi",
-      "start": 49.8,
-      "end": 55.0,
+      "start": 53.56,
+      "end": 58.56,
       "headline": {
         "text": "Ubat jadi bahaya.",
         "highlight": [
@@ -293,23 +293,23 @@
       },
       "captions": [
         {
-          "t": 49.91,
+          "t": 53.83,
           "text": "Dua biji sehari…"
         },
         {
-          "t": 51.41,
+          "t": 55.15,
           "text": "atau dua puluh?"
         },
         {
-          "t": 52.92,
+          "t": 56.91,
           "text": "Doktor tak berani beri ubat."
         }
       ]
     },
     {
       "id": "jambatan",
-      "start": 55.0,
-      "end": 60.8,
+      "start": 58.56,
+      "end": 65.07,
       "headline": {
         "text": "Jambatan tak bertemu.",
         "highlight": [
@@ -318,23 +318,23 @@
       },
       "captions": [
         {
-          "t": 55.24,
+          "t": 58.83,
           "text": "Pukul empat."
         },
         {
-          "t": 55.94,
+          "t": 59.5,
           "text": "Jambatan baru di Waterfront dibina dari dua tebing…"
         },
         {
-          "t": 58.98,
+          "t": 63.4,
           "text": "dan tak bertemu di tengah sungai."
         }
       ]
     },
     {
       "id": "loji",
-      "start": 60.8,
-      "end": 67.8,
+      "start": 65.07,
+      "end": 72.36,
       "headline": {
         "text": "Air dan elektrik terputus.",
         "highlight": [
@@ -344,31 +344,31 @@
       },
       "captions": [
         {
-          "t": 61.07,
+          "t": 65.34,
           "text": "Pukul enam."
         },
         {
-          "t": 61.84,
+          "t": 66.3,
           "text": "Loji air tak boleh sukat klorin."
         },
         {
-          "t": 63.73,
+          "t": 67.94,
           "text": "Janakuasa tak boleh kira voltan."
         },
         {
-          "t": 65.82,
+          "t": 70.26,
           "text": "Air paip berhenti."
         },
         {
-          "t": 66.99,
+          "t": 71.45,
           "text": "Lampu padam."
         }
       ]
     },
     {
       "id": "gelap",
-      "start": 67.8,
-      "end": 74.7,
+      "start": 72.36,
+      "end": 80.53,
       "headline": {
         "text": "Kuching gelap.",
         "highlight": [
@@ -377,27 +377,27 @@
       },
       "captions": [
         {
-          "t": 68.03,
+          "t": 72.63,
           "text": "Pukul sembilan malam."
         },
         {
-          "t": 69.0,
+          "t": 73.92,
           "text": "Kuching gelap gelita."
         },
         {
-          "t": 70.4,
+          "t": 75.15,
           "text": "Bantuan tak tahu berapa ramai perlu ditolong…"
         },
         {
-          "t": 72.91,
+          "t": 78.78,
           "text": "atau berapa jauh perlu pergi."
         }
       ]
     },
     {
       "id": "twist",
-      "start": 74.7,
-      "end": 84.9,
+      "start": 80.53,
+      "end": 93.92,
       "headline": {
         "text": "Matematik ada di mana-mana.",
         "highlight": [
@@ -406,35 +406,35 @@
       },
       "captions": [
         {
-          "t": 74.97,
+          "t": 80.8,
           "text": "Baru kita sedar."
         },
         {
-          "t": 76.1,
+          "t": 82.87,
           "text": "Matematik bukan cuma dalam kelas."
         },
         {
-          "t": 78.12,
+          "t": 85.68,
           "text": "Ia ada dalam laksa pagi kita,"
         },
         {
-          "t": 80.39,
+          "t": 88.54,
           "text": "jambatan yang kita lalu,"
         },
         {
-          "t": 81.72,
+          "t": 90.97,
           "text": "air yang kita minum —"
         },
         {
-          "t": 82.93,
+          "t": 91.93,
           "text": "dan setiap nyawa yang diselamatkan."
         }
       ]
     },
     {
       "id": "cta",
-      "start": 84.9,
-      "end": 92.0,
+      "start": 93.92,
+      "end": 101,
       "headline": {
         "text": "Apa jadi kalau _____?",
         "highlight": [
@@ -444,15 +444,15 @@
       },
       "captions": [
         {
-          "t": 85.19,
+          "t": 94.19,
           "text": "Apa jadi kalau…"
         },
         {
-          "t": 86.35,
+          "t": 95.32,
           "text": "apa pula?"
         },
         {
-          "t": 87.24,
+          "t": 96.74,
           "text": "Tulis di ruang komen."
         }
       ]
