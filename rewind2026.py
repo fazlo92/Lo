@@ -13,6 +13,9 @@ Struktur folder:
     fonts/courier-prime-latin-{400,700}-normal.woff
 """
 import argparse
+import os as _os
+_os.environ.setdefault("NUMBA_NUM_THREADS", "1")
+_os.environ.setdefault("OMP_NUM_THREADS", "1")
 import math
 import multiprocessing as mp
 import os
@@ -271,20 +274,57 @@ def draw_card(img, shot, t):
 
 
 # ---------------------------------------------------------------- grid
-def grid_rects(n):
-    if n == 4:
-        cw, ch, gap, cols = 573, 430, 46, 2
-    else:
-        cw, ch, gap, cols = 387, 290, 32, 3
-    cw, ch, gap = px(cw), px(ch), px(gap)
-    tw, th = cols * cw + (cols - 1) * gap, cols * ch + (cols - 1) * gap
-    x0, y0 = (W - tw) / 2, (H - th) / 2
-    return [(x0 + (i % cols) * (cw + gap) + cw / 2, y0 + (i // cols) * (ch + gap) + ch / 2, cw, ch)
-            for i in range(n)]
+@lru_cache(maxsize=None)
+def orient(path):
+    """'P' potret / 'L' landskap selepas pembetulan EXIF."""
+    im = Image.open(path)
+    w, h = im.size
+    if im.getexif().get(0x0112, 1) in (5, 6, 7, 8):
+        w, h = h, w
+    return "P" if h > w else "L"
+
+
+# susunan (lajur, baris) ikut bilangan gambar; baris tak penuh diletak di tengah
+LAYOUT = {
+    "L": {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (3, 2), 6: (3, 2), 7: (4, 2), 8: (4, 2)},
+    "P": {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (4, 1), 5: (5, 1), 6: (3, 2), 7: (4, 2), 8: (4, 2),
+          9: (5, 2), 10: (5, 2)},
+}
+MAXN = {"L": 8, "P": 10}
+
+
+def grid_layout(n, o):
+    cols, rows = LAYOUT[o][n]
+    aspect = 4 / 3 if o == "L" else 3 / 4
+    gap = px(34)
+    aw, ah = 0.86 * W, 0.80 * H
+    ch = min((ah - (rows - 1) * gap) / rows, ((aw - (cols - 1) * gap) / cols) / aspect)
+    ch = min(ch, 0.62 * H) if n > 1 else ch
+    cw = ch * aspect
+    cw, ch = int(cw), int(ch)
+    th = rows * ch + (rows - 1) * gap
+    y0 = (H - th) / 2 + px(10)
+    rects, i = [], 0
+    for r in range(rows):
+        k = min(cols, n - i)
+        tw = k * cw + (k - 1) * gap
+        x0 = (W - tw) / 2
+        for c in range(k):
+            rects.append((x0 + c * (cw + gap) + cw / 2, y0 + r * (ch + gap) + ch / 2, cw, ch))
+        i += k
+    return rects
+
+
+def palette_rects():
+    cw, ch, gap = px(387), px(290), px(32)
+    tw, th = 3 * cw + 2 * gap, 3 * ch + 2 * gap
+    x0, y0 = (W - tw) / 2, (H - th) / 2 + px(10)
+    return [(x0 + (i % 3) * (cw + gap) + cw / 2, y0 + (i // 3) * (ch + gap) + ch / 2, cw, ch)
+            for i in range(9)]
 
 
 def draw_grid(img, shot, t):
-    rects = grid_rects(len(shot["paths"]))
+    rects = shot["rects"]
     tcol = shot.get("color_at")
     for i, (path, ta) in enumerate(zip(shot["paths"], shot["appear"])):
         p = ease_out((t - ta) / 0.28)
@@ -300,7 +340,7 @@ def draw_grid(img, shot, t):
                 a = Image.blend(a, b, c) if c < 1 else b
         else:
             a = cell_asset(path, cw, ch, False, border)
-        paste_center(img, a, cx, cy, scale=0.88 + 0.12 * p, alpha=p)
+        paste_center(img, a, cx, cy, scale=0.9 + 0.1 * p, alpha=p)
 
 
 # ---------------------------------------------------------------- shot render
@@ -408,35 +448,122 @@ def snap(beats, t):
 
 
 # ---------------------------------------------------------------- timeline
-def pick(folder, exclude=()):
+def folder_files(folder, exclude=()):
     files = [f for f in list_images(folder) if os.path.basename(f) not in exclude]
     rng = random.Random(f"{SEED}-{folder}")
-    k = min(len(files), rng.randint(10, 15))
-    return rng.sample(files, k)
+    rng.shuffle(files)
+    return files
 
 
-def image_run(seg, beats, t_start, files, bps=4, ncell=9, bw=False, xfade=0.0):
+def chunks(items, o):
+    if not items:
+        return []
+    k = math.ceil(len(items) / MAXN[o])
+    base, extra = divmod(len(items), k)
+    out, i = [], 0
+    for j in range(k):
+        n = base + (1 if j < extra else 0)
+        out.append(items[i:i + n])
+        i += n
+    return out
+
+
+def build_grids(pool):
+    P = [f for f in pool if orient(f) == "P"]
+    L = [f for f in pool if orient(f) == "L"]
+    cp, cl = chunks(P, "P"), chunks(L, "L")
+    first, second = (cl, cp) if len(cl) >= len(cp) else (cp, cl)
+    order = []
+    for i in range(max(len(first), len(second))):
+        if i < len(first):
+            order.append(first[i])
+        if i < len(second):
+            order.append(second[i])
+    return [(g, "P" if orient(g[0]) == "P" else "L") for g in order]
+
+
+def plan_images(seg, beats, t_start, files, step=None, min_hold=2.0, bw=False, xfade=0.0,
+                max_singles=3):
+    """Gambar tunggal (4 beat) + grid ikut orientasi; setiap gambar sekali sahaja.
+    Masa dikira dalam separuh-beat supaya semua potongan jatuh pada beat."""
     t_end = seg["end"]
-    bb = [b for b in beats if t_start - 1e-3 <= b < t_end - 0.35]
+    bb = [float(b) for b in beats if t_start - 1e-3 <= b < t_end - 0.3]
     if not bb or abs(bb[0] - t_start) > 1e-3:
         bb = [t_start] + bb
-    hold = 2
-    n_single = max(1, (len(bb) - ncell - hold) // bps)
-    shots = []
-    for k in range(n_single):
-        a, b = bb[k * bps], bb[(k + 1) * bps]
-        sh = dict(kind="single", t0=a, t1=b, path=files[k % len(files)], xfade=xfade)
+    hb = []
+    for i, b in enumerate(bb):
+        hb.append(b)
+        nxt = bb[i + 1] if i + 1 < len(bb) else b + (bb[-1] - bb[-2] if len(bb) > 1 else 0.5)
+        hb.append((b + nxt) / 2)
+    avail = len(hb) - 1                      # dalam separuh-beat
+
+    files = list(files)
+    singles = [files.pop(next((i for i, f in enumerate(files) if orient(f) == "L"), 0))]
+    for o_ in "PL":                          # baki 1-2 gambar satu orientasi -> gambar tunggal
+        grp = [f for f in files if orient(f) == o_]
+        if 0 < len(grp) <= 2 and len(files) - len(grp) >= 3:
+            for f in grp:
+                files.remove(f)
+                singles.append(f)
+
+    def need(pool, st, hold):
+        g = build_grids(pool)
+        return len(singles) * 8 + sum(len(x) * st for x, _ in g) + len(g) * hold, g
+
+    steps = [int(step * 2)] if step else [2, 1]   # 1 beat atau separuh beat setiap gambar
+    plan = None
+    for st in steps:
+        for hold in (int(min_hold * 2), 2):
+            n, g = need(files, st, hold)
+            if n <= avail:
+                plan = (st, hold, g)
+                break
+        if plan:
+            break
+    dropped = []
+    if not plan:                             # terlalu banyak: buang beberapa (hampir semua)
+        st, hold = steps[-1], 2
+        while files:
+            n, g = need(files, st, hold)
+            if n <= avail:
+                break
+            dropped.append(files.pop())
+        plan = (st, hold, build_grids(files))
+    st, hold, grids = plan
+    # masa lebih: tambah gambar tunggal (maks), kemudian panjangkan pegangan grid
+    while len(singles) < max_singles and len(files) > 4:
+        n, _ = need(files[1:], st, hold)
+        if avail - (n + 8) < 8:
+            break
+        singles.append(files.pop(0))
+    _, grids = need(files, st, hold)
+    used = len(singles) * 8 + sum(len(x) * st for x, _ in grids)
+    hold = max(hold, (avail - used) // max(1, len(grids)))
+    hold = min(hold, 16)
+
+    shots, i = [], 0
+    for f in singles:
+        sh = dict(kind="single", t0=hb[i], t1=hb[min(i + 8, avail)], path=f, xfade=xfade)
         if bw:
-            sh["color_at"] = bb[k * bps + bps // 2]
+            sh["color_at"] = hb[i + 4]
         shots.append(sh)
-    g0 = n_single * bps
-    rest = files[n_single:] + files[:n_single]
-    paths = (rest * 2)[:ncell]
-    appear = [bb[min(g0 + j, len(bb) - 1)] for j in range(ncell)]
-    grid = dict(kind="grid", t0=bb[g0], t1=t_end, paths=paths, appear=appear)
-    if bw:
-        grid["color_at"] = bb[min(g0 + ncell, len(bb) - 1)]
-    shots.append(grid)
+        i += 8
+    for gi, (paths, o) in enumerate(grids):
+        n = len(paths)
+        appear = [hb[min(i + j * st, avail)] for j in range(n)]
+        end = i + n * st + hold
+        t1 = hb[min(end, avail)] if gi < len(grids) - 1 else t_end
+        sh = dict(kind="grid", t0=hb[i], t1=t1, paths=paths, appear=appear,
+                  rects=grid_layout(n, o), xfade=xfade)
+        if bw:
+            sh["color_at"] = hb[min(i + n * st + 1, avail)]
+        shots.append(sh)
+        i = end
+    if shots:
+        shots[-1]["t1"] = t_end
+    seg["stats"] = dict(used=len(singles) + sum(len(x) for x, _ in grids),
+                        dropped=len(dropped), grids=[f"{len(x)}{o}" for x, o in grids],
+                        step=st / 2, hold=hold / 2)
     return shots
 
 
@@ -451,6 +578,14 @@ def build_timeline(bt1, bt2):
     b1 = b1[b1 < S1 + S1_LEN]
     b2 = S2 + extend_beats(bt2, 140)
     TOTAL = 241.0
+
+    # satu gambar landskap setiap folder disimpan untuk grid palet finale (tidak diulang)
+    rng = random.Random(f"{SEED}-palette")
+    pal = []
+    for f in FOLDERS:
+        land = [x for x in list_images(f) if os.path.basename(x) != HERO and orient(x) == "L"]
+        pal.append(rng.choice(land))
+    reserved = {os.path.basename(p) for p in pal} | {HERO}
 
     # ---- pembuka 0:00 - 0:12 (senyap)
     card = make_card(["2026.", "Satu tahun.", "Sembilan warna.", "Ini cerita kita."],
@@ -469,14 +604,14 @@ def build_timeline(bt1, bt2):
         ("kuning", "03 KUNING", ["Kuning.", "Cerah.", "Setiap hari ada sebab untuk senyum."], 65.0, 90.0, 9),
         ("hijau", "04 HIJAU", ["Hijau.", "Tenang.", "Kerja banyak, hati tetap senang. mena kah??."], 90.0, 115.0, 4),
     ]
-    for name, folder, lines, a, b, ncell in p1:
+    for name, folder, lines, a, b, _ in p1:
         a = a if a == 12.0 else snap(b1, a)
         b = 115.0 if name == "hijau" else snap(b1, b)
         seg = dict(name=name, start=a, end=b, dot=name)
         card = make_card(lines, a, first_style=first_word(TXT[name]))
         img_t = float(b1[b1 >= card["typing_end"] + 1.5][0])
         card.update(t0=a, t1=img_t)
-        seg["shots"] = [card] + image_run(seg, b1, img_t, pick(folder), ncell=ncell)
+        seg["shots"] = [card] + plan_images(seg, b1, img_t, folder_files(folder, reserved))
         segs.append(seg)
 
     # ---- biru: kad ditaip dalam senyap 1:55, imej dari 2:05 (best_day)
@@ -487,18 +622,18 @@ def build_timeline(bt1, bt2):
     card.update(t0=115.0, t1=S2)
     clicks += card_clicks(card)
     G["bell"].append(card["typing_end"] + 0.12)
-    seg["shots"] = [card] + image_run(seg, b2, S2, pick("05 BIRU", exclude=(HERO,)), ncell=9)
+    seg["shots"] = [card] + plan_images(seg, b2, S2, folder_files("05 BIRU", reserved))
     segs.append(seg)
 
     # ---- bahagian 2
     p2 = [
         ("ungu", "06 UNGU", ["Ungu.", "Lembut.", "Penuh kenangan."], 150.0, 170.0,
-         dict(ncell=4, bps=8, xfade=0.55), first_word(TXT["ungu"]), 1),
+         dict(step=1.0, min_hold=3.0, xfade=0.45), first_word(TXT["ungu"]), 1),
         ("pink", "07 PINK", ["Pink.", "Manis.", "Sebab cikgu pun manis-manis."], 170.0, 190.0,
-         dict(ncell=9), first_word(TXT["pink"]), 2),
+         dict(), first_word(TXT["pink"]), 2),
         ("hitam", "08 HITAM & PUTIH", ["Hitam & putih.", "Tak semua gambar dirancang…",
                                        "dan itu yang paling kita suka."], 190.0, 210.0,
-         dict(ncell=4, bw=True), hitam_putih, 2),
+         dict(bw=True), hitam_putih, 2),
     ]
     for name, folder, lines, a, b, kw, style, cpf in p2:
         a, b = segs[-1]["end"], snap(b2, b)
@@ -508,7 +643,7 @@ def build_timeline(bt1, bt2):
         hold = 2.0 if name == "ungu" else 1.5
         img_t = float(b2[b2 >= card["typing_end"] + hold][0])
         card.update(t0=a, t1=img_t)
-        seg["shots"] = [card] + image_run(seg, b2, img_t, pick(folder), **kw)
+        seg["shots"] = [card] + plan_images(seg, b2, img_t, folder_files(folder, reserved), **kw)
         segs.append(seg)
 
     # ---- finale
@@ -517,13 +652,8 @@ def build_timeline(bt1, bt2):
     card = make_card(["Lain warna.", "Lain cerita.", "Satu keluarga."], a, first_style=rainbow_first)
     g0 = float(b2[b2 >= card["typing_end"] + 1.5][0])
     card.update(t0=a, t1=g0)
-    rng = random.Random(f"{SEED}-palette")
-    pal = []
-    for f in FOLDERS:
-        files = [x for x in list_images(f) if os.path.basename(x) != HERO]
-        pal.append(rng.choice(files))
     gb = b2[b2 >= g0 - 1e-3]
-    grid = dict(kind="grid", t0=g0, t1=float(gb[12]), paths=pal,
+    grid = dict(kind="grid", t0=g0, t1=float(gb[12]), paths=pal, rects=palette_rects(),
                 appear=[float(x) for x in gb[:9]],
                 borders=[C[n] if n != "putih" else "#FFFFFF" for n in NINE])
     hero = os.path.join(ROOT, "input", "05 BIRU", HERO)
@@ -621,7 +751,8 @@ def main():
     print(f"good_time ~{tempo1:.0f} BPM, best_day ~{tempo2:.0f} BPM")
     build_timeline(bt1, bt2)
     for s in G["segs"]:
-        print(f"  {s['name']:8s} {s['start']:7.2f} -> {s['end']:7.2f}  shots={len(s['shots'])}")
+        st = s.get("stats", {})
+        print(f"  {s['name']:8s} {s['start']:7.2f} -> {s['end']:7.2f}  shots={len(s['shots'])} {st}")
 
     os.makedirs(os.path.join(ROOT, "output"), exist_ok=True)
     if args.stills:
@@ -633,15 +764,14 @@ def main():
 
     out = args.out or os.path.join(ROOT, "output", "draft.mp4" if H == 1080 else f"preview_{H}p.mp4")
     wav = os.path.join(ROOT, "output", "_audio.wav")
-    build_audio(wav)
     n = int(round(G["total"] * FPS))
+    vid = os.path.join(ROOT, "output", f"_video_{H}.mp4")
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav,
+           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-c:v", "libx264", "-preset", "veryfast" if H < 1080 else "medium",
-           "-crf", "23" if H < 1080 else "19", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out]
+           "-crf", "23" if H < 1080 else "19", "-pix_fmt", "yuv420p", vid]
     ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    ctx = mp.get_context("fork")
+    ctx = mp.get_context("fork")              # fork SEBELUM MoviePy/ffmpeg audio dibuka
     with ctx.Pool(args.jobs) as pool:
         for k, buf in enumerate(pool.imap(render_bytes, range(n), chunksize=8)):
             ff.stdin.write(buf)
@@ -649,6 +779,10 @@ def main():
                 print(f"  frame {k}/{n} ({k / FPS:.0f}s)", flush=True)
     ff.stdin.close()
     ff.wait()
+    build_audio(wav)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", vid, "-i", wav, "-c:v", "copy",
+                    "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
+                   check=True)
     print("siap:", out)
 
 
