@@ -1,0 +1,487 @@
+{
+  "title": "Apa Jadi Kalau Internet Dunia Hilang Selama 7 Hari?",
+  "duration": 95,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voiceover": "vo.wav",
+  "events": {
+    "putus": 1.88,
+    "apps": 8.05,
+    "qrGagal": 13.92,
+    "cash": 17.05,
+    "tenang": 18.15,
+    "atm": 23.74,
+    "tunai": 27.1,
+    "perlahan": 32.14,
+    "sukar": 35.54,
+    "rak": 39.58,
+    "sandaran": 43.14,
+    "kecemasan": 45.22,
+    "takHubung": 50.86,
+    "radio": 52.88,
+    "khabar": 55.62,
+    "tempahan": 60.52,
+    "rugi": 63.14,
+    "pasar": 68.12,
+    "tanam": 70.52,
+    "jiran": 72.8,
+    "tengahMalam": 74.76,
+    "kembali": 75.9,
+    "mesej": 77.26,
+    "bergantung": 83.22,
+    "cta": 86.85
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "end": 5.64,
+      "headline": {
+        "text": "Apa jadi kalau internet dunia hilang selama 7 hari?",
+        "highlight": [
+          "internet"
+        ]
+      },
+      "captions": [
+        {
+          "t": 0,
+          "text": "Bayangkan…"
+        },
+        {
+          "t": 0.93,
+          "text": "esok pagi,"
+        },
+        {
+          "t": 1.85,
+          "text": "internet di seluruh dunia hilang."
+        },
+        {
+          "t": 3.95,
+          "text": "Selama tujuh hari."
+        }
+      ]
+    },
+    {
+      "id": "h1bilik",
+      "start": 5.64,
+      "end": 11.9,
+      "headline": {
+        "text": "Hari 1 — Kuching terdiam.",
+        "highlight": [
+          "terdiam"
+        ]
+      },
+      "captions": [
+        {
+          "t": 5.91,
+          "text": "Hari pertama."
+        },
+        {
+          "t": 6.73,
+          "text": "Pukul 7 pagi di Kuching."
+        },
+        {
+          "t": 8.02,
+          "text": "WhatsApp,"
+        },
+        {
+          "t": 8.57,
+          "text": "Facebook dan TikTok tidak boleh dibuka."
+        }
+      ]
+    },
+    {
+      "id": "h1kedai",
+      "start": 11.9,
+      "end": 19.3,
+      "headline": {
+        "text": "Hari 1 — Kuching terdiam.",
+        "highlight": [
+          "terdiam"
+        ]
+      },
+      "captions": [
+        {
+          "t": 12.17,
+          "text": "Di sebuah kedai makan di Satok,"
+        },
+        {
+          "t": 13.89,
+          "text": "bayaran Sarawak Pay gagal."
+        },
+        {
+          "t": 15.97,
+          "text": "Peniaga hanya berkata,"
+        },
+        {
+          "t": 17.02,
+          "text": "“Cash jak boleh!”"
+        },
+        {
+          "t": 18.12,
+          "text": "Ramai masih tenang."
+        }
+      ]
+    },
+    {
+      "id": "h2luar",
+      "start": 19.3,
+      "end": 22.54,
+      "headline": {
+        "text": "Hari 2 — Semua cari wang tunai.",
+        "highlight": [
+          "wang",
+          "tunai"
+        ]
+      },
+      "captions": [
+        {
+          "t": 19.57,
+          "text": "Hari kedua."
+        },
+        {
+          "t": 20.59,
+          "text": "Semua orang mencari wang tunai."
+        }
+      ]
+    },
+    {
+      "id": "h2atm",
+      "start": 22.54,
+      "end": 25.64,
+      "headline": {
+        "text": "Hari 2 — Semua cari wang tunai.",
+        "highlight": [
+          "wang",
+          "tunai"
+        ]
+      },
+      "captions": [
+        {
+          "t": 22.81,
+          "text": "Di Samarahan,"
+        },
+        {
+          "t": 23.71,
+          "text": "barisan panjang di mesin ATM."
+        }
+      ]
+    },
+    {
+      "id": "h2serikin",
+      "start": 25.64,
+      "end": 28.82,
+      "headline": {
+        "text": "Hari 2 — Semua cari wang tunai.",
+        "highlight": [
+          "wang",
+          "tunai"
+        ]
+      },
+      "captions": [
+        {
+          "t": 25.91,
+          "text": "Di Pasar Serikin,"
+        },
+        {
+          "t": 27.07,
+          "text": "peniaga kembali kepada tunai."
+        }
+      ]
+    },
+    {
+      "id": "h3pelabuhan",
+      "start": 28.82,
+      "end": 33.64,
+      "headline": {
+        "text": "Hari 3 — Penghantaran terganggu.",
+        "highlight": [
+          "Penghantaran"
+        ]
+      },
+      "captions": [
+        {
+          "t": 29.09,
+          "text": "Hari ketiga."
+        },
+        {
+          "t": 30.11,
+          "text": "Di Pelabuhan Bintulu dan Sibu,"
+        },
+        {
+          "t": 32.11,
+          "text": "penghantaran semakin perlahan."
+        }
+      ]
+    },
+    {
+      "id": "h3gudang",
+      "start": 33.64,
+      "end": 37.16,
+      "headline": {
+        "text": "Hari 3 — Penghantaran terganggu.",
+        "highlight": [
+          "Penghantaran"
+        ]
+      },
+      "captions": [
+        {
+          "t": 33.91,
+          "text": "Barang masih ada di gudang…"
+        },
+        {
+          "t": 35.51,
+          "text": "tetapi sukar dihantar."
+        }
+      ]
+    },
+    {
+      "id": "h4pasaraya",
+      "start": 37.16,
+      "end": 41.38,
+      "headline": {
+        "text": "Hari 4 — Bekalan terjejas.",
+        "highlight": [
+          "Bekalan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 37.43,
+          "text": "Hari keempat."
+        },
+        {
+          "t": 38.31,
+          "text": "Di Kuching dan Miri,"
+        },
+        {
+          "t": 39.55,
+          "text": "beberapa rak pasar raya mula kosong."
+        }
+      ]
+    },
+    {
+      "id": "h4hospital",
+      "start": 41.38,
+      "end": 47.17,
+      "headline": {
+        "text": "Hari 4 — Bekalan terjejas.",
+        "highlight": [
+          "Bekalan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 41.65,
+          "text": "Di Hospital Umum Sarawak,"
+        },
+        {
+          "t": 43.11,
+          "text": "petugas menggunakan prosedur sandaran."
+        },
+        {
+          "t": 45.19,
+          "text": "Rawatan kecemasan tetap diteruskan."
+        }
+      ]
+    },
+    {
+      "id": "h5ruai",
+      "start": 47.17,
+      "end": 54.58,
+      "headline": {
+        "text": "Hari 5 — Pedalaman terasing.",
+        "highlight": [
+          "Pedalaman"
+        ]
+      },
+      "captions": [
+        {
+          "t": 47.44,
+          "text": "Hari kelima."
+        },
+        {
+          "t": 48.93,
+          "text": "Di pedalaman Kapit dan Belaga,"
+        },
+        {
+          "t": 50.83,
+          "text": "penduduk tidak dapat menghubungi keluarga."
+        },
+        {
+          "t": 52.85,
+          "text": "Mereka kembali bergantung kepada radio."
+        }
+      ]
+    },
+    {
+      "id": "h5bandar",
+      "start": 54.58,
+      "end": 58.74,
+      "headline": {
+        "text": "Hari 5 — Pedalaman terasing.",
+        "highlight": [
+          "Pedalaman"
+        ]
+      },
+      "captions": [
+        {
+          "t": 54.85,
+          "text": "Di bandar,"
+        },
+        {
+          "t": 55.59,
+          "text": "khabar angin tersebar: internet tidak akan kembali."
+        }
+      ]
+    },
+    {
+      "id": "h6",
+      "start": 58.74,
+      "end": 64.78,
+      "headline": {
+        "text": "Hari 6 — Perniagaan tertekan.",
+        "highlight": [
+          "Perniagaan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 59.01,
+          "text": "Hari keenam."
+        },
+        {
+          "t": 60.49,
+          "text": "Perniagaan kecil kehilangan tempahan dalam talian."
+        },
+        {
+          "t": 63.11,
+          "text": "Kerugian semakin meningkat."
+        }
+      ]
+    },
+    {
+      "id": "h7pasar",
+      "start": 64.78,
+      "end": 69.36,
+      "headline": {
+        "text": "Hari 7 — Sarawak bertahan.",
+        "highlight": [
+          "bertahan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 65.05,
+          "text": "Hari ketujuh."
+        },
+        {
+          "t": 66.63,
+          "text": "Sarawak bertahan."
+        },
+        {
+          "t": 68.09,
+          "text": "Pasar masih dibuka."
+        }
+      ]
+    },
+    {
+      "id": "h7kampung",
+      "start": 69.36,
+      "end": 74.46,
+      "headline": {
+        "text": "Hari 7 — Sarawak bertahan.",
+        "highlight": [
+          "bertahan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 69.63,
+          "text": "Di kampung,"
+        },
+        {
+          "t": 70.49,
+          "text": "penduduk masih bercucuk tanam dan menangkap ikan."
+        },
+        {
+          "t": 72.77,
+          "text": "Jiran saling membantu."
+        }
+      ]
+    },
+    {
+      "id": "kembali",
+      "start": 74.46,
+      "end": 79.68,
+      "headline": {
+        "text": "Internet kembali.",
+        "highlight": [
+          "kembali"
+        ]
+      },
+      "captions": [
+        {
+          "t": 74.73,
+          "text": "Tepat tengah malam…"
+        },
+        {
+          "t": 75.87,
+          "text": "internet kembali."
+        },
+        {
+          "t": 77.23,
+          "text": "Telefon menerima mesej bertalu-talu."
+        }
+      ]
+    },
+    {
+      "id": "renung",
+      "start": 79.68,
+      "end": 86.85,
+      "headline": {
+        "text": "Betapa kita bergantung kepadanya.",
+        "highlight": [
+          "bergantung"
+        ]
+      },
+      "captions": [
+        {
+          "t": 79.95,
+          "text": "Tujuh hari tanpa internet tidak memusnahkan Sarawak."
+        },
+        {
+          "t": 83.19,
+          "text": "Tetapi cukup untuk menunjukkan betapa kita bergantung kepadanya."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 86.85,
+      "end": 95,
+      "headline": {
+        "text": "Apa jadi kalau _____?",
+        "highlight": [
+          "_____"
+        ],
+        "emoji": "👇"
+      },
+      "captions": [
+        {
+          "t": 87.12,
+          "text": "Apa jadi kalau…"
+        },
+        {
+          "t": 88.77,
+          "text": "perkara lain pula berlaku?"
+        },
+        {
+          "t": 90.35,
+          "text": "Tulis idea anda di ruang komen!"
+        }
+      ]
+    }
+  ]
+}
