@@ -38,7 +38,7 @@ export async function create({ THREE, renderer, script, U }) {
   // ------------------------------------------------ hands + phone
   const rig = new THREE.Group(); camera.add(rig);
   const skin = 0xc68a5f, sleeve = 0x3a4a6a;
-  const handL = new THREE.Group(); handL.position.set(-0.14, -0.21, -0.46); handL.rotation.set(0.3, 0.22, 0.1); rig.add(handL);
+  const handL = new THREE.Group(); handL.position.set(-0.085, -0.17, -0.46); handL.rotation.set(0.3, 0.22, 0.1); rig.add(handL);
   box(handL, 0.11, 0.42, 0.1, sleeve, -0.02, -0.33, 0.02).rotation.x = -0.15;
   box(handL, 0.09, 0.11, 0.04, skin, 0, -0.07, -0.012);
   box(handL, 0.025, 0.07, 0.03, skin, 0.055, -0.02, 0.005).rotation.z = -0.5;
@@ -260,7 +260,7 @@ export async function create({ THREE, renderer, script, U }) {
     for (let i = 0; i < 3; i++) { box(g, 0.01, 1.2, 0.01, 0x222222, 0.2 + i * 0.4, 3.0, -2.2 - i * 1.5); const b = cyl(g, 0.12, 0.2, 0.3, 10, new THREE.MeshBasicMaterial({ color: 0xfff6e0 }), 0.2 + i * 0.4, 2.3, -2.2 - i * 1.5); glow(g, 0xfff0c8, 1.2, 0.2 + i * 0.4, 2.2, -2.2 - i * 1.5); }
     // green price boards
     const board = texMat((c, w, h) => { c.fillStyle = '#7ccf3a'; c.fillRect(0, 0, w, h); c.fillStyle = '#a6e65c'; for (let i = 0; i < 40; i++) c.fillRect((i * 37) % w, (i * 53) % h, 8, 8); c.fillStyle = '#1a4ab0'; c.font = '800 34px HudSans'; c.textAlign = 'center'; c.fillText('IKAN TERUBUK', w / 2, 60); c.fillText('MASIN', w / 2, 100); c.fillStyle = '#c0392b'; c.font = '900 64px HudSans'; c.fillText('3 EKOR', w / 2, 190); c.font = '800 40px HudSans'; c.fillText('RM 30', w / 2, 240); }, 300, 270);
-    const pb = plane(g, 0.6, 0.54, board, 1.25, 1.35, -2.0); pb.rotation.y = -0.6;
+    const pb = plane(g, 0.6, 0.54, board, 0.95, 1.5, -2.6); pb.rotation.y = -0.5;
     // digital scale + paper note
     box(g, 0.4, 0.08, 0.35, 0xdfe2e6, -0.45, 0.88, -1.15); box(g, 0.36, 0.02, 0.3, 0xbfc4c9, -0.45, 0.93, -1.15);
     box(g, 0.22, 0.1, 0.04, 0x1a1a1a, -0.45, 0.9, -0.97);
@@ -268,7 +268,7 @@ export async function create({ THREE, renderer, script, U }) {
     paperMesh = plane(g, 0.28, 0.2, texMat((c, w, h) => { c.fillStyle = '#fbf7ea'; c.fillRect(0, 0, w, h); c.fillStyle = '#1a1a8a'; c.font = 'italic 700 92px Garamond'; c.fillText('20 kg', 22, 130); c.strokeStyle = '#c0392b'; c.lineWidth = 6; c.beginPath(); c.arc(140, 100, 110, 0, 7); c.stroke(); }, 300, 200), -0.1, 0.89, -0.85);
     paperMesh.rotation.x = -Math.PI / 2; paperMesh.rotation.z = 0.2;
     // discount sign
-    discT = canvasTex(320, 260); const ds = plane(g, 0.62, 0.5, new THREE.MeshLambertMaterial({ map: discT.tex }), -0.95, 1.35, -1.9); ds.rotation.y = 0.5;
+    discT = canvasTex(320, 260); const ds = plane(g, 0.62, 0.5, new THREE.MeshLambertMaterial({ map: discT.tex }), -0.62, 1.35, -1.9); ds.rotation.y = 0.4;
     person(g, -1.3, -3.2, 0.6, { shirt: 0x2c3140, skin: SKINS[2], seed: 51 });
     terubuk.update = t => {
       const c = scaleT.ctx; c.fillStyle = '#9fc48a'; c.fillRect(0, 0, 256, 110); c.fillStyle = '#122'; c.font = '700 70px HudSans'; c.textAlign = 'right'; c.fillText('2.00', 200, 84); c.font = '700 30px HudSans'; c.fillText('kg', 248, 84); c.textAlign = 'left'; scaleT.tex.needsUpdate = true;

@@ -44,7 +44,7 @@ export async function create({ THREE, renderer, script, U }) {
   // ---------------------------------------------------------------- hands + phone (camera rig)
   const rig = new THREE.Group(); camera.add(rig);
   const skin = 0xc68a5f, sleeve = 0x2d4a3e;
-  const handL = new THREE.Group(); handL.position.set(-0.14, -0.21, -0.46); handL.rotation.set(0.3, 0.22, 0.1); rig.add(handL);
+  const handL = new THREE.Group(); handL.position.set(-0.085, -0.17, -0.46); handL.rotation.set(0.3, 0.22, 0.1); rig.add(handL);
   box(handL, 0.11, 0.42, 0.1, sleeve, -0.02, -0.33, 0.02).rotation.x = -0.15;
   box(handL, 0.09, 0.11, 0.04, skin, 0, -0.07, -0.012);
   box(handL, 0.025, 0.07, 0.03, skin, 0.055, -0.02, 0.005).rotation.z = -0.5;
@@ -749,7 +749,7 @@ export async function create({ THREE, renderer, script, U }) {
     const z0 = E.priceBack;
     if (t >= z0 && t < z0 + 1.2) {
       g.font = '400 100px Garamond'; g.fillStyle = '#fbf8f1';
-      const x0 = 30 + g.measureText('RM 5').width; const k = (t - z0) / 1.2;
+      const x0 = 130 + g.measureText('RM 5').width; const k = (t - z0) / 1.2;
       [',', '0', '0', '0'].forEach((c, i) => {
         const d = easeOut(clamp(k * 1.4 - i * 0.12));
         g.globalAlpha = 1 - d; g.save(); g.translate(x0 + i * 46 + d * (60 + i * 30), 1068 - d * (160 + i * 40)); g.rotate(d * (0.6 + i * 0.3)); g.fillText(c, 0, 0); g.restore();

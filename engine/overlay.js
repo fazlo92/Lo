@@ -75,7 +75,8 @@ export function createOverlay(script) {
       const capText = cap ? cap.text : '';
       if (capText !== lastCaption) { el.caption.textContent = capText; lastCaption = capText; }
       el.caption.style.opacity = cap ? Math.min(easeOut((t - cap.t) / 0.18), 1 - smooth(sc.end - 0.15, sc.end, t)) : 0;
-      el.caption.style.top = sc.id === 'cta' ? '940px' : '1300px';
+      el.caption.style.top = sc.id === 'cta' ? '940px' : '';
+      el.caption.style.left = sc.id === 'cta' ? 'var(--safe-l)' : '';
 
       // HUD — a topic can drive it entirely (world.hud(t) -> {label, value, stat, pop, opacity} | null)
       if (world && world.hud) {

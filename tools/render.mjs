@@ -23,7 +23,7 @@ const outDir = path.join(ROOT, 'out');
 fs.mkdirSync(outDir, { recursive: true });
 
 const server = await startServer();
-const base = `http://127.0.0.1:${server.address().port}/engine/index.html?topic=${topic}`;
+const base = `http://127.0.0.1:${server.address().port}/engine/index.html?topic=${topic}${args.safe ? '&safe' : ''}`;
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 
 async function openPage() {
