@@ -1,63 +1,25 @@
-# Apa Jadi Kalau Internet di Seluruh Dunia Hilang Selama Seminggu? — Teks Suara
+# Apa Jadi Kalau Internet Dunia Hilang Selama 7 Hari? — Teks Suara (versi pendek, Sarawak)
 
 ## Skrip (tampal di ruangan teks)
 
-Bayangkan… esok pagi, internet di seluruh dunia tiba-tiba terputus.
+Bayangkan… esok pagi, internet di seluruh dunia hilang. Selama tujuh hari.
 
-Bukan sekadar WhatsApp atau TikTok.
+Hari pertama. Pukul 7 pagi di Kuching. WhatsApp, Facebook dan TikTok tidak boleh dibuka. Di sebuah kedai makan di Satok, bayaran Sarawak Pay gagal. Peniaga hanya berkata, "Cash jak boleh!" Ramai masih tenang.
 
-Seluruh internet dunia. Selama tujuh hari.
+Hari kedua. Semua orang mencari wang tunai. Di Samarahan, barisan panjang di mesin ATM. Di Pasar Serikin, peniaga kembali kepada tunai.
 
-Hari pertama. Dunia terdiam.
+Hari ketiga. Di Pelabuhan Bintulu dan Sibu, penghantaran semakin perlahan. Barang masih ada di gudang… tetapi sukar dihantar.
 
-Pukul 8 pagi. WhatsApp tidak boleh dibuka. Google tidak berfungsi. Media sosial lenyap.
+Hari keempat. Di Kuching dan Miri, beberapa rak pasar raya mula kosong. Di Hospital Umum Sarawak, petugas menggunakan prosedur sandaran. Rawatan kecemasan tetap diteruskan.
 
-Di kedai, pelanggan cuba membayar menggunakan QR. Transaksi gagal.
+Hari kelima. Di pedalaman Kapit dan Belaga, penduduk tidak dapat menghubungi keluarga. Mereka kembali bergantung kepada radio. Di bandar, khabar angin tersebar: internet tidak akan kembali.
 
-Ramai masih tenang. Mereka fikir internet akan pulih beberapa jam lagi.
+Hari keenam. Perniagaan kecil kehilangan tempahan dalam talian. Kerugian semakin meningkat.
 
-Hari kedua. Wang ada, tapi sukar digunakan.
+Hari ketujuh. Sarawak bertahan. Pasar masih dibuka. Di kampung, penduduk masih bercucuk tanam dan menangkap ikan. Jiran saling membantu.
 
-Perbankan dalam talian masih lumpuh. Sesetengah mesin ATM dan terminal pembayaran tidak dapat berhubung dengan sistem bank.
+Tepat tengah malam… internet kembali. Telefon menerima mesej bertalu-talu.
 
-Orang ramai mula mencari wang tunai. Barisan panjang terbentuk di bank dan pasar raya.
+Tujuh hari tanpa internet tidak memusnahkan Sarawak. Tetapi cukup untuk menunjukkan betapa kita bergantung kepadanya.
 
-Hari ketiga. Ekonomi mula tersekat.
-
-Perniagaan dalam talian kehilangan pesanan. Syarikat penerbangan berdepan masalah tempahan dan penyelarasan operasi.
-
-Pelabuhan dan gudang mula mengalami kelewatan kerana sistem logistik digital terganggu.
-
-Barang masih ada. Tetapi semakin sukar untuk dihantar.
-
-Hari keempat. Bekalan mula terganggu.
-
-Sesetengah pasar raya mengalami kekurangan barang tertentu. Penghantaran makanan segar dan ubat-ubatan semakin perlahan.
-
-Hospital masih beroperasi, tetapi sistem rekod dan komunikasi yang bergantung pada internet menghadapi masalah.
-
-Hari kelima. Dunia mula panik.
-
-Di sesetengah kawasan, orang ramai membeli bekalan secara berlebihan. Berita tersebar melalui radio, televisyen dan khabar angin.
-
-Tanpa internet, semakin sukar untuk menyemak kesahihan maklumat. Kerajaan mula mengutamakan pengagihan bekalan penting.
-
-Hari keenam. Krisis semakin mendalam.
-
-Perniagaan kecil yang bergantung sepenuhnya pada internet mula kehabisan pendapatan. Kilang tertentu mengurangkan pengeluaran kerana masalah pesanan dan bekalan komponen.
-
-Perkhidmatan kecemasan masih berjalan, tetapi penyelarasan antara agensi semakin mencabar.
-
-Hari ketujuh. Dunia berubah.
-
-Sudah seminggu manusia hidup tanpa internet. Kerugian ekonomi terus meningkat.
-
-Sesetengah negara masih mampu bertahan dengan sistem sandaran. Yang lain berdepan gangguan bekalan, perniagaan dan perkhidmatan awam.
-
-Kemudian… tepat tengah malam. Internet kembali.
-
-Tetapi jutaan transaksi tertangguh, pesanan tidak diproses dan operasi terganggu tidak boleh diselesaikan dalam sekelip mata.
-
-Internet hilang selama tujuh hari. Tetapi kesannya mungkin berlarutan berminggu-minggu.
-
-Persoalannya… Kalau internet hilang esok, berapa lama kita sebenarnya mampu bertahan?
+Apa jadi kalau… perkara lain pula berlaku? Tulis idea anda di ruang komen!
