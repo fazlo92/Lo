@@ -6,6 +6,7 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**.
 ## Hari 1 — Satok · `wisma-satok-luar-1.jpg`, `-luar-2.jpg`, `wisma-satok-dalam.jpg`
 - **Luar:** menara pejabat kelabu-perak ~10 tingkat dengan jalur tingkap gelap menegak, **bumbung melengkung gaya tanduk/Minangkabau gelap di puncak**; podium 4 tingkat berpanel kelabu; deretan pokok palma di hadapan; kanopi merah di aras bawah; tempat letak kereta
 - **Dalam:** lantai jubin corak **berlian/zig-zag kelabu-putih**, siling petak putih dengan lampu kalimantang, pintu gulung kelabu, gerai kecil di koridor
+- **Keputusan pengguna:** babak Hari 1 ialah kedai makan biasa di Satok sahaja (bukan di dalam Wisma Satok). Menara Wisma Satok hanya kelihatan di latar belakang sebagai penanda tempat.
 - Kedai makan (rekaan): kaunter dengan papan kod QR umum + papan tulisan tangan "CASH JAK BOLEH!"
 
 ## Hari 2 — Summer Mall, Samarahan · `summer-mall-luar.jpg`, `summer-mall-dalam.jpg`, `summer-mall-carian.jpg`
@@ -29,7 +30,8 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**.
 - **Rumah panjang moden dua tingkat**, sangat panjang, dinding putih-biru muda, **bumbung biru muda**, tiang beranda putih berulang, pintu kayu
 - Di tebing **sungai coklat teh susu**, jeti kecil terapung, perahu panjang
 - Dikelilingi hutan hujan lebat dan bukit; pandangan atas: bumbung merah jambu/biru/oren di tepi sungai berliku
-- Dalam (rekaan): ruai panjang, penduduk berkumpul keliling radio
+- **Ruai** · `ruai-rumah-panjang.jpg`: koridor sangat panjang, **lantai tikar getah corak biru**, dinding papan kayu coklat gelap dengan deretan pintu dan tingkap berlangsir merah, siling petak putih dengan **kipas siling berderet**, bangku kayu dan kerusi lipat anyaman di tepi; cahaya matahari masuk dari tingkap
+- Babak: penduduk duduk berkumpul di ruai keliling radio
 
 ## Peta Sarawak · `peta-sarawak-bahagian.jpg`, `peta-sarawak-bentuk.jpg`
 - Bentuk negeri: memanjang dari barat daya (Kuching) ke timur laut (Miri, Limbang), dengan lekuk Brunei di utara
@@ -41,4 +43,4 @@ Gambar daripada pengguna, diterjemah ke gaya **low-poly flat**.
 Bilik tidur, tugu kucing/ATM (jika perlu), hospital (Hari 4), pasar/Medan Niaga Satok (Hari 7), tebingan + DUN (babak akhir)
 
 ## Belum ada rujukan (akan direka dalam bentuk umum)
-Pasar raya di Kuching/Miri (rak kosong), gudang di Sibu, bilik peniaga online, kampung (sawah, sampan nelayan)
+Pasar raya di Kuching/Miri (rak kosong), gudang di Sibu, bilik peniaga online, kampung (kebun kecil dan sampan nelayan — tanpa sawah)
