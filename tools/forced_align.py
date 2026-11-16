@@ -15,13 +15,9 @@ import numpy as np, librosa, soundfile as sf
 vo, md, out = sys.argv[1:4]
 SR, HOP = 16000, 320  # 20 ms frames
 
-txt = open(md).read().split('## Skrip (tampal di ruangan teks)')[1].strip()
-paras = [p.strip() for p in txt.split('\n\n') if p.strip()]
-phr = []
-for pi, p in enumerate(paras):
-    for q in re.findall(r'[^.,?…—]+[.,?…—"]*', p):
-        q = q.replace('"', '').strip()
-        if q and re.search(r'\w', q): phr.append((pi, q))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from textnorm import phrases, spoken
+phr = phrases(md)
 
 # --- synthetic reference track
 tmp = tempfile.mkdtemp()
@@ -29,7 +25,7 @@ chunks, bounds, t = [], [], 0.0
 gap = np.zeros(int(0.12 * SR), dtype=np.float32)
 for i, (pi, q) in enumerate(phr):
     f = os.path.join(tmp, f'{i}.wav')
-    subprocess.run(['espeak-ng', '-v', 'ms', '-s', '165', '-w', f, re.sub(r'[—…]', ',', q)], check=True)
+    subprocess.run(['espeak-ng', '-v', 'ms', '-s', '165', '-w', f, re.sub(r'[—…!]', ',', spoken(q))], check=True)
     y, _ = librosa.load(f, sr=SR)
     y, _ = librosa.effects.trim(y, top_db=35)
     if i and pi != phr[i - 1][0]: chunks.append(np.zeros(int(0.35 * SR), dtype=np.float32)); t += 0.35

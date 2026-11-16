@@ -33,17 +33,13 @@ def peak(a, b): return max((abs(v) for v in x[int(a * sr):int(b * sr)]), default
 segs = [(a, b) for a, b in segs if peak(a, b) > 1000]
 
 # ---------- phrases
-txt = open(md).read().split('## Skrip (tampal di ruangan teks)')[1].strip()
-paras = [p.strip() for p in txt.split('\n\n') if p.strip()]
-phr = []
-for pi, p in enumerate(paras):
-    for q in re.findall(r'[^.,?…—]+[.,?…—"]*', p):
-        q = q.replace('"', '').strip()
-        if q and re.search(r'\w', q): phr.append((pi, q))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from textnorm import phrases, spoken
+phr = phrases(md)
 SPECIAL = {'ATM': 3, 'India': 3, 'Street': 1, 'Vivacity': 4, 'Zimbabwe': 3, 'Venezuela': 5, 'Kuching': 2, 'Malaysia': 4, 'Waterfront': 3}
 def syl(s):
     c = 0
-    for t in re.findall(r"[A-Za-z-]+", s):
+    for t in re.findall(r"[A-Za-z-]+", spoken(s)):
         c += SPECIAL.get(t) or max(1, len(re.findall(r'(ai|au|oi|[aeiou])', t.lower())))
     return c
 S = segs; syls = [syl(q) for _, q in phr]

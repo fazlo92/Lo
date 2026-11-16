@@ -7,332 +7,356 @@
  },
  {
   "para": 0,
-  "text": "semua orang di Kuching bangun…",
+  "text": "seluruh Kuching bangun…",
   "start": 3.52,
-  "end": 5.94
+  "end": 5.82
  },
  {
   "para": 0,
-  "text": "dan tiba-tiba tak pandai matematik.",
+  "text": "dan tiba-tiba semua orang tak pandai Matematik.",
   "start": 6.02,
-  "end": 9.12
+  "end": 9.02
  },
  {
-  "para": 0,
-  "text": "Jam loceng berbunyi —",
-  "start": 9.24,
+  "para": 1,
+  "text": "Jam loceng berbunyi.",
+  "start": 9.48,
   "end": 10.52
  },
  {
-  "para": 0,
-  "text": "tapi tiada siapa tahu pukul berapa.",
+  "para": 1,
+  "text": "Tapi tiada siapa tahu pukul berapa.",
   "start": 10.68,
   "end": 12.92
  },
  {
-  "para": 1,
-  "text": "Pukul tujuh setengah,",
-  "start": 13.24,
-  "end": 14.26
- },
- {
-  "para": 1,
-  "text": "gerai laksa.",
-  "start": 14.36,
-  "end": 15.36
- },
- {
-  "para": 1,
-  "text": "Semangkuk laksa Sarawak lapan ringgit.",
-  "start": 15.5,
-  "end": 18.26
- },
- {
-  "para": 1,
-  "text": "Anda bayar sepuluh —",
-  "start": 18.36,
-  "end": 19.42
- },
- {
-  "para": 1,
-  "text": "peniaga pulangkan lapan puluh.",
-  "start": 19.56,
-  "end": 21.1
+  "para": 2,
+  "text": "7.30 pagi.",
+  "start": 13.36,
+  "end": 14.3
  },
  {
   "para": 2,
-  "text": "Pukul sembilan,",
-  "start": 21.56,
-  "end": 22.32
+  "text": "Di gerai laksa.",
+  "start": 14.46,
+  "end": 15.46
  },
  {
   "para": 2,
-  "text": "di Medan Niaga Satok.",
-  "start": 22.46,
-  "end": 23.78
+  "text": "Semangkuk laksa Sarawak berharga RM8.",
+  "start": 15.6,
+  "end": 18.34
  },
  {
   "para": 2,
+  "text": "Bayar RM10,",
+  "start": 18.46,
+  "end": 19.54
+ },
+ {
+  "para": 2,
+  "text": "peniaga pulangkan RM80.",
+  "start": 19.66,
+  "end": 21.18
+ },
+ {
+  "para": 3,
+  "text": "9.00 pagi.",
+  "start": 21.66,
+  "end": 22.42
+ },
+ {
+  "para": 3,
+  "text": "Di Medan Niaga Satok.",
+  "start": 22.56,
+  "end": 23.88
+ },
+ {
+  "para": 3,
   "text": "Nak beli ikan terubuk masin.",
-  "start": 23.88,
-  "end": 25.34
- },
- {
-  "para": 2,
-  "text": "Penimbang tunjuk dua kilo —",
-  "start": 25.58,
-  "end": 27.22
- },
- {
-  "para": 2,
-  "text": "peniaga baca dua puluh.",
-  "start": 27.42,
-  "end": 29.16
- },
- {
-  "para": 2,
-  "text": "Diskaun lima puluh peratus —",
-  "start": 29.28,
-  "end": 30.44
- },
- {
-  "para": 2,
-  "text": "harga jadi lebih mahal.",
-  "start": 30.58,
-  "end": 31.94
+  "start": 23.96,
+  "end": 25.5
  },
  {
   "para": 3,
-  "text": "Pukul sepuluh.",
-  "start": 32.44,
-  "end": 33.22
+  "text": "Penimbang tunjuk 2 kilogram,",
+  "start": 25.68,
+  "end": 27.34
  },
  {
   "para": 3,
-  "text": "Hari gaji.",
-  "start": 33.38,
-  "end": 34.48
+  "text": "peniaga baca 20 kilogram.",
+  "start": 27.52,
+  "end": 29.26
  },
  {
   "para": 3,
-  "text": "Tapi tiada siapa boleh kira baki akaun.",
-  "start": 34.64,
-  "end": 37.72
+  "text": "Diskaun 50%,",
+  "start": 29.38,
+  "end": 30.54
  },
  {
   "para": 3,
-  "text": "Bank tutup kaunter.",
-  "start": 37.92,
-  "end": 39.32
+  "text": "tapi harga makin mahal!",
+  "start": 30.68,
+  "end": 32.08
  },
  {
   "para": 4,
-  "text": "Pukul sebelas.",
-  "start": 39.82,
-  "end": 40.72
+  "text": "10.00 pagi.",
+  "start": 32.56,
+  "end": 33.32
  },
  {
   "para": 4,
-  "text": "Had laju tak bermakna apa-apa.",
-  "start": 41.08,
-  "end": 42.7
+  "text": "Hari gaji!",
+  "start": 33.48,
+  "end": 34.56
  },
  {
   "para": 4,
-  "text": "Pam minyak tak tahu bila nak berhenti.",
-  "start": 42.88,
-  "end": 44.98
+  "text": "Tapi tiada siapa tahu cara mengira baki akaun.",
+  "start": 34.74,
+  "end": 37.76
  },
  {
   "para": 4,
-  "text": "Jalan raya lumpuh.",
-  "start": 45.08,
-  "end": 46.36
+  "text": "Kaunter bank terpaksa ditutup.",
+  "start": 38.02,
+  "end": 39.54
  },
  {
   "para": 5,
-  "text": "Tengah hari,",
-  "start": 46.8,
-  "end": 48.12
+  "text": "11.00 pagi.",
+  "start": 40.02,
+  "end": 40.9
  },
  {
   "para": 5,
-  "text": "Lapangan Terbang Antarabangsa Kuching.",
-  "start": 48.22,
-  "end": 50.1
+  "text": "Had laju tak lagi bermakna.",
+  "start": 41.28,
+  "end": 42.88
  },
  {
   "para": 5,
-  "text": "Juruterbang tak boleh kira bahan api atau ketinggian.",
-  "start": 50.2,
-  "end": 55.1
+  "text": "Nak isi minyak pun tak tahu berapa liter.",
+  "start": 43.08,
+  "end": 45.16
  },
  {
   "para": 5,
-  "text": "Semua penerbangan —",
-  "start": 55.24,
-  "end": 56.34
- },
- {
-  "para": 5,
-  "text": "dibatalkan.",
-  "start": 56.72,
-  "end": 57.08
+  "text": "Jalan raya mula sesak.",
+  "start": 45.28,
+  "end": 46.56
  },
  {
   "para": 6,
-  "text": "Pukul dua petang,",
-  "start": 57.5,
-  "end": 58.4
+  "text": "12.00 tengah hari.",
+  "start": 47.0,
+  "end": 48.26
  },
  {
   "para": 6,
-  "text": "Hospital Umum Sarawak.",
-  "start": 58.48,
-  "end": 60.32
+  "text": "Di Lapangan Terbang Antarabangsa Kuching.",
+  "start": 48.42,
+  "end": 50.24
  },
  {
   "para": 6,
-  "text": "Dua biji sehari…",
-  "start": 60.44,
-  "end": 61.8
+  "text": "Pramugari gagal mengira jumlah penumpang.",
+  "start": 50.4,
+  "end": 52.8
  },
  {
   "para": 6,
+  "text": "Juruterbang tak dapat membaca ketinggian pesawat.",
+  "start": 52.92,
+  "end": 55.3
+ },
+ {
+  "para": 6,
+  "text": "Semua penerbangan dibatalkan.",
+  "start": 55.44,
+  "end": 57.32
+ },
+ {
+  "para": 7,
+  "text": "2.00 petang.",
+  "start": 57.78,
+  "end": 58.56
+ },
+ {
+  "para": 7,
+  "text": "Di Hospital Umum Sarawak.",
+  "start": 58.68,
+  "end": 60.54
+ },
+ {
+  "para": 7,
+  "text": "Dua biji ubat sehari…",
+  "start": 60.64,
+  "end": 62.0
+ },
+ {
+  "para": 7,
   "text": "atau dua puluh?",
-  "start": 61.9,
-  "end": 63.32
- },
- {
-  "para": 6,
-  "text": "Doktor tak berani beri ubat.",
-  "start": 63.44,
-  "end": 65.06
+  "start": 62.1,
+  "end": 63.52
  },
  {
   "para": 7,
-  "text": "Pukul empat.",
-  "start": 65.44,
-  "end": 66.46
- },
- {
-  "para": 7,
-  "text": "Jambatan baru di Waterfront dibina dari dua tebing…",
-  "start": 66.58,
-  "end": 69.96
- },
- {
-  "para": 7,
-  "text": "dan tak bertemu di tengah sungai.",
-  "start": 70.08,
-  "end": 72.54
+  "text": "Doktor tak berani memberikan ubat.",
+  "start": 63.64,
+  "end": 65.28
  },
  {
   "para": 8,
-  "text": "Pukul enam.",
-  "start": 72.92,
-  "end": 74.04
+  "text": "4.00 petang.",
+  "start": 65.74,
+  "end": 66.76
  },
  {
   "para": 8,
-  "text": "Loji air tak boleh sukat klorin.",
-  "start": 74.08,
-  "end": 76.38
+  "text": "Sebuah jambatan baharu dibina dari dua tebing Sungai Sarawak.",
+  "start": 66.88,
+  "end": 70.22
  },
  {
   "para": 8,
-  "text": "Janakuasa tak boleh kira voltan.",
-  "start": 76.24,
-  "end": 78.06
+  "text": "Tapi kedua-dua bahagian tak bertemu di tengah!",
+  "start": 70.38,
+  "end": 72.9
  },
  {
-  "para": 8,
-  "text": "Air paip berhenti.",
-  "start": 78.14,
-  "end": 79.8
+  "para": 9,
+  "text": "6.00 petang.",
+  "start": 73.32,
+  "end": 74.34
  },
  {
-  "para": 8,
+  "para": 9,
+  "text": "Sukatan klorin di loji air tersilap.",
+  "start": 74.48,
+  "end": 76.42
+ },
+ {
+  "para": 9,
+  "text": "Jurutera gagal mengira voltan.",
+  "start": 76.64,
+  "end": 78.44
+ },
+ {
+  "para": 9,
+  "text": "Bekalan air terhenti.",
+  "start": 78.54,
+  "end": 80.2
+ },
+ {
+  "para": 9,
   "text": "Lampu padam.",
-  "start": 79.9,
-  "end": 80.56
+  "start": 80.3,
+  "end": 81.06
  },
  {
   "para": 9,
-  "text": "Pukul sembilan malam.",
-  "start": 80.8,
-  "end": 83.38
+  "text": "Internet terputus.",
+  "start": 81.2,
+  "end": 82.22
  },
  {
-  "para": 9,
+  "para": 10,
+  "text": "9.00 malam.",
+  "start": 82.7,
+  "end": 83.58
+ },
+ {
+  "para": 10,
   "text": "Kuching gelap gelita.",
-  "start": 83.54,
-  "end": 85.26
- },
- {
-  "para": 9,
-  "text": "Bantuan tak tahu berapa ramai perlu ditolong…",
-  "start": 85.4,
-  "end": 88.18
- },
- {
-  "para": 9,
-  "text": "atau berapa jauh perlu pergi.",
-  "start": 88.28,
-  "end": 91.1
+  "start": 83.94,
+  "end": 85.44
  },
  {
   "para": 10,
-  "text": "Baru kita sedar.",
-  "start": 91.46,
-  "end": 92.84
+  "text": "Pasukan penyelamat tak tahu berapa ramai yang perlu diselamatkan…",
+  "start": 85.8,
+  "end": 88.56
  },
  {
   "para": 10,
-  "text": "Matematik bukan cuma dalam kelas.",
-  "start": 92.94,
-  "end": 95.2
- },
- {
-  "para": 10,
-  "text": "Ia ada dalam laksa pagi kita,",
-  "start": 95.38,
-  "end": 98.02
- },
- {
-  "para": 10,
-  "text": "jambatan yang kita lalu,",
-  "start": 98.12,
-  "end": 102.44
- },
- {
-  "para": 10,
-  "text": "air yang kita minum —",
-  "start": 102.54,
-  "end": 104.48
- },
- {
-  "para": 10,
-  "text": "dan setiap nyawa yang diselamatkan.",
-  "start": 104.62,
-  "end": 107.88
+  "text": "atau sejauh mana mereka perlu pergi.",
+  "start": 88.68,
+  "end": 90.66
  },
  {
   "para": 11,
+  "text": "Akhirnya,",
+  "start": 91.1,
+  "end": 91.82
+ },
+ {
+  "para": 11,
+  "text": "baru kita sedar.",
+  "start": 91.96,
+  "end": 92.98
+ },
+ {
+  "para": 12,
+  "text": "Matematik bukan sekadar subjek di sekolah.",
+  "start": 93.44,
+  "end": 95.9
+ },
+ {
+  "para": 13,
+  "text": "Ia ada dalam setiap urusan harian,",
+  "start": 96.34,
+  "end": 98.74
+ },
+ {
+  "para": 13,
+  "text": "setiap jambatan yang kita lalui,",
+  "start": 98.86,
+  "end": 100.52
+ },
+ {
+  "para": 13,
+  "text": "setiap titis air yang kita minum…",
+  "start": 100.66,
+  "end": 102.48
+ },
+ {
+  "para": 13,
+  "text": "malah dalam setiap nyawa yang diselamatkan.",
+  "start": 102.58,
+  "end": 105.0
+ },
+ {
+  "para": 14,
+  "text": "Tanpa Matematik,",
+  "start": 105.46,
+  "end": 106.44
+ },
+ {
+  "para": 14,
+  "text": "dunia yang kita kenal mungkin terhenti.",
+  "start": 106.58,
+  "end": 108.72
+ },
+ {
+  "para": 15,
   "text": "Apa jadi kalau…",
-  "start": 108.34,
-  "end": 109.52
+  "start": 109.18,
+  "end": 110.32
  },
  {
-  "para": 11,
-  "text": "apa pula?",
-  "start": 109.64,
-  "end": 111.1
+  "para": 15,
+  "text": "perkara lain pula berlaku?",
+  "start": 110.48,
+  "end": 111.7
  },
  {
-  "para": 11,
-  "text": "Tulis di ruang komen.",
-  "start": 111.26,
-  "end": 112.94
+  "para": 16,
+  "text": "Tulis idea anda di ruang komen!",
+  "start": 112.2,
+  "end": 113.88
  }
 ]

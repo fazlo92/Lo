@@ -617,7 +617,7 @@ export async function create({ THREE, renderer, script, U }) {
   function drawFx(g, t, w, h) {
     // icons during the lesson
     if (t >= SC.twist.start && t < SC.cta.start + 0.5) {
-      const icons = [[E.laksaIcon, '🍜'], [E.jambatanIcon, '🌉'], [E.airIcon, '💧'], [E.nyawaIcon, '❤️']];
+      const icons = [[E.laksaIcon, '🛒'], [E.jambatanIcon, '🌉'], [E.airIcon, '💧'], [E.nyawaIcon, '❤️']];
       g.font = '110px "Noto Color Emoji"'; g.textAlign = 'center';
       icons.forEach(([at, em], i) => { const k = easeOut(clamp((t - at) / 0.4)); if (k <= 0) return; g.globalAlpha = k * (1 - smooth(SC.cta.start - 0.3, SC.cta.start + 0.4, t)); g.fillText(em, w / 2 + (i - 1.5) * 200, 980 - (1 - k) * 40); });
       g.globalAlpha = 1; g.textAlign = 'left';
