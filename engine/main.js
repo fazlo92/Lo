@@ -37,6 +37,7 @@ function renderFrame(t) {
 }
 window.renderFrame = t => { renderFrame(t); return true; };
 window.__script = script;
+if (script.theme?.hl) document.documentElement.style.setProperty('--hl', script.theme.hl);
 if (params.has('safe')) document.getElementById('safe').style.display = 'block';   // ?safe shows the TikTok safe-zone guide
 
 if (params.has('play')) {

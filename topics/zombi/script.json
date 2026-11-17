@@ -1,0 +1,493 @@
+{
+  "title": "Apa Jadi Kalau Wabak Zombi Berlaku di Kuching?",
+  "duration": 114,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voiceover": "vo.wav",
+  "theme": {
+    "hl": "#ff5a5f"
+  },
+  "events": {
+    "bayangkan": 4.99,
+    "pesakit": 10.58,
+    "tujuh": 12.12,
+    "agresif": 22.43,
+    "metro": 27.78,
+    "tular": 32.62,
+    "satok": 38.96,
+    "sekolah": 43.28,
+    "tinggal": 45.68,
+    "zon": 52.7,
+    "laluan": 55.8,
+    "bas": 57.44,
+    "henti": 59.68,
+    "merebak": 63.64,
+    "padam": 71.18,
+    "rumah": 73.1,
+    "radio6": 79.3,
+    "heli": 84.02,
+    "udara": 87.06,
+    "darulhana": 89.52,
+    "radio": 95.88,
+    "kawalan": 97.32,
+    "sibu": 99.2,
+    "permulaan": 103.02,
+    "cta": 105.1
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "end": 16.1,
+      "headline": {
+        "text": "Apa jadi kalau wabak zombi berlaku di Kuching?",
+        "highlight": [
+          "wabak",
+          "zombi"
+        ]
+      },
+      "captions": [
+        {
+          "t": 0.27,
+          "text": "Apa jadi kalau wabak zombi berlaku di Kuching?"
+        },
+        {
+          "t": 4.96,
+          "text": "Bayangkan…"
+        },
+        {
+          "t": 5.69,
+          "text": "esok pagi,"
+        },
+        {
+          "t": 6.71,
+          "text": "satu wabak misteri mula merebak di Kuching."
+        },
+        {
+          "t": 9.62,
+          "text": "Mula-mula,"
+        },
+        {
+          "t": 10.55,
+          "text": "hanya seorang pesakit."
+        },
+        {
+          "t": 12.09,
+          "text": "Tujuh hari kemudian…"
+        },
+        {
+          "t": 13.81,
+          "text": "seluruh bandar berubah."
+        }
+      ]
+    },
+    {
+      "id": "h1hus",
+      "start": 16.1,
+      "end": 26.26,
+      "headline": {
+        "text": "Hari 1 — Pesakit pertama.",
+        "highlight": [
+          "Pesakit"
+        ]
+      },
+      "captions": [
+        {
+          "t": 16.37,
+          "text": "Hari pertama."
+        },
+        {
+          "t": 18.1,
+          "text": "Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas…"
+        },
+        {
+          "t": 22.4,
+          "text": "dan tingkah laku agresif."
+        }
+      ]
+    },
+    {
+      "id": "h1metro",
+      "start": 26.26,
+      "end": 31.22,
+      "headline": {
+        "text": "Hari 1 — Pesakit pertama.",
+        "highlight": [
+          "Pesakit"
+        ]
+      },
+      "captions": [
+        {
+          "t": 26.53,
+          "text": "Menjelang malam,"
+        },
+        {
+          "t": 27.75,
+          "text": "kejadian serupa dilaporkan di MetroCity dan Petra Jaya."
+        }
+      ]
+    },
+    {
+      "id": "h2tular",
+      "start": 31.22,
+      "end": 35.74,
+      "headline": {
+        "text": "Hari 2 — Kuching panik.",
+        "highlight": [
+          "panik"
+        ]
+      },
+      "captions": [
+        {
+          "t": 31.49,
+          "text": "Hari kedua."
+        },
+        {
+          "t": 32.59,
+          "text": "Rakaman serangan di Waterfront menjadi tular."
+        }
+      ]
+    },
+    {
+      "id": "h2spring",
+      "start": 35.74,
+      "end": 38.66,
+      "headline": {
+        "text": "Hari 2 — Kuching panik.",
+        "highlight": [
+          "panik"
+        ]
+      },
+      "captions": [
+        {
+          "t": 36.01,
+          "text": "Pengunjung VivaCity dan The Spring bergegas keluar."
+        }
+      ]
+    },
+    {
+      "id": "h2satok",
+      "start": 38.66,
+      "end": 41.92,
+      "headline": {
+        "text": "Hari 2 — Kuching panik.",
+        "highlight": [
+          "panik"
+        ]
+      },
+      "captions": [
+        {
+          "t": 38.93,
+          "text": "Jalan ke Jambatan Satok mula sesak."
+        }
+      ]
+    },
+    {
+      "id": "h3jalan",
+      "start": 41.92,
+      "end": 48.02,
+      "headline": {
+        "text": "Hari 3 — Bandar lumpuh.",
+        "highlight": [
+          "lumpuh"
+        ]
+      },
+      "captions": [
+        {
+          "t": 42.19,
+          "text": "Hari ketiga."
+        },
+        {
+          "t": 43.25,
+          "text": "Sekolah ditutup."
+        },
+        {
+          "t": 44.49,
+          "text": "Di Jalan Tun Jugah,"
+        },
+        {
+          "t": 45.65,
+          "text": "kereta ditinggalkan di tengah kesesakan."
+        }
+      ]
+    },
+    {
+      "id": "h3pasaraya",
+      "start": 48.02,
+      "end": 51.4,
+      "headline": {
+        "text": "Hari 3 — Bandar lumpuh.",
+        "highlight": [
+          "lumpuh"
+        ]
+      },
+      "captions": [
+        {
+          "t": 48.29,
+          "text": "Rak pasar raya kosong akibat pembelian panik."
+        }
+      ]
+    },
+    {
+      "id": "h4sentral",
+      "start": 51.4,
+      "end": 57.14,
+      "headline": {
+        "text": "Hari 4 — Zon kecemasan.",
+        "highlight": [
+          "kecemasan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 51.67,
+          "text": "Hari keempat."
+        },
+        {
+          "t": 52.67,
+          "text": "Kuching diisytiharkan zon kecemasan."
+        },
+        {
+          "t": 55.77,
+          "text": "Laluan keluar dikawal."
+        }
+      ]
+    },
+    {
+      "id": "h4platform",
+      "start": 57.14,
+      "end": 59.38,
+      "headline": {
+        "text": "Hari 4 — Zon kecemasan.",
+        "highlight": [
+          "kecemasan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 57.41,
+          "text": "Bas di Kuching Sentral tidak lagi bergerak."
+        }
+      ]
+    },
+    {
+      "id": "h4ltak",
+      "start": 59.38,
+      "end": 65.94,
+      "headline": {
+        "text": "Hari 4 — Zon kecemasan.",
+        "highlight": [
+          "kecemasan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 59.65,
+          "text": "Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan."
+        },
+        {
+          "t": 63.61,
+          "text": "Tetapi wabak terus merebak."
+        }
+      ]
+    },
+    {
+      "id": "h5waterfront",
+      "start": 65.94,
+      "end": 68.62,
+      "headline": {
+        "text": "Hari 5 — Bandar hantu.",
+        "highlight": [
+          "hantu"
+        ]
+      },
+      "captions": [
+        {
+          "t": 66.21,
+          "text": "Hari kelima."
+        },
+        {
+          "t": 67.37,
+          "text": "Waterfront kosong."
+        }
+      ]
+    },
+    {
+      "id": "h5metro",
+      "start": 68.62,
+      "end": 72.8,
+      "headline": {
+        "text": "Hari 5 — Bandar hantu.",
+        "highlight": [
+          "hantu"
+        ]
+      },
+      "captions": [
+        {
+          "t": 68.89,
+          "text": "Kedai-kedai di MetroCity tutup."
+        },
+        {
+          "t": 71.15,
+          "text": "Lampu jalan mula padam."
+        }
+      ]
+    },
+    {
+      "id": "h5rumah",
+      "start": 72.8,
+      "end": 75.2,
+      "headline": {
+        "text": "Hari 5 — Bandar hantu.",
+        "highlight": [
+          "hantu"
+        ]
+      },
+      "captions": [
+        {
+          "t": 73.07,
+          "text": "Penduduk berlindung di dalam rumah."
+        }
+      ]
+    },
+    {
+      "id": "h6",
+      "start": 75.2,
+      "end": 82.52,
+      "headline": {
+        "text": "Hari 6 — Pertahanan terakhir.",
+        "highlight": [
+          "terakhir"
+        ]
+      },
+      "captions": [
+        {
+          "t": 75.47,
+          "text": "Hari keenam."
+        },
+        {
+          "t": 76.55,
+          "text": "Sekumpulan penduduk berkumpul di pusat perlindungan."
+        },
+        {
+          "t": 79.27,
+          "text": "Mereka menghubungi pasukan penyelamat melalui radio."
+        }
+      ]
+    },
+    {
+      "id": "h7",
+      "start": 82.52,
+      "end": 94.7,
+      "headline": {
+        "text": "Hari 7 — Kuching jatuh.",
+        "highlight": [
+          "jatuh"
+        ]
+      },
+      "captions": [
+        {
+          "t": 82.79,
+          "text": "Hari ketujuh."
+        },
+        {
+          "t": 83.99,
+          "text": "Kumpulan terakhir dipindahkan dengan helikopter."
+        },
+        {
+          "t": 87.03,
+          "text": "Dari udara,"
+        },
+        {
+          "t": 87.97,
+          "text": "Kuching sunyi."
+        },
+        {
+          "t": 89.49,
+          "text": "Jambatan Darul Hana masih berdiri…"
+        },
+        {
+          "t": 91.85,
+          "text": "tetapi kehidupan bandar telah terhenti."
+        }
+      ]
+    },
+    {
+      "id": "radio",
+      "start": 94.7,
+      "end": 101.72,
+      "headline": {
+        "text": "Kuching hanyalah permulaan.",
+        "highlight": [
+          "permulaan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 94.97,
+          "text": "Kemudian…"
+        },
+        {
+          "t": 95.85,
+          "text": "satu panggilan radio."
+        },
+        {
+          "t": 97.29,
+          "text": "Ini pusat kawalan…"
+        },
+        {
+          "t": 99.17,
+          "text": "kami menerima laporan jangkitan baharu di Sibu."
+        }
+      ]
+    },
+    {
+      "id": "sibu",
+      "start": 101.72,
+      "end": 105.1,
+      "headline": {
+        "text": "Kuching hanyalah permulaan.",
+        "highlight": [
+          "permulaan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 101.99,
+          "text": "Rupa-rupanya,"
+        },
+        {
+          "t": 102.99,
+          "text": "Kuching hanyalah permulaan."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 105.1,
+      "end": 114,
+      "headline": {
+        "text": "Ke mana korang akan lari?",
+        "highlight": [
+          "lari"
+        ],
+        "emoji": "👇"
+      },
+      "captions": [
+        {
+          "t": 105.37,
+          "text": "Kalau wabak zombi berlaku di Kuching…"
+        },
+        {
+          "t": 107.45,
+          "text": "ke mana korang akan lari dulu?"
+        },
+        {
+          "t": 108.99,
+          "text": "Tulis di ruang komen!"
+        }
+      ]
+    }
+  ]
+}
