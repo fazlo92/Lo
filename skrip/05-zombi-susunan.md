@@ -21,7 +21,7 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 | 5 | 0:52–1:01 | Waterfront kosong → MetroCity gelap → tingkap rumah | Hari 5 — Bandar **hantu**. | 63% |
 | 6 | 1:01–1:08 | Dewan pusat perlindungan | Hari 6 — Pertahanan **terakhir**. | 81% |
 | 7 | 1:08–1:20 | Helikopter atas Sungai Sarawak | Hari 7 — Kuching **jatuh**. | 100% |
-| 8 | 1:20–1:28 | Dalam helikopter, radio | Kuching hanyalah **permulaan**. | SIBU ● |
+| 8 | 1:20–1:28 | Helikopter → Sibu (senja) | Kuching hanyalah **permulaan**. | SIBU ● |
 | 9 | 1:28–1:35 | Langit subuh | Ke mana korang akan **lari**? 👇 | — |
 
 ---
@@ -69,7 +69,8 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 
 ## 8 · Twist — Sibu
 - **VO:** "Kemudian… satu panggilan radio. 'Ini pusat kawalan… kami menerima laporan jangkitan baharu di Sibu.' Rupa-rupanya, Kuching hanyalah permulaan."
-- **Paparan:** dalam kabin helikopter, radio berkelip. Peta mini zum keluar dari Kuching → peta **Sarawak**; titik **SIBU** menyala merah dan berdenyut. Bunyi statik radio.
+- **8a Kabin helikopter:** radio berkelip, bunyi statik. Peta mini zum keluar dari Kuching → peta **Sarawak**; titik **SIBU** menyala merah dan berdenyut.
+- **8b Sibu, senja** (baru, rujukan `sibu-*.jpg`): potongan pantas ke **patung angsa putih** bersayap terbuka di atas batu di tebing sungai, dengan **Wisma Sanyan** (menara kaca hijau-biru dengan kepala putih bulat) dan dataran rumput di latar. Dataran kosong dan sunyi, lampu menyala biasa — kemudian satu siluet berjalan kaku muncul di hujung dataran. Potong ke CTA.
 
 ## 9 · CTA
 - **VO:** "Kalau wabak zombi berlaku di Kuching… ke mana korang akan lari dulu? Tulis di ruang komen!"
@@ -86,4 +87,4 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 
 ## Set Three.js
 - **Guna semula:** bilik tidur, HUS, Waterfront + Darul Hana + DUN, VivaCity, pasar raya, LTAK, peta Sarawak
-- **Baru:** MetroCity, The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
+- **Baru:** Sibu (patung angsa, Wisma Sanyan, dataran), MetroCity, The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
