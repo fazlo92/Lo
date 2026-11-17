@@ -10,7 +10,7 @@ Hari kedua. Rakaman serangan di Waterfront menjadi tular. Pengunjung VivaCity da
 
 Hari ketiga. Sekolah ditutup. Di Jalan Tun Jugah, kereta ditinggalkan di tengah kesesakan. Rak pasar raya kosong akibat pembelian panik.
 
-Hari keempat. Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak.
+Hari keempat. Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Bas di Kuching Sentral tidak lagi bergerak. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak.
 
 Hari kelima. Waterfront kosong. Kedai-kedai di Satok tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah.
 

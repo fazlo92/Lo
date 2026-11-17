@@ -17,7 +17,7 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 | 1 | 0:09–0:20 | HUS kecemasan → jalan Satok (senja) | Hari 1 — **Pesakit** pertama. | 1 PESAKIT → 3% |
 | 2 | 0:20–0:31 | Waterfront → VivaCity / The Spring → Jambatan Satok | Hari 2 — Kuching **panik**. | 12% |
 | 3 | 0:31–0:41 | Jalan Tun Jugah → pasar raya | Hari 3 — Bandar **lumpuh**. | 28% |
-| 4 | 0:41–0:52 | Sekatan jalan → LTAK | Hari 4 — Zon **kecemasan**. | 45% |
+| 4 | 0:41–0:54 | Kuching Sentral → LTAK | Hari 4 — Zon **kecemasan**. | 45% |
 | 5 | 0:52–1:01 | Waterfront kosong → Satok gelap → tingkap rumah | Hari 5 — Bandar **hantu**. | 63% |
 | 6 | 1:01–1:08 | Dewan pusat perlindungan | Hari 6 — Pertahanan **terakhir**. | 81% |
 | 7 | 1:08–1:20 | Helikopter atas Sungai Sarawak | Hari 7 — Kuching **jatuh**. | 100% |
@@ -48,9 +48,9 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 - **3c Pasar raya** (guna semula): rak kosong, troli terbalik.
 
 ## 4 · Hari 4 — Zon kecemasan
-- **VO:** "Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak."
+- **VO:** "Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Bas di Kuching Sentral tidak lagi bergerak. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak."
 - **4a Telefon:** amaran kecemasan merah penuh skrin "ZON KECEMASAN · KEKAL DI RUMAH".
-- **4b Sekatan jalan** (baru): penghadang jalur merah-putih, kon, trak tentera umum, lampu suar.
+- **4b Kuching Sentral** (baru, rujukan `kuching-sentral-*.jpg`): luar — bumbung besar melengkung macam sayap, dinding panel **merah-oren dengan jalur kuning**, tiang kelabu menyerong; penghadang + trak tentera umum di tempat letak kereta. Dalam — platform bas bertiang kelabu berlabel **B2 / C2 / D2** (merah), bas ekspres berhenti dengan papan "PERJALANAN DIGANTUNG", penumpang beg terkandas. Logo dan jenama iklan tidak dimodelkan.
 - **4c LTAK** (guna semula): papan penerbangan semua "DIHENTIKAN", dewan berlepas kosong. Peta mini: merah meliputi separuh Kuching.
 
 ## 5 · Hari 5 — Bandar hantu
@@ -86,4 +86,4 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 
 ## Set Three.js
 - **Guna semula:** bilik tidur, HUS, jalan Satok + Wisma Satok, Waterfront + Darul Hana + DUN, VivaCity, pasar raya, LTAK, peta Sarawak
-- **Baru:** The Spring, Jambatan Satok, Jalan Tun Jugah, sekatan jalan, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
+- **Baru:** The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
