@@ -1,90 +1,191 @@
-# Wabak Zombi di Kuching — Storyboard v1
+# Apa Jadi Kalau Wabak Zombi Berlaku di Kuching? — Storyboard & Penerangan Grafik v2
 
-Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** suara + 4s CTA ≈ **1:35**.
-
-## Gaya tetap
-- **POV** orang pertama, telefon di tangan kiri; skrin telefon ikut cerita (berita tular, amaran kecemasan, peta, radio).
-- **Kad pembuka:** teks kecil "Kisah rekaan" pada 2 saat pertama (sebab guna tempat & hospital sebenar).
-- **HUD:** label `KAWASAN TERJEJAS`, nombor `1 PESAKIT` → `12%` → … → `100%`; warna putih → kuning → oren → merah. Baris bawah `HARI 3 / 7 · JALAN TUN JUGAH`.
-- **Peta mini Kuching** (atas): tompok merah merebak dari HUS ke MetroCity, Petra Jaya, Waterfront… Babak akhir zum keluar ke peta Sarawak → titik **Sibu** berkelip merah.
-- **Zombi:** low-poly, kulit kelabu-hijau, jalan kaku, mata kuning bercahaya. **Tiada darah atau luka** (selamat untuk TikTok); serangan ditunjuk melalui siluet, bayang dan orang lari.
-- **Suasana** makin gelap: pagi biasa → senja oren → malam biru → kabus hijau → malam gelap → subuh kelabu (helikopter).
-- **Zon selamat TikTok** dipatuhi (teks, HUD, telefon).
-
-| # | Masa | Lokasi | Tajuk | HUD |
-|---|---|---|---|---|
-| 0 | 0:00–0:09 | Bilik tidur → tingkap | Apa jadi kalau **wabak zombi** berlaku di Kuching? | 0 |
-| 1 | 0:09–0:20 | HUS kecemasan → MetroCity (senja) | Hari 1 — **Pesakit** pertama. | 1 PESAKIT → 3% |
-| 2 | 0:20–0:31 | Waterfront → VivaCity / The Spring → Jambatan Satok | Hari 2 — Kuching **panik**. | 12% |
-| 3 | 0:31–0:41 | Jalan Tun Jugah → pasar raya | Hari 3 — Bandar **lumpuh**. | 28% |
-| 4 | 0:41–0:54 | Kuching Sentral → LTAK | Hari 4 — Zon **kecemasan**. | 45% |
-| 5 | 0:52–1:01 | Waterfront kosong → MetroCity gelap → tingkap rumah | Hari 5 — Bandar **hantu**. | 63% |
-| 6 | 1:01–1:08 | Dewan pusat perlindungan | Hari 6 — Pertahanan **terakhir**. | 81% |
-| 7 | 1:08–1:20 | Helikopter atas Sungai Sarawak | Hari 7 — Kuching **jatuh**. | 100% |
-| 8 | 1:20–1:28 | Helikopter → Sibu (senja) | Kuching hanyalah **permulaan**. | SIBU ● |
-| 9 | 1:28–1:35 | Langit subuh | Ke mana korang akan **lari**? 👇 | — |
+- **Teks suara:** `skrip/05-zombi-vo.md`
+- **Gambar rujukan:** `topics/zombi/rujukan/` + set lama (HUS, VivaCity, LTAK, pasar raya, Waterfront)
+- **Format:** 1080×1920, 30fps, ~1:36 (masa sebenar diselaraskan ikut rakaman)
+- **Zon selamat TikTok:** semua teks, HUD, peta dan telefon di dalam zon (kiri 130px, kanan 225px, atas 220px, bawah 470px)
 
 ---
 
-## 0 · Hook — Bilik tidur
-- **VO:** "Bayangkan… esok pagi, satu wabak misteri mula merebak di Kuching. Mula-mula, hanya seorang pesakit. Tujuh hari kemudian… seluruh bandar berubah."
-- **Paparan:** pagi biasa, telefon: notifikasi berita "Pesakit misteri di HUS". Luar tingkap: siren ambulans jauh. Pada "tujuh hari": 7 petak kalendar di skrin telefon, satu demi satu bertukar merah.
+## A. Bahasa grafik tetap
 
-## 1 · Hari 1 — Pesakit pertama
-- **VO:** "Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di MetroCity dan Petra Jaya."
-- **1a HUS** (guna semula): laluan kecemasan, ambulans lampu biru-merah; satu figura terhuyung-hayang di kanopi kaca, petugas berundur.
-- **1b MetroCity, senja** (baru, rujukan `metrocity-*.jpg`): deretan kedai 3–4 tingkat berfasad **kaca hijau kebiruan** dengan bingkai putih, kaki lima berbumbung, menara kondominium putih tinggi di hujung, tempat letak kereta di hadapan; 2–3 siluet berjalan kaku di hujung deretan; telefon: berita "Kes serangan di MetroCity & Petra Jaya". Peta mini: 3 titik merah. Papan nama kedai dibiarkan kosong.
+### Susun atur skrin (atas → bawah)
+| Kawasan | Elemen |
+|---|---|
+| y 230–420 | **Peta mini** (Kuching; akhir video → Sarawak) |
+| y 440–560 | **Tajuk** serif putih, 1 kata merah/biru |
+| y 960–1110 | **HUD** kiri: label kecil / nombor besar / baris hari & lokasi |
+| y 1235–1350 | **Sari kata** italik, di sebelah kanan telefon |
+| bawah kiri | **Tangan + telefon** (POV) |
 
-## 2 · Hari 2 — Kuching panik
-- **VO:** "Rakaman serangan di Waterfront menjadi tular. Pengunjung VivaCity dan The Spring bergegas keluar. Jalan ke Jambatan Satok mula sesak."
-- **2a Telefon penuh skrin:** video tular dengan butang ▶, kiraan tontonan berpusing naik `1.2J`.
-- **2b Luar mall** (VivaCity guna semula; The Spring baru): orang berlari keluar membawa beg; kereta beredar.
-- **2c Jambatan Satok** (baru): jambatan gantung dengan menara, kereta beratur penuh, hon.
+### Tajuk
+- Font serif (EB Garamond), putih dengan bayang.
+- **Kata kunci berwarna merah darah gelap `#e0484f`** (bukan biru seperti siri lain) — tanda siri seram.
+- Hari baru: tajuk masuk dengan kesan **glitch** sekejap (gelincir RGB 0.2s).
 
-## 3 · Hari 3 — Bandar lumpuh
-- **VO:** "Sekolah ditutup. Di Jalan Tun Jugah, kereta ditinggalkan di tengah kesesakan. Rak pasar raya kosong akibat pembelian panik."
-- **3a Telefon:** notis "SEKOLAH DITUTUP".
-- **3b Jalan Tun Jugah** (baru): jalan raya 3 lorong penuh kereta ditinggalkan, pintu terbuka, lampu kecemasan berkelip.
-- **3c Pasar raya** (guna semula): rak kosong, troli terbalik.
+### HUD
+- Label: `KAWASAN TERJEJAS`
+- Nombor: `1 PESAKIT` → `3%` → `12%` → `28%` → `45%` → `63%` → `81%` → `100%` (bergolek naik setiap hari)
+- Warna: putih → kuning → oren → merah → merah berkelip (Hari 7)
+- Baris bawah: `HARI 3 / 7 · JALAN TUN JUGAH`
+- Ikon kecil di sebelah label: simbol **biohazard ☣** berdenyut
 
-## 4 · Hari 4 — Zon kecemasan
-- **VO:** "Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Bas di Kuching Sentral tidak lagi bergerak. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak."
-- **4a Telefon:** amaran kecemasan merah penuh skrin "ZON KECEMASAN · KEKAL DI RUMAH".
-- **4b Kuching Sentral** (baru, rujukan `kuching-sentral-*.jpg`): luar — bumbung besar melengkung macam sayap, dinding panel **merah-oren dengan jalur kuning**, tiang kelabu menyerong; penghadang + trak tentera umum di tempat letak kereta. Dalam — platform bas bertiang kelabu berlabel **B2 / C2 / D2** (merah), bas ekspres berhenti dengan papan "PERJALANAN DIGANTUNG", penumpang beg terkandas. Logo dan jenama iklan tidak dimodelkan.
-- **4c LTAK** (guna semula): papan penerbangan semua "DIHENTIKAN", dewan berlepas kosong. Peta mini: merah meliputi separuh Kuching.
+### Peta mini Kuching
+- Garisan sungai Sarawak berliku + titik lokasi (HUS, MetroCity, Petra Jaya, Waterfront, VivaCity, The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, LTAK).
+- **Tompok merah** (jangkitan) membesar dari HUS mengikut peratus HUD; tepi tompok berdenyut.
+- Babak 8: peta zum keluar → **bentuk Sarawak**; titik **SIBU** berdenyut merah.
 
-## 5 · Hari 5 — Bandar hantu
-- **VO:** "Waterfront kosong. Kedai-kedai di MetroCity tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah."
-- **5a Waterfront malam** (guna semula): tiada orang, tanglung padam, kabus hijau nipis atas sungai; satu siluet jauh.
-- **5b MetroCity malam:** pintu gulung tertutup di sepanjang deretan kedai, kaca gelap, lampu jalan padam satu demi satu.
-- **5c Dari dalam rumah:** intai celah langsir — bayang-bayang lalu di luar; tangan tutup lampu.
+### Zombi
+- Low-poly, tubuh sama seperti orang lain tetapi **kulit kelabu-hijau `#7f8f78`**, baju koyak (warna pudar), **mata kuning bercahaya** (glow kecil).
+- Gerak: jalan kaku terhuyung, kepala senget, tangan separuh terangkat; laju perlahan.
+- **Tiada darah, luka atau gigitan ditunjuk.** Ancaman ditunjuk melalui siluet, bayang, orang lari, pintu diketuk.
+- Mula muncul jauh (Hari 1), makin ramai dan dekat (Hari 5), kumpulan besar di bawah helikopter (Hari 7).
 
-## 6 · Hari 6 — Pertahanan terakhir
-- **VO:** "Sekumpulan penduduk berkumpul di pusat perlindungan. Mereka menghubungi pasukan penyelamat melalui radio."
-- **Paparan** (baru): dewan sekolah/komuniti — tilam di lantai, kotak air & makanan, pintu dihalang meja; seorang memegang walkie-talkie, lampu suluh. Bunyi ketukan di pintu.
+### Telefon (tangan kiri)
+Skrin ikut cerita: notifikasi berita → video tular → notis sekolah tutup → **amaran kecemasan merah** → peta pemindahan → tiada isyarat → radio.
 
-## 7 · Hari 7 — Kuching jatuh
-- **VO:** "Kumpulan terakhir dipindahkan dengan helikopter. Dari udara, Kuching sunyi. Jambatan Darul Hana masih berdiri… tetapi kehidupan bandar telah terhenti."
-- **Paparan:** POV dari pintu helikopter, subuh kelabu-biru. Bawah: Sungai Sarawak, **Jambatan Darul Hana** (rujukan `darul-hana-*.jpg`: dek S putih, dua tiang putih menyerong bentuk A, pelantar bulat berbumbung kuning, pagar putih; DUN dan Astana di tebing seberang), DUN, bandar tanpa lampu, kereta terbiar. HUD `100%`.
+### Palet & cahaya mengikut hari
+| Hari | Suasana | Langit | Gred warna |
+|---|---|---|---|
+| Hook | pagi biasa | biru cerah | normal |
+| 1 | siang → senja | oren | sedikit hangat |
+| 2 | siang panik | biru pucat | kontras tinggi |
+| 3 | mendung | kelabu | pudar |
+| 4 | petang suram | kuning kotor | pudar, vignet |
+| 5 | malam | biru gelap + kabus hijau | sejuk, gelap |
+| 6 | malam dalam dewan | — | lampu suluh, hangat kecil |
+| 7 | subuh | kelabu-biru | sejuk, desaturasi |
+| 8 | senja Sibu | ungu-oren | normal → merah |
 
-## 8 · Twist — Sibu
-- **VO:** "Kemudian… satu panggilan radio. 'Ini pusat kawalan… kami menerima laporan jangkitan baharu di Sibu.' Rupa-rupanya, Kuching hanyalah permulaan."
-- **8a Kabin helikopter:** radio berkelip, bunyi statik. Peta mini zum keluar dari Kuching → peta **Sarawak**; titik **SIBU** menyala merah dan berdenyut.
-- **8b Sibu, senja** (baru, rujukan `sibu-*.jpg`): potongan pantas ke **patung angsa putih** bersayap terbuka di atas batu di tebing sungai, dengan **Wisma Sanyan** (menara kaca hijau-biru dengan kepala putih bulat) dan dataran rumput di latar. Dataran kosong dan sunyi, lampu menyala biasa — kemudian satu siluet berjalan kaku muncul di hujung dataran. Potong ke CTA.
+### Peralihan
+- Antara hari: **kilat putih 0.3s + glitch** + bunyi "whoosh/heartbeat".
+- Dalam hari yang sama: potong terus (cut).
+- Masuk Sibu: **statik radio** penuh skrin 0.4s.
 
-## 9 · CTA
-- **VO:** "Kalau wabak zombi berlaku di Kuching… ke mana korang akan lari dulu? Tulis di ruang komen!"
-- **Tajuk:** Ke mana korang akan **lari**? 👇
+### Bunyi (ringkas)
+Dengung rendah sepanjang video, degupan jantung makin laju dari Hari 2; siren, hon, statik radio, ketukan pintu; Hari 7 angin + bilah helikopter; Sibu: senyap → satu bunyi geraman jauh.
 
 ---
 
-## Perubahan daripada teks asal (kreatif)
-- Dipendekkan ~50% supaya bawah 2 minit; semua 7 hari dan semua lokasi dikekalkan.
-- Ayat "Dalam senario ini…" dibuang daripada suara; diganti teks "Kisah rekaan" di skrin.
-- Hari 6 "kes di luar Kuching" digabung dengan babak akhir (Sibu) supaya twist tidak didedahkan dua kali.
-- Hari 7: pemindahan dengan **helikopter** (sepadan dengan "dari udara").
-- Soalan akhir dipendekkan: "ke mana korang akan lari dulu?"
+## B. Storyboard
 
-## Set Three.js
-- **Guna semula:** bilik tidur, HUS, Waterfront + Darul Hana + DUN, VivaCity, pasar raya, LTAK, peta Sarawak
-- **Baru:** Sibu (patung angsa, Wisma Sanyan, dataran), MetroCity, The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
+### 0 · HOOK — 0:00–0:10
+| | |
+|---|---|
+| **VO** | "Bayangkan… esok pagi, satu wabak misteri mula merebak di Kuching. Mula-mula, hanya seorang pesakit. Tujuh hari kemudian… seluruh bandar berubah." |
+| **Tajuk** | Apa jadi kalau **wabak zombi** berlaku di Kuching? |
+| **Set** | Bilik tidur (guna semula), pagi |
+| **Kamera** | Duduk di katil, pandang tingkap; tolak perlahan ke tingkap |
+| **Grafik** | • 0:00–0:02 teks kecil **"Kisah rekaan"** di bawah tajuk<br>• Telefon: notifikasi berita *"Pesakit misteri dimasukkan ke HUS"*<br>• Luar tingkap: lampu biru-merah ambulans berkelip jauh<br>• Pada "tujuh hari": 7 petak kalendar di skrin telefon jadi merah satu demi satu |
+| **HUD** | `0` · `KUCHING · 7:00 PAGI` |
+| **Peta** | Kosong; titik HUS mula berkelip pada "seorang pesakit" |
+| **Bunyi** | Burung pagi → siren jauh → dengung rendah masuk |
+
+### 1 · HARI 1 — Pesakit pertama — 0:10–0:21
+| | |
+|---|---|
+| **VO** | "Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di MetroCity dan Petra Jaya." |
+| **Tajuk** | Hari 1 — **Pesakit** pertama. |
+| **1a HUS kecemasan** (guna semula) | Siang. Ambulans di bawah kanopi kaca, lampu biru-merah. Seorang lelaki (kulit mula pucat) terhuyung keluar ambulans; dua petugas berbaju putih berundur. Papan biru "KECEMASAN". |
+| **1b MetroCity, senja** (baru) | Deretan kedai 3–4 tingkat fasad **kaca hijau kebiruan** + bingkai putih, kaki lima berbumbung, menara kondo putih di hujung; papan nama kosong. Langit oren. **2–3 siluet** berjalan kaku di hujung deretan, mata kuning. |
+| **Telefon** | Berita: *"Serangan dilaporkan di MetroCity & Petra Jaya"* |
+| **HUD** | `1 PESAKIT` → `3%` · `HARI 1 / 7 · HUS` → `MetroCity` |
+| **Peta** | Tompok kecil di HUS; 2 titik baru menyala (MetroCity, Petra Jaya) |
+| **Bunyi** | Siren dekat; senja: cengkerik + geraman samar |
+
+### 2 · HARI 2 — Kuching panik — 0:21–0:30
+| | |
+|---|---|
+| **VO** | "Rakaman serangan di Waterfront menjadi tular. Pengunjung VivaCity dan The Spring bergegas keluar. Jalan ke Jambatan Satok mula sesak." |
+| **Tajuk** | Hari 2 — Kuching **panik**. |
+| **2a Telefon penuh fokus** | Video tular: Waterfront kabur dengan orang lari, butang ▶, kiraan tontonan berpusing `120K → 1.2J`, ikon komen 🔥 |
+| **2b The Spring** (baru) | Bangunan **putih panjang berpanel**, jalur tingkap gelap mendatar, menara kaca di hujung, papan jenama kosong. Orang berlari keluar ke tempat letak kereta membawa beg; kereta beredar. (VivaCity sekilas 1s sebelum ini — fasad kiub kuning-coklat.) |
+| **2c Jambatan Satok** (baru) | Jambatan gantung **menara kekisi besi putih**, kabel melengkung, dek panjang; jalan raya di tebing penuh kereta beratur, lampu brek merah. |
+| **HUD** | `12%` kuning · `HARI 2 / 7 · WATERFRONT` → `JAMBATAN SATOK` |
+| **Peta** | Tompok merebak ke Waterfront |
+| **Bunyi** | Degupan jantung bermula; hon bertalu |
+
+### 3 · HARI 3 — Bandar lumpuh — 0:30–0:39
+| | |
+|---|---|
+| **VO** | "Sekolah ditutup. Di Jalan Tun Jugah, kereta ditinggalkan di tengah kesesakan. Rak pasar raya kosong akibat pembelian panik." |
+| **Tajuk** | Hari 3 — Bandar **lumpuh**. |
+| **Telefon** | Notis: *"SEMUA SEKOLAH DITUTUP"* |
+| **3a Jalan Tun Jugah** (baru) | Jalan 3 lorong, langit mendung kelabu. Kereta **ditinggalkan**, pintu terbuka, lampu kecemasan kuning berkelip; beg terjatuh di jalan. Satu siluet jauh di antara kereta. |
+| **3b Pasar raya** (guna semula) | Rak kosong, troli terbalik, kotak berselerak; tanda "STOK HABIS". |
+| **HUD** | `28%` oren · `HARI 3 / 7 · JALAN TUN JUGAH` |
+| **Bunyi** | Lampu kecemasan "tik-tik", degupan lebih laju |
+
+### 4 · HARI 4 — Zon kecemasan — 0:39–0:51
+| | |
+|---|---|
+| **VO** | "Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Bas di Kuching Sentral tidak lagi bergerak. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak." |
+| **Tajuk** | Hari 4 — Zon **kecemasan**. |
+| **Telefon** | Amaran kecemasan **merah penuh skrin** berkelip: *"ZON KECEMASAN · KEKAL DI RUMAH"* |
+| **4a Kuching Sentral luar** (baru) | Bumbung besar **melengkung macam sayap**, dinding panel **merah-oren berjalur kuning**, tiang kelabu menyerong. Di tempat letak kereta: penghadang jalur merah-putih, kon, trak tentera hijau umum, lampu suar. |
+| **4b Platform bas** (baru) | Tiang kelabu berlabel **B2 / C2 / D2** merah, bas ekspres diam, papan elektronik **"PERJALANAN DIGANTUNG"**, penumpang duduk atas beg. |
+| **4c LTAK** (guna semula) | Dewan berlepas kosong, papan penerbangan semua **"DIHENTIKAN"** merah. |
+| **Akhir babak** | Pada "wabak terus merebak": peta mini tompok merah membesar laju |
+| **HUD** | `45%` oren-merah · `HARI 4 / 7 · KUCHING SENTRAL` → `LTAK` |
+| **Bunyi** | Nada amaran kecemasan telefon; pengumuman PA samar |
+
+### 5 · HARI 5 — Bandar hantu — 0:51–0:58
+| | |
+|---|---|
+| **VO** | "Waterfront kosong. Kedai-kedai di MetroCity tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah." |
+| **Tajuk** | Hari 5 — Bandar **hantu**. |
+| **5a Waterfront malam** (guna semula) | Lantai bata, pagar besi, tanglung merah padam, **kabus hijau nipis** atas sungai, DUN siluet; satu figura berdiri diam di hujung tebingan. |
+| **5b MetroCity malam** | Pintu gulung tertutup sepanjang deretan; **lampu jalan padam satu demi satu** ke arah kamera. |
+| **5c Dalam rumah** | Intai dari celah langsir: bayang-bayang lalu di luar tingkap; tangan kanan tutup suis lampu → gelap. |
+| **Telefon** | `Tiada isyarat` · bateri `18%` |
+| **HUD** | `63%` merah · `HARI 5 / 7 · WATERFRONT` |
+| **Bunyi** | Senyap, angin, satu bunyi tin jatuh jauh; lampu padam "klik" |
+
+### 6 · HARI 6 — Pertahanan terakhir — 0:58–1:06
+| | |
+|---|---|
+| **VO** | "Sekumpulan penduduk berkumpul di pusat perlindungan. Mereka menghubungi pasukan penyelamat melalui radio." |
+| **Tajuk** | Hari 6 — Pertahanan **terakhir**. |
+| **Set** (baru) | Dewan sekolah/komuniti: tilam di lantai, kotak air & makanan bertimbun, pintu besar dihalang meja dan kerusi; tingkap ditampal papan. |
+| **Grafik** | Seorang memegang **walkie-talkie** (lampu hijau berkelip bila bercakap); lampu suluh menyapu dinding; penduduk duduk berkumpul. Pintu bergegar sedikit pada akhir babak. |
+| **HUD** | `81%` merah berkelip · `HARI 6 / 7 · PUSAT PERLINDUNGAN` |
+| **Bunyi** | Statik radio, suara samar "…diterima…", ketukan pintu 3 kali |
+
+### 7 · HARI 7 — Kuching jatuh — 1:06–1:17
+| | |
+|---|---|
+| **VO** | "Kumpulan terakhir dipindahkan dengan helikopter. Dari udara, Kuching sunyi. Jambatan Darul Hana masih berdiri… tetapi kehidupan bandar telah terhenti." |
+| **Tajuk** | Hari 7 — Kuching **jatuh**. |
+| **Set** | POV dari pintu terbuka helikopter (bingkai pintu, tali pemegang di tepi skrin), terbang perlahan di atas Sungai Sarawak waktu **subuh kelabu-biru**. |
+| **Grafik** | Bawah: **Jambatan Darul Hana** — dek S putih, dua tiang menyerong bentuk A, pelantar bulat berbumbung kuning; **DUN** bumbung emas dan **Astana** di tebing seberang. Bandar tanpa lampu, kereta terbiar di jalan, kumpulan kecil titik-titik zombi bergerak perlahan. Kamera condong turun pada "Darul Hana masih berdiri". |
+| **HUD** | `100%` merah berkelip · `HARI 7 / 7 · KUCHING` |
+| **Peta** | Seluruh Kuching merah |
+| **Bunyi** | Bilah helikopter, angin; muzik sayu perlahan |
+
+### 8 · TWIST — Sibu — 1:17–1:27
+| | |
+|---|---|
+| **VO** | "Kemudian… satu panggilan radio. 'Ini pusat kawalan… kami menerima laporan jangkitan baharu di Sibu.' Rupa-rupanya, Kuching hanyalah permulaan." |
+| **Tajuk** | Kuching hanyalah **permulaan**. |
+| **8a Kabin helikopter** | Radio di panel berkelip; sari kata ayat radio dalam fon **mesin taip hijau** (gaya transmisi). Peta mini zum keluar → **bentuk Sarawak**; titik **SIBU** berdenyut merah. |
+| **8b Sibu, senja** (baru) | Statik penuh skrin 0.4s → **patung angsa putih** bersayap terbuka di atas batu, tebing sungai; **Wisma Sanyan** (menara kaca hijau-biru, kepala putih bulat) dan dataran rumput di latar. Lampu menyala, dataran kosong. Pada "permulaan": **satu siluet bermata kuning** muncul di hujung dataran. |
+| **HUD** | Bertukar: `SIBU · KES BAHARU` merah |
+| **Bunyi** | Statik radio → senyap → satu geraman jauh → dentuman bass |
+
+### 9 · CTA — 1:27–1:36
+| | |
+|---|---|
+| **VO** | "Kalau wabak zombi berlaku di Kuching… ke mana korang akan lari dulu? Tulis di ruang komen!" |
+| **Tajuk** | Ke mana korang akan **lari**? 👇 |
+| **Grafik** | Kekal di Sibu senja (siluet berdiri jauh), kamera bernafas perlahan; HUD dan peta pudar. |
+| **Bunyi** | Dengung rendah pudar |
+
+---
+
+## C. Set Three.js
+| Status | Set |
+|---|---|
+| Guna semula | Bilik tidur, HUS kecemasan, VivaCity luar, pasar raya, LTAK dalam, Waterfront + Darul Hana + DUN, peta Sarawak, helikopter (baru tapi ringkas) |
+| Baru (ada rujukan) | MetroCity (siang/senja/malam), The Spring, Jambatan Satok, Kuching Sentral luar + platform, Sibu (patung angsa + Wisma Sanyan + dataran), Astana |
+| Baru (tanpa rujukan, bentuk umum) | Jalan Tun Jugah, dalam rumah (langsir), dewan perlindungan, trak tentera, model zombi |
+| Tidak dimodelkan | Logo/jenama kedai, iklan, nombor plat, wajah sebenar |
