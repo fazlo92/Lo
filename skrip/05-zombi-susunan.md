@@ -14,11 +14,11 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 | # | Masa | Lokasi | Tajuk | HUD |
 |---|---|---|---|---|
 | 0 | 0:00–0:09 | Bilik tidur → tingkap | Apa jadi kalau **wabak zombi** berlaku di Kuching? | 0 |
-| 1 | 0:09–0:20 | HUS kecemasan → jalan Satok (senja) | Hari 1 — **Pesakit** pertama. | 1 PESAKIT → 3% |
+| 1 | 0:09–0:20 | HUS kecemasan → MetroCity (senja) | Hari 1 — **Pesakit** pertama. | 1 PESAKIT → 3% |
 | 2 | 0:20–0:31 | Waterfront → VivaCity / The Spring → Jambatan Satok | Hari 2 — Kuching **panik**. | 12% |
 | 3 | 0:31–0:41 | Jalan Tun Jugah → pasar raya | Hari 3 — Bandar **lumpuh**. | 28% |
 | 4 | 0:41–0:54 | Kuching Sentral → LTAK | Hari 4 — Zon **kecemasan**. | 45% |
-| 5 | 0:52–1:01 | Waterfront kosong → Satok gelap → tingkap rumah | Hari 5 — Bandar **hantu**. | 63% |
+| 5 | 0:52–1:01 | Waterfront kosong → MetroCity gelap → tingkap rumah | Hari 5 — Bandar **hantu**. | 63% |
 | 6 | 1:01–1:08 | Dewan pusat perlindungan | Hari 6 — Pertahanan **terakhir**. | 81% |
 | 7 | 1:08–1:20 | Helikopter atas Sungai Sarawak | Hari 7 — Kuching **jatuh**. | 100% |
 | 8 | 1:20–1:28 | Dalam helikopter, radio | Kuching hanyalah **permulaan**. | SIBU ● |
@@ -31,9 +31,9 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 - **Paparan:** pagi biasa, telefon: notifikasi berita "Pesakit misteri di HUS". Luar tingkap: siren ambulans jauh. Pada "tujuh hari": 7 petak kalendar di skrin telefon, satu demi satu bertukar merah.
 
 ## 1 · Hari 1 — Pesakit pertama
-- **VO:** "Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di Satok dan Petra Jaya."
+- **VO:** "Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di MetroCity dan Petra Jaya."
 - **1a HUS** (guna semula): laluan kecemasan, ambulans lampu biru-merah; satu figura terhuyung-hayang di kanopi kaca, petugas berundur.
-- **1b Jalan Satok, senja** (guna semula + Wisma Satok di latar): 2–3 siluet berjalan kaku di hujung jalan; telefon: berita "Kes serangan di Satok & Petra Jaya". Peta mini: 3 titik merah.
+- **1b MetroCity, senja** (baru, rujukan `metrocity-*.jpg`): deretan kedai 3–4 tingkat berfasad **kaca hijau kebiruan** dengan bingkai putih, kaki lima berbumbung, menara kondominium putih tinggi di hujung, tempat letak kereta di hadapan; 2–3 siluet berjalan kaku di hujung deretan; telefon: berita "Kes serangan di MetroCity & Petra Jaya". Peta mini: 3 titik merah. Papan nama kedai dibiarkan kosong.
 
 ## 2 · Hari 2 — Kuching panik
 - **VO:** "Rakaman serangan di Waterfront menjadi tular. Pengunjung VivaCity dan The Spring bergegas keluar. Jalan ke Jambatan Satok mula sesak."
@@ -54,9 +54,9 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 - **4c LTAK** (guna semula): papan penerbangan semua "DIHENTIKAN", dewan berlepas kosong. Peta mini: merah meliputi separuh Kuching.
 
 ## 5 · Hari 5 — Bandar hantu
-- **VO:** "Waterfront kosong. Kedai-kedai di Satok tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah."
+- **VO:** "Waterfront kosong. Kedai-kedai di MetroCity tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah."
 - **5a Waterfront malam** (guna semula): tiada orang, tanglung padam, kabus hijau nipis atas sungai; satu siluet jauh.
-- **5b Satok:** pintu gulung tertutup, lampu jalan padam satu demi satu.
+- **5b MetroCity malam:** pintu gulung tertutup di sepanjang deretan kedai, kaca gelap, lampu jalan padam satu demi satu.
 - **5c Dari dalam rumah:** intai celah langsir — bayang-bayang lalu di luar; tangan tutup lampu.
 
 ## 6 · Hari 6 — Pertahanan terakhir
@@ -65,7 +65,7 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 
 ## 7 · Hari 7 — Kuching jatuh
 - **VO:** "Kumpulan terakhir dipindahkan dengan helikopter. Dari udara, Kuching sunyi. Jambatan Darul Hana masih berdiri… tetapi kehidupan bandar telah terhenti."
-- **Paparan:** POV dari pintu helikopter, subuh kelabu-biru. Bawah: Sungai Sarawak, **Jambatan Darul Hana** (bentuk S, guna semula), DUN, bandar tanpa lampu, kereta terbiar. HUD `100%`.
+- **Paparan:** POV dari pintu helikopter, subuh kelabu-biru. Bawah: Sungai Sarawak, **Jambatan Darul Hana** (rujukan `darul-hana-*.jpg`: dek S putih, dua tiang putih menyerong bentuk A, pelantar bulat berbumbung kuning, pagar putih; DUN dan Astana di tebing seberang), DUN, bandar tanpa lampu, kereta terbiar. HUD `100%`.
 
 ## 8 · Twist — Sibu
 - **VO:** "Kemudian… satu panggilan radio. 'Ini pusat kawalan… kami menerima laporan jangkitan baharu di Sibu.' Rupa-rupanya, Kuching hanyalah permulaan."
@@ -85,5 +85,5 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 - Soalan akhir dipendekkan: "ke mana korang akan lari dulu?"
 
 ## Set Three.js
-- **Guna semula:** bilik tidur, HUS, jalan Satok + Wisma Satok, Waterfront + Darul Hana + DUN, VivaCity, pasar raya, LTAK, peta Sarawak
-- **Baru:** The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi
+- **Guna semula:** bilik tidur, HUS, Waterfront + Darul Hana + DUN, VivaCity, pasar raya, LTAK, peta Sarawak
+- **Baru:** MetroCity, The Spring, Jambatan Satok, Jalan Tun Jugah, Kuching Sentral, rumah (intai langsir), dewan perlindungan, helikopter, model zombi

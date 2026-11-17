@@ -4,7 +4,7 @@
 
 Bayangkan… esok pagi, satu wabak misteri mula merebak di Kuching. Mula-mula, hanya seorang pesakit. Tujuh hari kemudian… seluruh bandar berubah.
 
-Hari pertama. Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di Satok dan Petra Jaya.
+Hari pertama. Seorang lelaki tiba di Hospital Umum Sarawak dengan demam panas… dan tingkah laku agresif. Menjelang malam, kejadian serupa dilaporkan di MetroCity dan Petra Jaya.
 
 Hari kedua. Rakaman serangan di Waterfront menjadi tular. Pengunjung VivaCity dan The Spring bergegas keluar. Jalan ke Jambatan Satok mula sesak.
 
@@ -12,7 +12,7 @@ Hari ketiga. Sekolah ditutup. Di Jalan Tun Jugah, kereta ditinggalkan di tengah 
 
 Hari keempat. Kuching diisytiharkan zon kecemasan. Laluan keluar dikawal. Bas di Kuching Sentral tidak lagi bergerak. Penerbangan di Lapangan Terbang Antarabangsa Kuching dihentikan. Tetapi wabak terus merebak.
 
-Hari kelima. Waterfront kosong. Kedai-kedai di Satok tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah.
+Hari kelima. Waterfront kosong. Kedai-kedai di MetroCity tutup. Lampu jalan mula padam. Penduduk berlindung di dalam rumah.
 
 Hari keenam. Sekumpulan penduduk berkumpul di pusat perlindungan. Mereka menghubungi pasukan penyelamat melalui radio.
 
