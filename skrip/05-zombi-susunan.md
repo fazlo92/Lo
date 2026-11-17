@@ -6,7 +6,7 @@ Teks suara: `skrip/05-zombi-vo.md` (193 patah perkataan). Anggaran **~1:30** sua
 - **POV** orang pertama, telefon di tangan kiri; skrin telefon ikut cerita (berita tular, amaran kecemasan, peta, radio).
 - **Kad pembuka:** teks kecil "Kisah rekaan" pada 2 saat pertama (sebab guna tempat & hospital sebenar).
 - **HUD:** label `KAWASAN TERJEJAS`, nombor `1 PESAKIT` → `12%` → … → `100%`; warna putih → kuning → oren → merah. Baris bawah `HARI 3 / 7 · JALAN TUN JUGAH`.
-- **Peta mini Kuching** (atas): tompok merah merebak dari HUS ke Satok, Petra Jaya, Waterfront… Babak akhir zum keluar ke peta Sarawak → titik **Sibu** berkelip merah.
+- **Peta mini Kuching** (atas): tompok merah merebak dari HUS ke MetroCity, Petra Jaya, Waterfront… Babak akhir zum keluar ke peta Sarawak → titik **Sibu** berkelip merah.
 - **Zombi:** low-poly, kulit kelabu-hijau, jalan kaku, mata kuning bercahaya. **Tiada darah atau luka** (selamat untuk TikTok); serangan ditunjuk melalui siluet, bayang dan orang lari.
 - **Suasana** makin gelap: pagi biasa → senja oren → malam biru → kabus hijau → malam gelap → subuh kelabu (helikopter).
 - **Zon selamat TikTok** dipatuhi (teks, HUD, telefon).
