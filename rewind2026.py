@@ -323,6 +323,47 @@ def palette_rects():
             for i in range(9)]
 
 
+def mixed_layout(paths):
+    """Grid campur orientasi: 2 baris, ketinggian sama, setiap sel ikut bentuk gambarnya
+    (potret 3:4, landskap 4:3); landskap diselang-seli supaya seimbang."""
+    paths = list(paths)
+    L = [p for p in paths if orient(p) == "L"]
+    P = [p for p in paths if orient(p) == "P"]
+    order = list(P)
+    for i, p in enumerate(L):                         # sebarkan landskap
+        order.insert(round((i + 0.5) * (len(order) + 1) / (len(L) + 0.5)) if order else 0, p)
+    asp = [4 / 3 if orient(p) == "L" else 3 / 4 for p in order]
+    rows_n = 1 if len(order) <= 4 else 2
+    if rows_n == 1:
+        rows = [list(range(len(order)))]
+    else:
+        tot, acc, cut = sum(asp), 0.0, len(order)
+        for i, a in enumerate(asp):
+            if acc + a / 2 >= tot / 2:
+                cut = i
+                break
+            acc += a
+        rows = [list(range(cut)), list(range(cut, len(order)))]
+    gap = px(34)
+    aw, ah = 0.86 * W, 0.80 * H
+    h = (ah - (rows_n - 1) * gap) / rows_n
+    for r in rows:
+        units = sum(asp[i] for i in r)
+        h = min(h, (aw - (len(r) - 1) * gap) / units)
+    h = int(h)
+    th = rows_n * h + (rows_n - 1) * gap
+    y = (H - th) / 2 + px(10)
+    rects = [None] * len(order)
+    for r in rows:
+        ws = [int(h * asp[i]) for i in r]
+        x = (W - (sum(ws) + (len(r) - 1) * gap)) / 2
+        for i, w in zip(r, ws):
+            rects[i] = (x + w / 2, y + h / 2, w, h)
+            x += w + gap
+        y += h + gap
+    return order, rects
+
+
 def draw_grid(img, shot, t):
     rects = shot["rects"]
     tcol = shot.get("color_at")
@@ -512,8 +553,8 @@ def plan_images(seg, beats, t_start, files, step=None, min_hold=2.0, bw=False, x
 
     steps = [int(step * 2)] if step else [2, 1]   # 1 beat atau separuh beat setiap gambar
     plan = None
-    for st in steps:
-        for hold in (int(min_hold * 2), 2):
+    for hold in (int(min_hold * 2), 2):          # utamakan masa pegang grid, baru rentak
+        for st in steps:
             n, g = need(files, st, hold)
             if n <= avail:
                 plan = (st, hold, g)
@@ -572,12 +613,13 @@ def build_timeline(bt1, bt2):
     clicks = []           # masa ketukan mesin taip
 
     # ---- lagu
-    S1, S1_LEN = 12.0, 103.5                 # good_time: 0:12, potong ~1:45, fade 1s
-    S2 = 125.0                               # best_day: 2:05 dari awal lagu
+    EXT_M, EXT_H = 10.0, 10.0                # Merah & Hijau dipanjangkan supaya grid lebih tenang
+    SH = EXT_M + EXT_H                       # anjakan untuk segmen selepas Hijau
+    S1, S1_LEN = 12.0, 103.5 + SH            # good_time: 0:12, potong ~2:04, fade 1s
+    S2 = 125.0 + SH                          # best_day: mula dari awal lagu
     b1 = S1 + extend_beats(bt1, S1_LEN)
     b1 = b1[b1 < S1 + S1_LEN]
-    b2 = S2 + extend_beats(bt2, 140)
-    TOTAL = 241.0
+    b2 = S2 + extend_beats(bt2, 160)
 
     # satu gambar landskap setiap folder disimpan untuk grid palet finale (tidak diulang)
     rng = random.Random(f"{SEED}-palette")
@@ -599,27 +641,31 @@ def build_timeline(bt1, bt2):
 
     # ---- bahagian 1 (good_time)
     p1 = [
-        ("merah", "01 MERAH", ["Merah.", "Warna semangat.", "Warna kita bermula."], 12.0, 40.0, 9),
-        ("oren", "02 OREN & PEACH", ["Oren.", "Hangat.", "seperti gelak dan tawa di bilik guru."], 40.0, 65.0, 4),
-        ("kuning", "03 KUNING", ["Kuning.", "Cerah.", "Setiap hari ada sebab untuk senyum."], 65.0, 90.0, 9),
-        ("hijau", "04 HIJAU", ["Hijau.", "Tenang.", "Kerja banyak, hati tetap senang. mena kah??."], 90.0, 115.0, 4),
+        ("merah", "01 MERAH", ["Merah.", "Warna semangat.", "Warna kita bermula."], 12.0, 40.0 + EXT_M, 9),
+        ("oren", "02 OREN & PEACH", ["Oren.", "Hangat.", "seperti gelak dan tawa di bilik guru."],
+         40.0 + EXT_M, 65.0 + EXT_M, 4),
+        ("kuning", "03 KUNING", ["Kuning.", "Cerah.", "Setiap hari ada sebab untuk senyum."],
+         65.0 + EXT_M, 90.0 + EXT_M, 9),
+        ("hijau", "04 HIJAU", ["Hijau.", "Tenang.", "Kerja banyak, hati tetap senang. mena kah??."],
+         90.0 + EXT_M, 115.0 + SH, 4),
     ]
     for name, folder, lines, a, b, _ in p1:
         a = a if a == 12.0 else snap(b1, a)
-        b = 115.0 if name == "hijau" else snap(b1, b)
+        b = 115.0 + SH if name == "hijau" else snap(b1, b)
         seg = dict(name=name, start=a, end=b, dot=name)
         card = make_card(lines, a, first_style=first_word(TXT[name]))
         img_t = float(b1[b1 >= card["typing_end"] + 1.5][0])
         card.update(t0=a, t1=img_t)
-        seg["shots"] = [card] + plan_images(seg, b1, img_t, folder_files(folder, reserved))
+        kw = dict(min_hold=3.0) if name in ("merah", "hijau") else {}
+        seg["shots"] = [card] + plan_images(seg, b1, img_t, folder_files(folder, reserved), **kw)
         segs.append(seg)
 
     # ---- biru: kad ditaip dalam senyap 1:55, imej dari 2:05 (best_day)
-    end_biru = snap(b2, 150.0)
-    seg = dict(name="biru", start=115.0, end=end_biru, dot="biru")
+    end_biru = snap(b2, 150.0 + SH)
+    seg = dict(name="biru", start=115.0 + SH, end=end_biru, dot="biru")
     card = make_card(["Biru.", "Bila semua sedondon,", "baru kita sedar…", "kita satu pasukan."],
-                     115.0, lead=0.7, gap=1.25, first_style=first_word(TXT["biru"]))
-    card.update(t0=115.0, t1=S2)
+                     115.0 + SH, lead=0.7, gap=1.25, first_style=first_word(TXT["biru"]))
+    card.update(t0=115.0 + SH, t1=S2)
     clicks += card_clicks(card)
     G["bell"].append(card["typing_end"] + 0.12)
     seg["shots"] = [card] + plan_images(seg, b2, S2, folder_files("05 BIRU", reserved))
@@ -636,7 +682,7 @@ def build_timeline(bt1, bt2):
          dict(bw=True), hitam_putih, 2),
     ]
     for name, folder, lines, a, b, kw, style, cpf in p2:
-        a, b = segs[-1]["end"], snap(b2, b)
+        a, b = segs[-1]["end"], snap(b2, b + SH)
         seg = dict(name=name, start=a, end=b, dot=name)
         card = make_card(lines, a, first_style=style, cpf=cpf,
                          gap=0.3 if name == "ungu" else 0.15)
@@ -647,19 +693,27 @@ def build_timeline(bt1, bt2):
         segs.append(seg)
 
     # ---- finale
-    a, b = segs[-1]["end"], snap(b2, 230.0)
-    seg = dict(name="finale", start=a, end=b, dot="nine")
+    a = segs[-1]["end"]
     card = make_card(["Lain warna.", "Lain cerita.", "Satu keluarga."], a, first_style=rainbow_first)
     g0 = float(b2[b2 >= card["typing_end"] + 1.5][0])
     card.update(t0=a, t1=g0)
-    gb = b2[b2 >= g0 - 1e-3]
-    grid = dict(kind="grid", t0=g0, t1=float(gb[12]), paths=pal, rects=palette_rects(),
-                appear=[float(x) for x in gb[:9]],
+    gb = [float(x) for x in b2[b2 >= g0 - 1e-3]]
+    # grid Campur: semua baki folder 09, susunan baris kemas ikut bentuk setiap gambar
+    campur, crects = mixed_layout(folder_files("09 CAMPUR WARNA (finale)", reserved))
+    nc = len(campur)
+    k = nc + 4                                       # 1 beat setiap gambar + pegang 4 beat
+    grid_c = dict(kind="grid", t0=g0, t1=gb[k], paths=campur, rects=crects,
+                  appear=gb[:nc])
+    grid = dict(kind="grid", t0=gb[k], t1=gb[k + 12], paths=pal, rects=palette_rects(),
+                appear=gb[k:k + 9], xfade=0.35,
                 borders=[C[n] if n != "putih" else "#FFFFFF" for n in NINE])
     hero = os.path.join(ROOT, "input", "05 BIRU", HERO)
-    full = dict(kind="full", t0=float(gb[12]), t1=b, path=hero, xfade=0.6)
-    seg["shots"] = [card, grid, full]
+    b = gb[k + 12 + 13]                              # IMG_9590 ~8 saat, zoom keluar
+    full = dict(kind="full", t0=gb[k + 12], t1=b, path=hero, xfade=0.6)
+    seg = dict(name="finale", start=a, end=b, dot="nine", shots=[card, grid_c, grid, full],
+               stats=dict(campur=nc))
     segs.append(seg)
+    TOTAL = round(b + 11.0, 2)
 
     # ---- penutup
     a = segs[-1]["end"]
