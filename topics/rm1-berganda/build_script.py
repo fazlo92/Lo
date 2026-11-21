@@ -25,16 +25,22 @@ S = [("hook", 0, "Apa jadi kalau RM1 berganda setiap hari selama 30 hari?", ["be
      ("klimaks", cut(DAY(30)), "Hari 30: RM536 juta!", ["RM536", "juta!"]),
      ("eksponen", cut(T("Inilah")), "Kuasa eksponen: × 2.", ["eksponen:"]),
      ("cta", cut(T("Korang pilih")), "Korang pilih yang mana?", ["mana?"])]
+# merge "Hari N," with the amount that follows into one caption
+capsrc = []
+for x in al:
+    if capsrc and re.match(r'^Hari \d+,$', capsrc[-1]['text']) and x['start'] - capsrc[-1]['start'] < 2.5:
+        capsrc[-1] = {**capsrc[-1], 'text': capsrc[-1]['text'] + ' ' + x['text']}
+    else: capsrc.append(dict(x))
 scenes = []
 for i, (sid, a, h, hl) in enumerate(S):
     b = S[i + 1][1] if i + 1 < len(S) else end
-    caps = [{"t": round(max(a, x['start'] - 0.03), 2), "text": x['text']} for x in al if a <= max(0, x['start'] - 0.03) < b]
+    caps = [{"t": round(max(a, x['start'] - 0.03), 2), "text": x['text']} for x in capsrc if a <= max(0, x['start'] - 0.03) < b]
     sc = {"id": sid, "start": a, "end": b, "headline": {"text": h, "highlight": hl}, "captions": caps}
     if sid == 'cta': sc['headline']['emoji'] = '👇'
     scenes.append(sc)
 ev = {f"d{n}": DAY(n) for n in range(1, 31)}
 ev.update({"pilih": T("Pilih"), "laksa": T("semangkuk"), "ketawa": T("Ramai"), "belumSejuta": T("Masih belum"), "jutawanKata": T("Anda jutawan"),
-           "separuhKata": T("baru separuh"), "inilah": T("Inilah"), "darab": T("Setiap hari, hanya"), "cta": cut(T("Korang pilih"))})
+           "separuhKata": T("baru separuh"), "inilah": T("Inilah"), "darab": T("Setiap hari"), "cta": cut(T("Korang pilih"))})
 json.dump({"title": "Apa Jadi Kalau RM1 Berganda Setiap Hari Selama 30 Hari?", "duration": end, "fps": 30, "width": 1080, "height": 1920,
            "voiceover": "vo.wav", "theme": {"hl": "#f2c94c"}, "events": ev, "scenes": scenes}, open(os.path.join(D, 'script.json'), 'w'), indent=2, ensure_ascii=False)
 for s in scenes: print(f"{s['id']:10s} {s['start']:6.2f}-{s['end']:6.2f}  {len(s['captions'])} cap")

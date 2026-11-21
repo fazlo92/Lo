@@ -1,0 +1,404 @@
+{
+  "title": "Apa Jadi Kalau RM1 Berganda Setiap Hari Selama 30 Hari?",
+  "duration": 94,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voiceover": "vo.wav",
+  "theme": {
+    "hl": "#f2c94c"
+  },
+  "events": {
+    "d1": 8.64,
+    "d2": 10.26,
+    "d3": 11.5,
+    "d4": 13.02,
+    "d5": 16.21,
+    "d6": 18.16,
+    "d7": 19.98,
+    "d8": 23.54,
+    "d9": 25.72,
+    "d10": 28.0,
+    "d11": 30.62,
+    "d12": 32.0,
+    "d13": 33.6,
+    "d14": 35.36,
+    "d15": 37.38,
+    "d16": 41.26,
+    "d17": 43.24,
+    "d18": 45.32,
+    "d19": 48.76,
+    "d20": 51.36,
+    "d21": 55.16,
+    "d22": 58.78,
+    "d23": 60.46,
+    "d24": 62.22,
+    "d25": 63.9,
+    "d26": 66.1,
+    "d27": 68.36,
+    "d28": 70.94,
+    "d29": 74.18,
+    "d30": 79.04,
+    "pilih": 3.94,
+    "laksa": 14.84,
+    "ketawa": 21.84,
+    "belumSejuta": 53.36,
+    "jutawanKata": 57.02,
+    "separuhKata": 77.32,
+    "inilah": 84.11,
+    "darab": 86.22,
+    "cta": 88.21
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "end": 8.39,
+      "headline": {
+        "text": "Apa jadi kalau RM1 berganda setiap hari selama 30 hari?",
+        "highlight": [
+          "berganda"
+        ]
+      },
+      "captions": [
+        {
+          "t": 0,
+          "text": "Apa jadi kalau RM1 berganda setiap hari selama 30 hari?"
+        },
+        {
+          "t": 3.91,
+          "text": "Pilih: RM1 juta tunai hari ini…"
+        },
+        {
+          "t": 6.03,
+          "text": "atau RM1 yang berganda setiap hari?"
+        }
+      ]
+    },
+    {
+      "id": "kopitiam",
+      "start": 8.39,
+      "end": 23.29,
+      "headline": {
+        "text": "Hari 1–7: cuma RM64.",
+        "highlight": [
+          "RM64"
+        ]
+      },
+      "captions": [
+        {
+          "t": 8.61,
+          "text": "Hari 1, RM1."
+        },
+        {
+          "t": 10.23,
+          "text": "Hari 2, RM2."
+        },
+        {
+          "t": 11.47,
+          "text": "Hari 3, RM4."
+        },
+        {
+          "t": 12.99,
+          "text": "Hari 4, RM8…"
+        },
+        {
+          "t": 14.81,
+          "text": "semangkuk laksa."
+        },
+        {
+          "t": 16.18,
+          "text": "Hari 5, RM16."
+        },
+        {
+          "t": 18.13,
+          "text": "Hari 6, RM32."
+        },
+        {
+          "t": 19.95,
+          "text": "Hari 7, RM64."
+        },
+        {
+          "t": 21.81,
+          "text": "Ramai yang ketawa."
+        }
+      ]
+    },
+    {
+      "id": "kedai",
+      "start": 23.29,
+      "end": 37.13,
+      "headline": {
+        "text": "Hari 8–14: ribuan ringgit.",
+        "highlight": [
+          "ribuan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 23.51,
+          "text": "Hari 8, RM128."
+        },
+        {
+          "t": 25.69,
+          "text": "Hari 9, RM256."
+        },
+        {
+          "t": 27.97,
+          "text": "Hari 10, RM512."
+        },
+        {
+          "t": 30.59,
+          "text": "Hari 11, seribu."
+        },
+        {
+          "t": 31.97,
+          "text": "Hari 12, dua ribu."
+        },
+        {
+          "t": 33.57,
+          "text": "Hari 13, empat ribu."
+        },
+        {
+          "t": 35.33,
+          "text": "Hari 14, lapan ribu."
+        }
+      ]
+    },
+    {
+      "id": "motor",
+      "start": 37.13,
+      "end": 45.07,
+      "headline": {
+        "text": "Hari 15: sebuah motosikal.",
+        "highlight": [
+          "motosikal"
+        ]
+      },
+      "captions": [
+        {
+          "t": 37.35,
+          "text": "Hari 15, enam belas ribu…"
+        },
+        {
+          "t": 39.43,
+          "text": "sebuah motosikal."
+        },
+        {
+          "t": 41.23,
+          "text": "Hari 16, tiga puluh dua ribu."
+        },
+        {
+          "t": 43.21,
+          "text": "Hari 17, enam puluh lima ribu."
+        }
+      ]
+    },
+    {
+      "id": "kereta",
+      "start": 45.07,
+      "end": 48.51,
+      "headline": {
+        "text": "Hari 18: sebuah kereta.",
+        "highlight": [
+          "kereta"
+        ]
+      },
+      "captions": [
+        {
+          "t": 45.29,
+          "text": "Hari 18, seratus tiga puluh ribu…"
+        },
+        {
+          "t": 47.49,
+          "text": "sebuah kereta."
+        }
+      ]
+    },
+    {
+      "id": "belum",
+      "start": 48.51,
+      "end": 54.91,
+      "headline": {
+        "text": "Hari 20: belum sejuta!",
+        "highlight": [
+          "belum"
+        ]
+      },
+      "captions": [
+        {
+          "t": 48.73,
+          "text": "Hari 19, dua ratus enam puluh ribu."
+        },
+        {
+          "t": 51.33,
+          "text": "Hari 20…"
+        },
+        {
+          "t": 52.17,
+          "text": "lima ratus ribu."
+        },
+        {
+          "t": 53.33,
+          "text": "Masih belum sejuta!"
+        }
+      ]
+    },
+    {
+      "id": "jutawan",
+      "start": 54.91,
+      "end": 58.53,
+      "headline": {
+        "text": "Hari 21: jutawan!",
+        "highlight": [
+          "jutawan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 55.13,
+          "text": "Hari 21…"
+        },
+        {
+          "t": 56.17,
+          "text": "sejuta."
+        },
+        {
+          "t": 56.99,
+          "text": "Anda jutawan!"
+        }
+      ]
+    },
+    {
+      "id": "langit",
+      "start": 58.53,
+      "end": 73.93,
+      "headline": {
+        "text": "Hari 22–28: berjuta-juta.",
+        "highlight": [
+          "berjuta-juta"
+        ]
+      },
+      "captions": [
+        {
+          "t": 58.75,
+          "text": "Hari 22, dua juta."
+        },
+        {
+          "t": 60.43,
+          "text": "Hari 23, empat juta."
+        },
+        {
+          "t": 62.19,
+          "text": "Hari 24, lapan juta."
+        },
+        {
+          "t": 63.87,
+          "text": "Hari 25, enam belas juta."
+        },
+        {
+          "t": 66.07,
+          "text": "Hari 26, tiga puluh tiga juta."
+        },
+        {
+          "t": 68.33,
+          "text": "Hari 27, enam puluh tujuh juta."
+        },
+        {
+          "t": 70.91,
+          "text": "Hari 28, seratus tiga puluh empat juta."
+        }
+      ]
+    },
+    {
+      "id": "separuh",
+      "start": 73.93,
+      "end": 78.79,
+      "headline": {
+        "text": "Hari 29: baru separuh.",
+        "highlight": [
+          "separuh"
+        ]
+      },
+      "captions": [
+        {
+          "t": 74.15,
+          "text": "Hari 29, dua ratus enam puluh lapan juta…"
+        },
+        {
+          "t": 77.29,
+          "text": "baru separuh jalan."
+        }
+      ]
+    },
+    {
+      "id": "klimaks",
+      "start": 78.79,
+      "end": 83.86,
+      "headline": {
+        "text": "Hari 30: RM536 juta!",
+        "highlight": [
+          "RM536",
+          "juta!"
+        ]
+      },
+      "captions": [
+        {
+          "t": 79.01,
+          "text": "Hari 30…"
+        },
+        {
+          "t": 80.29,
+          "text": "lebih RM536 juta!"
+        }
+      ]
+    },
+    {
+      "id": "eksponen",
+      "start": 83.86,
+      "end": 88.21,
+      "headline": {
+        "text": "Kuasa eksponen: × 2.",
+        "highlight": [
+          "eksponen:"
+        ]
+      },
+      "captions": [
+        {
+          "t": 84.08,
+          "text": "Inilah kuasa eksponen."
+        },
+        {
+          "t": 86.19,
+          "text": "Setiap hari,"
+        },
+        {
+          "t": 86.95,
+          "text": "hanya darab dua."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 88.21,
+      "end": 94,
+      "headline": {
+        "text": "Korang pilih yang mana?",
+        "highlight": [
+          "mana?"
+        ],
+        "emoji": "👇"
+      },
+      "captions": [
+        {
+          "t": 88.43,
+          "text": "Korang pilih yang mana?"
+        },
+        {
+          "t": 89.53,
+          "text": "Tulis di ruang komen!"
+        }
+      ]
+    }
+  ]
+}
