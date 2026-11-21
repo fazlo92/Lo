@@ -6,23 +6,39 @@
 - **Pengajaran:** kuasa eksponen (×2 berulang). Twist: pada Hari 29 baru separuh, Hari 20 masih belum sejuta.
 - **Harga barang** di skrin ialah anggaran umum ("lebih kurang"), bukan harga rasmi.
 
-## Jadual kiraan (×2 setiap hari)
-| Hari | Baki | Di skrin |
+## Jadual kiraan — semua 30 hari (angka tepat dipaparkan di skrin)
+| Hari | Baki | Nota |
 |---|---|---|
-| 1 | RM1 | duit syiling |
-| 3 | RM4 | teh C peng |
-| 4 | RM8 | semangkuk laksa Sarawak |
-| 7 | RM64 | |
-| 10 | RM512 | |
-| 14 | RM8,192 | |
+| 1 | RM1 |  |
+| 2 | RM2 |  |
+| 3 | RM4 |  |
+| 4 | RM8 | semangkuk laksa |
+| 5 | RM16 |  |
+| 6 | RM32 |  |
+| 7 | RM64 | ramai ketawa |
+| 8 | RM128 |  |
+| 9 | RM256 |  |
+| 10 | RM512 |  |
+| 11 | RM1,024 |  |
+| 12 | RM2,048 |  |
+| 13 | RM4,096 |  |
+| 14 | RM8,192 |  |
 | 15 | RM16,384 | motosikal |
+| 16 | RM32,768 |  |
+| 17 | RM65,536 |  |
 | 18 | RM131,072 | kereta |
+| 19 | RM262,144 |  |
 | 20 | RM524,288 | **masih belum sejuta** |
-| 21 | RM1,048,576 | jutawan! |
-| 25 | RM16,777,216 | |
-| 28 | RM134,217,728 | |
-| 29 | RM268,435,456 | separuh |
-| 30 | **RM536,870,912** | ≈ RM537 juta |
+| 21 | RM1,048,576 | **jutawan** |
+| 22 | RM2,097,152 |  |
+| 23 | RM4,194,304 |  |
+| 24 | RM8,388,608 |  |
+| 25 | RM16,777,216 |  |
+| 26 | RM33,554,432 |  |
+| 27 | RM67,108,864 |  |
+| 28 | RM134,217,728 |  |
+| 29 | RM268,435,456 | **separuh jalan** |
+| 30 | RM536,870,912 | **lebih setengah bilion** |
 
 ## HUD
 - Label `BAKI AKAUN`, nombor bergolek naik; baris bawah `HARI 18 / 30 · KERETA`.
@@ -44,32 +60,38 @@
 | 10 Pengajaran | | Kuasa **eksponen**. | — | ×2 berulang |
 | 11 CTA | | Korang pilih yang mana? 👇 | — | |
 
-## Draf suara latar (~170 patah perkataan)
+## Draf suara latar v3 — semua 30 hari (jumlah besar dibundarkan dalam suara; angka tepat dipaparkan di skrin)
 
 ## Skrip (tampal di ruangan teks)
 
 Apa jadi kalau RM1 berganda setiap hari selama 30 hari?
 
-Bayangkan… anda diberi dua pilihan. RM1 juta tunai hari ini. Atau RM1 yang berganda setiap hari, selama 30 hari.
+Pilih: RM1 juta tunai hari ini… atau RM1 yang berganda setiap hari?
 
-Hari pertama, RM1. Hari kedua, RM2. Hari keempat, cukup untuk semangkuk laksa Sarawak.
+Hari 1, RM1. Hari 2, RM2. Hari 3, RM4. Hari 4, RM8… semangkuk laksa.
 
-Hari ketujuh, cuma RM64. Ramai yang ketawa. Pilihan sejuta nampak jauh lebih baik.
+Hari 5, RM16. Hari 6, RM32. Hari 7, RM64. Ramai yang ketawa.
 
-Hari kelima belas, RM16,384. Cukup untuk sebuah motosikal.
+Hari 8, RM128. Hari 9, RM256. Hari 10, RM512.
 
-Hari kelapan belas, RM131,072. Cukup untuk sebuah kereta.
+Hari 11, seribu. Hari 12, dua ribu. Hari 13, empat ribu. Hari 14, lapan ribu.
 
-Hari kedua puluh… RM524,288. Masih belum sejuta!
+Hari 15, enam belas ribu… sebuah motosikal.
 
-Tetapi esoknya, hari kedua puluh satu… RM1,048,576. Anda jutawan!
+Hari 16, tiga puluh dua ribu. Hari 17, enam puluh lima ribu. Hari 18, seratus tiga puluh ribu… sebuah kereta.
 
-Hari kedua puluh lima, lebih RM16 juta. Hari kedua puluh lapan, lebih RM134 juta.
+Hari 19, dua ratus enam puluh ribu. Hari 20… lima ratus ribu. Masih belum sejuta!
 
-Hari kedua puluh sembilan… anda baru separuh jalan.
+Hari 21… sejuta. Anda jutawan!
 
-Dan hari ketiga puluh… RM536,870,912. Lebih setengah bilion ringgit!
+Hari 22, dua juta. Hari 23, empat juta. Hari 24, lapan juta. Hari 25, enam belas juta.
 
-Inilah kuasa eksponen. Setiap hari, hanya darab dua. Tetapi hasilnya… luar biasa.
+Hari 26, tiga puluh tiga juta. Hari 27, enam puluh tujuh juta. Hari 28, seratus tiga puluh empat juta.
 
-Kalau korang, pilih RM1 juta hari ini… atau RM1 yang berganda? Tulis di ruang komen!
+Hari 29, dua ratus enam puluh lapan juta… baru separuh jalan.
+
+Hari 30… lebih RM536 juta!
+
+Inilah kuasa eksponen. Setiap hari, hanya darab dua.
+
+Korang pilih yang mana? Tulis di ruang komen!

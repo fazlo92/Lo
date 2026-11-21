@@ -15,6 +15,7 @@ def num_ms(n):
     return num_ms(n // 1000000) + ' juta' + ('' if n % 1000000 == 0 else ' ' + num_ms(n % 1000000))
 
 def spoken(s):
+    s = re.sub(r'(?<=\d),(?=\d{3})', '', s)   # thousands separators
     s = re.sub(r'RM\s?(\d+)', lambda m: num_ms(m.group(1)) + ' ringgit', s)
     s = re.sub(r'(\d+)\.(\d\d)', lambda m: num_ms(m.group(1)) + ('' if m.group(2) == '00' else ' ' + num_ms(m.group(2))), s)
     s = re.sub(r'(\d+)%', lambda m: num_ms(m.group(1)) + ' peratus', s)
