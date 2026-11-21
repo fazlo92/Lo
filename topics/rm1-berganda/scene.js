@@ -116,7 +116,7 @@ export async function create({ THREE, renderer, script, U }) {
     river.update = (t, mode) => {
       const night = mode === 'night'; river.water.material.color.setHex(night ? 0x141c2c : mode === 'dusk' ? 0x7a6a62 : 0x5f7a66);
       for (const l of river.lamps) l.gl.material.opacity = night ? 0.7 : 0; for (const c of cityLit) c.visible = night;
-      const showBar = sceneAt(t).id === 'separuh'; river.bar.visible = showBar; if (showBar) river.fill.scale.x = Math.max(0.001, 0.5 * easeOut(clamp((t - SC.separuh.start) / 1.2)));
+      const showBar = false; river.bar.visible = showBar; if (showBar) river.fill.scale.x = Math.max(0.001, 0.5 * easeOut(clamp((t - SC.separuh.start) / 1.2)));
     };
   }
 
@@ -287,7 +287,8 @@ export async function create({ THREE, renderer, script, U }) {
     if (d >= 2 && !['eksponen', 'cta', 'separuh', 'klimaks'].includes(sc.id)) { const dt = t - DAYT[d - 1]; const k = easeOut(clamp(dt / 0.25)); g.globalAlpha = k * 0.95; g.font = '700 32px HudSans'; g.fillStyle = '#fff'; g.textAlign = 'center';
       const txt = `${rm(val(d - 1))} × 2 = ${rm(val(d))}`; const tw = g.measureText(txt).width + 36; g.fillStyle = 'rgba(0,0,0,.45)'; g.beginPath(); g.roundRect(540 - tw / 2, 808 - 30, tw, 46, 14); g.fill(); g.fillStyle = '#fff'; g.fillText(txt, 540, 808); g.textAlign = 'left'; g.globalAlpha = 1; }
     // halfway label for day 29
-    if (sc.id === 'separuh') { g.font = '800 34px HudSans'; g.fillStyle = '#f2c94c'; g.textAlign = 'center'; g.fillText('SEPARUH DARIPADA RM536,870,912', 540, 690); g.textAlign = 'left'; }
+    if (sc.id === 'separuh') { const k = easeOut(clamp((t - SC.separuh.start) / 1.2)); g.font = '800 30px HudSans'; g.fillStyle = '#f2c94c'; g.textAlign = 'center'; g.fillText('SEPARUH DARIPADA RM536,870,912', 540, 690); g.textAlign = 'left';
+      const bx = 330, by = 716, bw = 430, bh = 40; g.fillStyle = 'rgba(0,0,0,.55)'; g.beginPath(); g.roundRect(bx, by, bw, bh, 20); g.fill(); g.fillStyle = '#f2c94c'; g.beginPath(); g.roundRect(bx, by, bw * 0.5 * k, bh, 20); g.fill(); g.strokeStyle = '#fff'; g.lineWidth = 2; g.beginPath(); g.roundRect(bx, by, bw, bh, 20); g.stroke(); g.fillStyle = '#2a1e00'; g.font = '900 24px HudSans'; g.fillText('50%', bx + 14, by + 29); }
     // exponential graph
     if (sc.id === 'eksponen') { const gx = 330, gy = 600, gw = 440, gh = 300; const k = clamp((t - SC.eksponen.start) / 2.2);
       g.fillStyle = 'rgba(0,0,0,.5)'; g.beginPath(); g.roundRect(gx - 20, gy - 20, gw + 40, gh + 60, 18); g.fill();
