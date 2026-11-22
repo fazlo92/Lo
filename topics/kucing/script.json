@@ -1,0 +1,340 @@
+{
+  "title": "Apa Jadi Kalau Semua Rumah di Kuching Bela Seekor Kucing?",
+  "duration": 102,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voiceover": "vo.wav",
+  "theme": {
+    "hl": "#ffb347"
+  },
+  "events": {
+    "baharu": 6.12,
+    "isi": 10.76,
+    "satok": 17.26,
+    "jumlah1": 18.94,
+    "g60": 24.68,
+    "darab1": 27.68,
+    "tan98": 30.7,
+    "beg": 34.02,
+    "rm15": 38.44,
+    "sen90": 40.36,
+    "kecil": 42.68,
+    "darab2": 44.58,
+    "rm147": 46.2,
+    "rm44": 49.42,
+    "najis40": 53.34,
+    "tan65": 55.26,
+    "tan195": 58.18,
+    "persen10": 61.9,
+    "empat": 64.78,
+    "anak65": 67.02,
+    "jumlah2": 70.14,
+    "tan3500": 74.92,
+    "rm53": 77.4,
+    "didarab": 82.78,
+    "bandar": 87.96,
+    "mandul": 94.68,
+    "cta": 95.54
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "end": 8.7,
+      "headline": {
+        "text": "Apa jadi kalau semua rumah di Kuching bela seekor kucing?",
+        "highlight": [
+          "kucing?"
+        ]
+      },
+      "captions": [
+        {
+          "t": 0,
+          "text": "Apa jadi kalau semua rumah di Kuching bela seekor kucing?"
+        },
+        {
+          "t": 3.55,
+          "text": "Bayangkan…"
+        },
+        {
+          "t": 4.72,
+          "text": "esok pagi,"
+        },
+        {
+          "t": 6.09,
+          "text": "setiap rumah di Kuching menyambut seekor kucing baharu."
+        }
+      ]
+    },
+    {
+      "id": "taman",
+      "start": 8.7,
+      "end": 23.18,
+      "headline": {
+        "text": "162,802 rumah. 162,802 kucing.",
+        "highlight": [
+          "162,802"
+        ]
+      },
+      "captions": [
+        {
+          "t": 8.97,
+          "text": "Berdasarkan Banci 2020,"
+        },
+        {
+          "t": 10.73,
+          "text": "Bahagian Kuching mempunyai 162,802 isi rumah."
+        },
+        {
+          "t": 15.65,
+          "text": "Satu rumah, satu kucing."
+        },
+        {
+          "t": 17.23,
+          "text": "Dari Satok hingga Lundu…"
+        },
+        {
+          "t": 18.91,
+          "text": "162,802 ekor kucing!"
+        }
+      ]
+    },
+    {
+      "id": "makanan",
+      "start": 23.18,
+      "end": 36.59,
+      "headline": {
+        "text": "Minggu 1: 9.8 tan sehari.",
+        "highlight": [
+          "9.8",
+          "tan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 23.45,
+          "text": "Minggu pertama."
+        },
+        {
+          "t": 24.65,
+          "text": "Katakan seekor kucing makan 60 gram sehari."
+        },
+        {
+          "t": 27.65,
+          "text": "Darab dengan 162,802…"
+        },
+        {
+          "t": 30.67,
+          "text": "hampir 9.8 tan makanan setiap hari!"
+        },
+        {
+          "t": 33.99,
+          "text": "Itu hampir 1,000 beg makanan sehari."
+        }
+      ]
+    },
+    {
+      "id": "kos",
+      "start": 36.59,
+      "end": 51.22,
+      "headline": {
+        "text": "Bulan 1: RM4.4 juta.",
+        "highlight": [
+          "RM4.4",
+          "juta."
+        ]
+      },
+      "captions": [
+        {
+          "t": 36.86,
+          "text": "Bulan pertama."
+        },
+        {
+          "t": 38.41,
+          "text": "Pada harga RM15 sekilo,"
+        },
+        {
+          "t": 40.33,
+          "text": "seekor kucing cuma 90 sen sehari."
+        },
+        {
+          "t": 42.65,
+          "text": "Nampak kecil, kan?"
+        },
+        {
+          "t": 44.55,
+          "text": "Tetapi darab dengan semua kucing…"
+        },
+        {
+          "t": 46.17,
+          "text": "hampir RM147,000 sehari."
+        },
+        {
+          "t": 48.63,
+          "text": "Sebulan, RM4.4 juta!"
+        }
+      ]
+    },
+    {
+      "id": "najis",
+      "start": 51.22,
+      "end": 59.86,
+      "headline": {
+        "text": "Bulan 3: 195 tan najis.",
+        "highlight": [
+          "195",
+          "tan"
+        ]
+      },
+      "captions": [
+        {
+          "t": 51.49,
+          "text": "Bulan ketiga."
+        },
+        {
+          "t": 53.31,
+          "text": "40 gram najis seekor sehari…"
+        },
+        {
+          "t": 55.23,
+          "text": "menjadi 6.5 tan sehari."
+        },
+        {
+          "t": 57.47,
+          "text": "Sebulan, hampir 195 tan!"
+        }
+      ]
+    },
+    {
+      "id": "anak",
+      "start": 59.86,
+      "end": 73.56,
+      "headline": {
+        "text": "Bulan 6: 227,000+ ekor.",
+        "highlight": [
+          "227,000+"
+        ]
+      },
+      "captions": [
+        {
+          "t": 60.13,
+          "text": "Bulan keenam."
+        },
+        {
+          "t": 61.87,
+          "text": "Kalau hanya 10% betina tidak dimandulkan,"
+        },
+        {
+          "t": 64.75,
+          "text": "dan setiap seekor melahirkan empat anak…"
+        },
+        {
+          "t": 66.99,
+          "text": "lebih 65,000 anak kucing lahir!"
+        },
+        {
+          "t": 70.11,
+          "text": "Jumlahnya kini melebihi 227,000 ekor."
+        }
+      ]
+    },
+    {
+      "id": "setahun",
+      "start": 73.56,
+      "end": 80.28,
+      "headline": {
+        "text": "Setahun: RM53 juta.",
+        "highlight": [
+          "RM53",
+          "juta."
+        ]
+      },
+      "captions": [
+        {
+          "t": 73.83,
+          "text": "Setahun kemudian."
+        },
+        {
+          "t": 74.89,
+          "text": "Lebih 3,500 tan makanan."
+        },
+        {
+          "t": 77.37,
+          "text": "Kos melebihi RM53 juta!"
+        }
+      ]
+    },
+    {
+      "id": "pengajaran",
+      "start": 80.28,
+      "end": 95.54,
+      "headline": {
+        "text": "Bela kucing = tanggungjawab.",
+        "highlight": [
+          "tanggungjawab."
+        ]
+      },
+      "captions": [
+        {
+          "t": 80.55,
+          "text": "Seekor kucing nampak kecil."
+        },
+        {
+          "t": 82.75,
+          "text": "Tetapi apabila didarab dengan seluruh Kuching…"
+        },
+        {
+          "t": 85.57,
+          "text": "setiap angka menjadi sangat besar."
+        },
+        {
+          "t": 87.93,
+          "text": "Kuching memang Bandar Raya Kucing."
+        },
+        {
+          "t": 90.15,
+          "text": "Tetapi bela kucing bukan sekadar comel…"
+        },
+        {
+          "t": 92.73,
+          "text": "ia tanggungjawab."
+        },
+        {
+          "t": 93.77,
+          "text": "Jaga dengan baik,"
+        },
+        {
+          "t": 94.65,
+          "text": "dan mandulkan."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "start": 95.54,
+      "end": 102,
+      "headline": {
+        "text": "Apa jadi kalau _____?",
+        "highlight": [
+          "_____"
+        ],
+        "emoji": "👇"
+      },
+      "captions": [
+        {
+          "t": 95.81,
+          "text": "Apa jadi kalau…"
+        },
+        {
+          "t": 96.89,
+          "text": "perkara lain pula?"
+        },
+        {
+          "t": 97.89,
+          "text": "Tulis di ruang komen!"
+        }
+      ]
+    }
+  ]
+}
