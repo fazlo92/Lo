@@ -1,5 +1,7 @@
 # Apa Jadi Kalau Sebuah Rumah di Kuching Bela Seekor Kucing? — Rangka + Skrip v1
 
+> **Nota:** Topik ini digantikan oleh `skrip/06-kucing-vo.md` (semua rumah di Kuching bela seekor kucing).
+
 - **Format:** 9:16, sasaran ~1:30, POV low-poly, siri "Apa Jadi?"
 - **Cerita:** satu keluarga di Kuching ambil seekor anak kucing betina bernama "Comel". Kita kira kosnya — dan apa jadi kalau Comel tidak dimandulkan.
 - **Pengajaran:** kos sebenar membela haiwan + kuasa eksponen → mandulkan kucing.

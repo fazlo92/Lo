@@ -1,4 +1,4 @@
-# Apa Jadi Kalau Setiap Rumah di Kuching Diwajibkan Membela Seekor Kucing? — Teks Suara (dimurnikan)
+# Apa Jadi Kalau Semua Rumah di Kuching Bela Seekor Kucing? — Teks Suara v2
 
 Sumber angka isi rumah: Banci 2020, Bahagian Kuching = 162,802 (diberi pengguna; belum disemak).
 Semua angka lain ialah andaian (60 g makanan, RM15/kg, 40 g najis, 10% betina tidak dimandulkan, 4 anak).
@@ -18,13 +18,15 @@ Semua angka lain ialah andaian (60 g makanan, RM15/kg, 40 g najis, 10% betina ti
 | Makanan setahun | 9,768 kg × 365 | 3,565 tan ≈ **lebih 3,500 tan** |
 | Kos setahun | RM146,522 × 365 | RM53.5 juta ≈ **melebihi RM53 juta** |
 
+Nota sumber: Portal Kerajaan Sarawak mencatat penduduk Bahagian Kuching 812,900 (2020); buletin DOSM Sarawak 2020 mencatat 202.0 ribu tempat kediaman di Bahagian Kuching. Angka 162,802 isi rumah (Banci 2020) daripada pengguna — sahkan di MyCenDash/DOSM sebelum terbit.
+
 ## Skrip (tampal di ruangan teks)
 
-Apa jadi kalau setiap rumah di Kuching diwajibkan membela seekor kucing?
+Apa jadi kalau semua rumah di Kuching bela seekor kucing?
 
-Bayangkan… satu peraturan baharu diperkenalkan. Setiap isi rumah wajib membela seekor kucing!
+Bayangkan… esok pagi, setiap rumah di Kuching menyambut seekor kucing baharu.
 
-Hari pertama. Berdasarkan Banci 2020, Bahagian Kuching mempunyai 162,802 isi rumah. Maknanya, jumlah kucing yang sama diperlukan! Dari Satok hingga Lundu, semua orang mula mencari kucing.
+Berdasarkan Banci 2020, Bahagian Kuching mempunyai 162,802 isi rumah. Satu rumah, satu kucing. Dari Satok hingga Lundu… 162,802 ekor kucing!
 
 Minggu pertama. Katakan seekor kucing makan 60 gram sehari. Darab dengan 162,802… hampir 9.8 tan makanan setiap hari! Itu hampir 1,000 beg makanan sehari.
 
@@ -36,8 +38,8 @@ Bulan keenam. Kalau hanya 10% betina tidak dimandulkan, dan setiap seekor melahi
 
 Setahun kemudian. Lebih 3,500 tan makanan. Kos melebihi RM53 juta!
 
-Tetapi soalan sebenar bukan berapa banyak kucing. Adakah setiap keluarga mempunyai ruang, masa dan kemampuan untuk menjaganya dengan baik?
+Seekor kucing nampak kecil. Tetapi apabila didarab dengan seluruh Kuching… setiap angka menjadi sangat besar.
 
-Kuching memang dikenali sebagai Bandar Raya Kucing. Tetapi patutkah setiap rumah diwajibkan membela kucing… semata-mata kerana nama?
+Kuching memang Bandar Raya Kucing. Tetapi bela kucing bukan sekadar comel… ia tanggungjawab. Jaga dengan baik, dan mandulkan.
 
-Apa pendapat korang? Tulis di ruang komen!
+Apa jadi kalau… perkara lain pula? Tulis di ruang komen!
